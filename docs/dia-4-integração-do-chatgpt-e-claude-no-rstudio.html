@@ -377,7 +377,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="11.1" data-path="dia4_ia.html"><a href="#exerc%C3%ADcio-guiado-de-integra%C3%A7%C3%A3o-21h30---22h00"><i class="fa fa-check"></i><b>11.1</b> Exercício Guiado de Integração (21h30 - 22h00)</a>
 <ul>
-<li class="chapter" data-level="11.1.1" data-path="dia4_ia.html"><a href="#tarefa-1-revisar-c%C3%B3digo-com-gptstudio"><i class="fa fa-check"></i><b>11.1.1</b> Tarefa 1: Revisar código com gptstudio</a></li>
+<li class="chapter" data-level="11.1.1" data-path="dia4_ia.html"><a href="#tarefa-1-revisar-c%C3%B3digo-com-chattr"><i class="fa fa-check"></i><b>11.1.1</b> Tarefa 1: Revisar código com chattr</a></li>
 <li class="chapter" data-level="11.1.2" data-path="dia4_ia.html"><a href="#tarefa-2-gerar-fun%C3%A7%C3%A3o-com-chattr-claude"><i class="fa fa-check"></i><b>11.1.2</b> Tarefa 2: Gerar função com chattr (Claude)</a></li>
 <li class="chapter" data-level="11.1.3" data-path="dia4_ia.html"><a href="#tarefa-3-documento-de-reflex%C3%A3o"><i class="fa fa-check"></i><b>11.1.3</b> Tarefa 3: Documento de Reflexão</a></li>
 <li class="chapter" data-level="11.1.4" data-path="dia4_ia.html"><a href="#compara%C3%A7%C3%A3o-chatgpt-vs-claude"><i class="fa fa-check"></i><b>11.1.4</b> Comparação ChatGPT vs Claude</a></li>
@@ -1269,29 +1269,26 @@ ANTHROPIC_API_KEY=XXXXX
 <h3><span class="header-section-number">10.10.5</span> Casos de Uso Práticos com Claude<a href="#casos-de-uso-pr%C3%A1ticos-com-claude" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div id="caso-1-análise-profunda-de-código" class="section level4 hasAnchor" number="10.10.5.1">
 <h4><span class="header-section-number">10.10.5.1</span> Caso 1: Análise profunda de código<a href="#caso-1-an%C3%A1lise-profunda-de-c%C3%B3digo" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-1" tabindex="-1"></a><span class="co"># Código complexo para analisar</span></span>
-<span id="cb137-2"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-2" tabindex="-1"></a>pipeline_complexo <span class="ot">&lt;-</span> <span class="st">&quot;</span></span>
-<span id="cb137-3"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-3" tabindex="-1"></a><span class="st">library(tidyverse)</span></span>
-<span id="cb137-4"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-4" tabindex="-1"></a></span>
-<span id="cb137-5"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-5" tabindex="-1"></a><span class="st">resultado &lt;- mtcars %&gt;%</span></span>
-<span id="cb137-6"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-6" tabindex="-1"></a><span class="st">  mutate(</span></span>
-<span id="cb137-7"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-7" tabindex="-1"></a><span class="st">    eficiencia = mpg / wt,</span></span>
-<span id="cb137-8"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-8" tabindex="-1"></a><span class="st">    categoria_cyl = case_when(</span></span>
-<span id="cb137-9"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-9" tabindex="-1"></a><span class="st">      cyl &lt;= 4 ~ &#39;Pequeno&#39;,</span></span>
-<span id="cb137-10"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-10" tabindex="-1"></a><span class="st">      cyl &lt;= 6 ~ &#39;Médio&#39;,</span></span>
-<span id="cb137-11"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-11" tabindex="-1"></a><span class="st">      TRUE ~ &#39;Grande&#39;</span></span>
-<span id="cb137-12"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-12" tabindex="-1"></a><span class="st">    )</span></span>
-<span id="cb137-13"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-13" tabindex="-1"></a><span class="st">  ) %&gt;%</span></span>
-<span id="cb137-14"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-14" tabindex="-1"></a><span class="st">  group_by(categoria_cyl, gear) %&gt;%</span></span>
-<span id="cb137-15"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-15" tabindex="-1"></a><span class="st">  summarize(</span></span>
-<span id="cb137-16"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-16" tabindex="-1"></a><span class="st">    n = n(),</span></span>
-<span id="cb137-17"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-17" tabindex="-1"></a><span class="st">    media_ef = mean(eficiencia),</span></span>
-<span id="cb137-18"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-18" tabindex="-1"></a><span class="st">    dp_ef = sd(eficiencia),</span></span>
-<span id="cb137-19"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-19" tabindex="-1"></a><span class="st">    .groups = &#39;drop&#39;</span></span>
-<span id="cb137-20"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-20" tabindex="-1"></a><span class="st">  ) %&gt;%</span></span>
-<span id="cb137-21"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-21" tabindex="-1"></a><span class="st">  filter(n &gt;= 3) %&gt;%</span></span>
-<span id="cb137-22"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-22" tabindex="-1"></a><span class="st">  arrange(desc(media_ef))</span></span>
-<span id="cb137-23"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-23" tabindex="-1"></a><span class="st">&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-1" tabindex="-1"></a>pipeline_complexo <span class="ot">&lt;-</span> <span class="st">&quot;library(tidyverse) </span></span>
+<span id="cb137-2"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-2" tabindex="-1"></a><span class="st">resultado &lt;- mtcars %&gt;%</span></span>
+<span id="cb137-3"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-3" tabindex="-1"></a><span class="st">  mutate(</span></span>
+<span id="cb137-4"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-4" tabindex="-1"></a><span class="st">    eficiencia = mpg / wt,</span></span>
+<span id="cb137-5"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-5" tabindex="-1"></a><span class="st">    categoria_cyl = case_when(</span></span>
+<span id="cb137-6"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-6" tabindex="-1"></a><span class="st">      cyl &lt;= 4 ~ &#39;Pequeno&#39;,</span></span>
+<span id="cb137-7"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-7" tabindex="-1"></a><span class="st">      cyl &lt;= 6 ~ &#39;Médio&#39;,</span></span>
+<span id="cb137-8"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-8" tabindex="-1"></a><span class="st">      TRUE ~ &#39;Grande&#39;</span></span>
+<span id="cb137-9"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-9" tabindex="-1"></a><span class="st">    )</span></span>
+<span id="cb137-10"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-10" tabindex="-1"></a><span class="st">  ) %&gt;%</span></span>
+<span id="cb137-11"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-11" tabindex="-1"></a><span class="st">  group_by(categoria_cyl, gear) %&gt;%</span></span>
+<span id="cb137-12"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-12" tabindex="-1"></a><span class="st">  summarize(</span></span>
+<span id="cb137-13"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-13" tabindex="-1"></a><span class="st">    n = n(),</span></span>
+<span id="cb137-14"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-14" tabindex="-1"></a><span class="st">    media_ef = mean(eficiencia),</span></span>
+<span id="cb137-15"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-15" tabindex="-1"></a><span class="st">    dp_ef = sd(eficiencia),</span></span>
+<span id="cb137-16"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-16" tabindex="-1"></a><span class="st">    .groups = &#39;drop&#39;</span></span>
+<span id="cb137-17"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-17" tabindex="-1"></a><span class="st">  ) %&gt;%</span></span>
+<span id="cb137-18"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-18" tabindex="-1"></a><span class="st">  filter(n &gt;= 3) %&gt;%</span></span>
+<span id="cb137-19"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb137-19" tabindex="-1"></a><span class="st">  arrange(desc(media_ef))&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#cb138-1" tabindex="-1"></a><span class="fu">chattr</span>(<span class="fu">paste0</span>(<span class="st">&quot;Faca uma analise profunda desse codigo:&quot;</span>, pipeline_complexo))</span></code></pre></div>
 </div>
 </div>
 </div>
