@@ -187,9 +187,10 @@ anthropic-claude
 instalação-de-pacotes
 o-que-cada-pacote-faz
 intervalo-20h15---20h30
-rstudio-gptstudio-chatgpt-20h30---21h00
-conhecendo-o-gptstudio
+rstudio-chattr-20h30---21h00
+conhecendo-o-chattr
 acessando-os-addins
+definindo-o-modelo-de-ia-para-ser-utilizado
 chat-integrado
 explicar-código-selecionado
 comentar-código-automaticamente
@@ -198,7 +199,7 @@ caso-1-explicar-um-erro
 caso-2-refatorar-função
 caso-3-gerar-testes-unitários
 rstudio-chattr-claude-21h00---21h30
-conhecendo-o-chattr
+conhecendo-o-chattr-1
 configuração-inicial
 chat-interativo
 chat-programático
