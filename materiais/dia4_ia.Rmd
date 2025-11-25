@@ -923,11 +923,8 @@ print(historico)
 
 #### Caso 1: Análise profunda de código
 
-```{r caso-analise}
-# Código complexo para analisar
-pipeline_complexo <- "
-library(tidyverse)
-
+```{r}
+pipeline_complexo <- "library(tidyverse) 
 resultado <- mtcars %>%
   mutate(
     eficiencia = mpg / wt,
@@ -945,8 +942,11 @@ resultado <- mtcars %>%
     .groups = 'drop'
   ) %>%
   filter(n >= 3) %>%
-  arrange(desc(media_ef))
-"
+  arrange(desc(media_ef))"
+```
+
+```{r}
+chattr(paste0("Faca uma analise profunda desse codigo:", pipeline_complexo))
 ```
 
 # Prompt:
@@ -966,64 +966,16 @@ Claude fornece análise profunda:
 
 #### Caso 2: Gerar função robusta
 
-```{r caso-funcao-robusta}
+```{r}
 # Prompt para Claude:
-"Crie uma função em R que:
+prompt <- "Crie uma função em R que:
 1. Receba um data.frame e nome de coluna numérica
 2. Remova NAs
 3. Retorne lista com média e desvio padrão
 4. Inclua validações de tipo e mensagens de erro claras
 5. Documente com comentários"
 
-# Claude gera:
-#' Calcula estatísticas descritivas de uma coluna numérica
-#'
-#' @param df Data frame contendo os dados
-#' @param col_name String com nome da coluna numérica
-#' @return Lista com média e desvio padrão
-calcular_stats <- function(df, col_name) {
-  # Validar entrada: df deve ser data.frame
-  if (!is.data.frame(df)) {
-    stop("Erro: 'df' deve ser um data.frame")
-  }
-  
-  # Validar: coluna existe
-  if (!col_name %in% names(df)) {
-    stop(paste0("Erro: coluna '", col_name, "' não encontrada"))
-  }
-  
-  # Extrair coluna
-  coluna <- df[[col_name]]
-  
-  # Validar: coluna é numérica
-  if (!is.numeric(coluna)) {
-    stop(paste0("Erro: coluna '", col_name, "' não é numérica"))
-  }
-  
-  # Remover NAs e avisar se houver
-  n_nas <- sum(is.na(coluna))
-  if (n_nas > 0) {
-    message(paste0("Aviso: ", n_nas, " valores NA foram removidos"))
-  }
-  coluna_limpa <- na.omit(coluna)
-  
-  # Validar: ainda há dados após remover NAs
-  if (length(coluna_limpa) == 0) {
-    stop("Erro: nenhum valor válido após remover NAs")
-  }
-  
-  # Calcular estatísticas
-  list(
-    media = mean(coluna_limpa),
-    desvio_padrao = sd(coluna_limpa),
-    n_observacoes = length(coluna_limpa),
-    n_nas_removidos = n_nas
-  )
-}
-
-# Teste
-dados <- data.frame(x = c(1, 2, NA, 4, 5), y = letters[1:5])
-calcular_stats(dados, "x")
+chattr(prompt)
 ```
 
 #### Caso 3: Explicar traceback complexo
@@ -1038,25 +990,16 @@ Caused by error:
 Run `rlang::last_trace()` to see where the error occurred.
 "
 
-# Prompt para Claude:
-"Explique este erro do R e como corrigi-lo:
-[cole o erro acima]"
-
-# Claude explica:
-# - O que significa cada linha do erro
-# - Por que ocorreu (coluna não existe)
-# - Como diagnosticar (verificar names(dados))
-# - Como corrigir (usar nome correto ou criar coluna)
-# - Dicas para evitar no futuro
+chattr(erro)
 ```
 
 ---
 
 ## Exercício Guiado de Integração (21h30 - 22h00)
 
-### Tarefa 1: Revisar código com gptstudio
+### Tarefa 1: Revisar código com chattr
 
-**Objetivo:** Usar ChatGPT para revisar um script tidyverse e propor melhorias.
+**Objetivo:** Usar IA para revisar um script tidyverse e propor melhorias.
 
 **Código para revisar:**
 
@@ -1085,39 +1028,18 @@ resultado <- dados %>%
   )
 
 print(resultado)
+
+#
+# Seus codigos aqui
+
 ```
 
 **Passos:**
 
 1. Selecione todo o código
-2. Use gptstudio → Explain Code
-3. Depois use gptstudio → Write Code com prompt:
+2. Use chattr → Explain Code
+3. Depois use chattr → Write Code com prompt:
    "Sugira 2 melhorias para este código"
-
-**Melhorias esperadas do ChatGPT:**
-
-```{r tarefa1-melhorado}
-# VERSÃO MELHORADA
-library(tidyverse)
-library(palmerpenguins)
-
-# Melhoria 1: Usar drop_na() em vez de múltiplos filter
-# Melhoria 2: Encadear operações em um único pipeline
-resultado <- penguins %>%
-  drop_na(bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g) %>%
-  mutate(bill_ratio = bill_length_mm / bill_depth_mm) %>%
-  group_by(species) %>%
-  summarize(
-    n = n(),
-    across(
-      c(bill_ratio, body_mass_g),
-      list(mean = mean, sd = sd),
-      .names = "{.col}_{.fn}"
-    )
-  )
-
-print(resultado)
-```
 
 ---
 
@@ -1126,6 +1048,7 @@ print(resultado)
 **Objetivo:** Usar Claude para gerar uma função robusta.
 
 **Especificações:**
+
 - Receber um data.frame e nome de coluna numérica
 - Remover NAs
 - Retornar média e desvio-padrão com nomes claros
@@ -1218,11 +1141,13 @@ output: html_document
 ### Comparação ChatGPT vs Claude
 
 **ChatGPT:**
+
 - Velocidade: [sua observação]
 - Qualidade: [sua observação]
 - Melhor para: [sua conclusão]
 
 **Claude:**
+
 - Velocidade: [sua observação]
 - Qualidade: [sua observação]
 - Melhor para: [sua conclusão]

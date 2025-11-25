@@ -208,7 +208,7 @@ prompt
 caso-2-gerar-função-robusta
 caso-3-explicar-traceback-complexo
 exercício-guiado-de-integração-21h30---22h00
-tarefa-1-revisar-código-com-gptstudio
+tarefa-1-revisar-código-com-chattr
 tarefa-2-gerar-função-com-chattr-claude
 tarefa-3-documento-de-reflexão
 comparação-chatgpt-vs-claude

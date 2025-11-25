@@ -377,7 +377,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="11.1" data-path="dia4_ia.html"><a href="#exerc%C3%ADcio-guiado-de-integra%C3%A7%C3%A3o-21h30---22h00"><i class="fa fa-check"></i><b>11.1</b> Exercício Guiado de Integração (21h30 - 22h00)</a>
 <ul>
-<li class="chapter" data-level="11.1.1" data-path="dia4_ia.html"><a href="#tarefa-1-revisar-c%C3%B3digo-com-gptstudio"><i class="fa fa-check"></i><b>11.1.1</b> Tarefa 1: Revisar código com gptstudio</a></li>
+<li class="chapter" data-level="11.1.1" data-path="dia4_ia.html"><a href="#tarefa-1-revisar-c%C3%B3digo-com-chattr"><i class="fa fa-check"></i><b>11.1.1</b> Tarefa 1: Revisar código com chattr</a></li>
 <li class="chapter" data-level="11.1.2" data-path="dia4_ia.html"><a href="#tarefa-2-gerar-fun%C3%A7%C3%A3o-com-chattr-claude"><i class="fa fa-check"></i><b>11.1.2</b> Tarefa 2: Gerar função com chattr (Claude)</a></li>
 <li class="chapter" data-level="11.1.3" data-path="dia4_ia.html"><a href="#tarefa-3-documento-de-reflex%C3%A3o"><i class="fa fa-check"></i><b>11.1.3</b> Tarefa 3: Documento de Reflexão</a></li>
 <li class="chapter" data-level="11.1.4" data-path="dia4_ia.html"><a href="#compara%C3%A7%C3%A3o-chatgpt-vs-claude"><i class="fa fa-check"></i><b>11.1.4</b> Comparação ChatGPT vs Claude</a></li>
@@ -445,155 +445,82 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div id="caso-2-gerar-função-robusta" class="section level4 hasAnchor" number="11.0.0.1">
 <h4><span class="header-section-number">11.0.0.1</span> Caso 2: Gerar função robusta<a href="#caso-2-gerar-fun%C3%A7%C3%A3o-robusta" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="prompt.html#cb138-1" tabindex="-1"></a><span class="co"># Prompt para Claude:</span></span>
-<span id="cb138-2"><a href="prompt.html#cb138-2" tabindex="-1"></a><span class="st">&quot;Crie uma função em R que:</span></span>
-<span id="cb138-3"><a href="prompt.html#cb138-3" tabindex="-1"></a><span class="st">1. Receba um data.frame e nome de coluna numérica</span></span>
-<span id="cb138-4"><a href="prompt.html#cb138-4" tabindex="-1"></a><span class="st">2. Remova NAs</span></span>
-<span id="cb138-5"><a href="prompt.html#cb138-5" tabindex="-1"></a><span class="st">3. Retorne lista com média e desvio padrão</span></span>
-<span id="cb138-6"><a href="prompt.html#cb138-6" tabindex="-1"></a><span class="st">4. Inclua validações de tipo e mensagens de erro claras</span></span>
-<span id="cb138-7"><a href="prompt.html#cb138-7" tabindex="-1"></a><span class="st">5. Documente com comentários&quot;</span></span>
-<span id="cb138-8"><a href="prompt.html#cb138-8" tabindex="-1"></a></span>
-<span id="cb138-9"><a href="prompt.html#cb138-9" tabindex="-1"></a><span class="co"># Claude gera:</span></span>
-<span id="cb138-10"><a href="prompt.html#cb138-10" tabindex="-1"></a><span class="co">#&#39; Calcula estatísticas descritivas de uma coluna numérica</span></span>
-<span id="cb138-11"><a href="prompt.html#cb138-11" tabindex="-1"></a><span class="co">#&#39;</span></span>
-<span id="cb138-12"><a href="prompt.html#cb138-12" tabindex="-1"></a><span class="co">#&#39; @param df Data frame contendo os dados</span></span>
-<span id="cb138-13"><a href="prompt.html#cb138-13" tabindex="-1"></a><span class="co">#&#39; @param col_name String com nome da coluna numérica</span></span>
-<span id="cb138-14"><a href="prompt.html#cb138-14" tabindex="-1"></a><span class="co">#&#39; @return Lista com média e desvio padrão</span></span>
-<span id="cb138-15"><a href="prompt.html#cb138-15" tabindex="-1"></a>calcular_stats <span class="ot">&lt;-</span> <span class="cf">function</span>(df, col_name) {</span>
-<span id="cb138-16"><a href="prompt.html#cb138-16" tabindex="-1"></a>  <span class="co"># Validar entrada: df deve ser data.frame</span></span>
-<span id="cb138-17"><a href="prompt.html#cb138-17" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.data.frame</span>(df)) {</span>
-<span id="cb138-18"><a href="prompt.html#cb138-18" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">&quot;Erro: &#39;df&#39; deve ser um data.frame&quot;</span>)</span>
-<span id="cb138-19"><a href="prompt.html#cb138-19" tabindex="-1"></a>  }</span>
-<span id="cb138-20"><a href="prompt.html#cb138-20" tabindex="-1"></a>  </span>
-<span id="cb138-21"><a href="prompt.html#cb138-21" tabindex="-1"></a>  <span class="co"># Validar: coluna existe</span></span>
-<span id="cb138-22"><a href="prompt.html#cb138-22" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span>col_name <span class="sc">%in%</span> <span class="fu">names</span>(df)) {</span>
-<span id="cb138-23"><a href="prompt.html#cb138-23" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="fu">paste0</span>(<span class="st">&quot;Erro: coluna &#39;&quot;</span>, col_name, <span class="st">&quot;&#39; não encontrada&quot;</span>))</span>
-<span id="cb138-24"><a href="prompt.html#cb138-24" tabindex="-1"></a>  }</span>
-<span id="cb138-25"><a href="prompt.html#cb138-25" tabindex="-1"></a>  </span>
-<span id="cb138-26"><a href="prompt.html#cb138-26" tabindex="-1"></a>  <span class="co"># Extrair coluna</span></span>
-<span id="cb138-27"><a href="prompt.html#cb138-27" tabindex="-1"></a>  coluna <span class="ot">&lt;-</span> df[[col_name]]</span>
-<span id="cb138-28"><a href="prompt.html#cb138-28" tabindex="-1"></a>  </span>
-<span id="cb138-29"><a href="prompt.html#cb138-29" tabindex="-1"></a>  <span class="co"># Validar: coluna é numérica</span></span>
-<span id="cb138-30"><a href="prompt.html#cb138-30" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.numeric</span>(coluna)) {</span>
-<span id="cb138-31"><a href="prompt.html#cb138-31" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="fu">paste0</span>(<span class="st">&quot;Erro: coluna &#39;&quot;</span>, col_name, <span class="st">&quot;&#39; não é numérica&quot;</span>))</span>
-<span id="cb138-32"><a href="prompt.html#cb138-32" tabindex="-1"></a>  }</span>
-<span id="cb138-33"><a href="prompt.html#cb138-33" tabindex="-1"></a>  </span>
-<span id="cb138-34"><a href="prompt.html#cb138-34" tabindex="-1"></a>  <span class="co"># Remover NAs e avisar se houver</span></span>
-<span id="cb138-35"><a href="prompt.html#cb138-35" tabindex="-1"></a>  n_nas <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(coluna))</span>
-<span id="cb138-36"><a href="prompt.html#cb138-36" tabindex="-1"></a>  <span class="cf">if</span> (n_nas <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
-<span id="cb138-37"><a href="prompt.html#cb138-37" tabindex="-1"></a>    <span class="fu">message</span>(<span class="fu">paste0</span>(<span class="st">&quot;Aviso: &quot;</span>, n_nas, <span class="st">&quot; valores NA foram removidos&quot;</span>))</span>
-<span id="cb138-38"><a href="prompt.html#cb138-38" tabindex="-1"></a>  }</span>
-<span id="cb138-39"><a href="prompt.html#cb138-39" tabindex="-1"></a>  coluna_limpa <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(coluna)</span>
-<span id="cb138-40"><a href="prompt.html#cb138-40" tabindex="-1"></a>  </span>
-<span id="cb138-41"><a href="prompt.html#cb138-41" tabindex="-1"></a>  <span class="co"># Validar: ainda há dados após remover NAs</span></span>
-<span id="cb138-42"><a href="prompt.html#cb138-42" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(coluna_limpa) <span class="sc">==</span> <span class="dv">0</span>) {</span>
-<span id="cb138-43"><a href="prompt.html#cb138-43" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">&quot;Erro: nenhum valor válido após remover NAs&quot;</span>)</span>
-<span id="cb138-44"><a href="prompt.html#cb138-44" tabindex="-1"></a>  }</span>
-<span id="cb138-45"><a href="prompt.html#cb138-45" tabindex="-1"></a>  </span>
-<span id="cb138-46"><a href="prompt.html#cb138-46" tabindex="-1"></a>  <span class="co"># Calcular estatísticas</span></span>
-<span id="cb138-47"><a href="prompt.html#cb138-47" tabindex="-1"></a>  <span class="fu">list</span>(</span>
-<span id="cb138-48"><a href="prompt.html#cb138-48" tabindex="-1"></a>    <span class="at">media =</span> <span class="fu">mean</span>(coluna_limpa),</span>
-<span id="cb138-49"><a href="prompt.html#cb138-49" tabindex="-1"></a>    <span class="at">desvio_padrao =</span> <span class="fu">sd</span>(coluna_limpa),</span>
-<span id="cb138-50"><a href="prompt.html#cb138-50" tabindex="-1"></a>    <span class="at">n_observacoes =</span> <span class="fu">length</span>(coluna_limpa),</span>
-<span id="cb138-51"><a href="prompt.html#cb138-51" tabindex="-1"></a>    <span class="at">n_nas_removidos =</span> n_nas</span>
-<span id="cb138-52"><a href="prompt.html#cb138-52" tabindex="-1"></a>  )</span>
-<span id="cb138-53"><a href="prompt.html#cb138-53" tabindex="-1"></a>}</span>
-<span id="cb138-54"><a href="prompt.html#cb138-54" tabindex="-1"></a></span>
-<span id="cb138-55"><a href="prompt.html#cb138-55" tabindex="-1"></a><span class="co"># Teste</span></span>
-<span id="cb138-56"><a href="prompt.html#cb138-56" tabindex="-1"></a>dados <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="cn">NA</span>, <span class="dv">4</span>, <span class="dv">5</span>), <span class="at">y =</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>])</span>
-<span id="cb138-57"><a href="prompt.html#cb138-57" tabindex="-1"></a><span class="fu">calcular_stats</span>(dados, <span class="st">&quot;x&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="prompt.html#cb139-1" tabindex="-1"></a><span class="co"># Prompt para Claude:</span></span>
+<span id="cb139-2"><a href="prompt.html#cb139-2" tabindex="-1"></a>prompt <span class="ot">&lt;-</span> <span class="st">&quot;Crie uma função em R que:</span></span>
+<span id="cb139-3"><a href="prompt.html#cb139-3" tabindex="-1"></a><span class="st">1. Receba um data.frame e nome de coluna numérica</span></span>
+<span id="cb139-4"><a href="prompt.html#cb139-4" tabindex="-1"></a><span class="st">2. Remova NAs</span></span>
+<span id="cb139-5"><a href="prompt.html#cb139-5" tabindex="-1"></a><span class="st">3. Retorne lista com média e desvio padrão</span></span>
+<span id="cb139-6"><a href="prompt.html#cb139-6" tabindex="-1"></a><span class="st">4. Inclua validações de tipo e mensagens de erro claras</span></span>
+<span id="cb139-7"><a href="prompt.html#cb139-7" tabindex="-1"></a><span class="st">5. Documente com comentários&quot;</span></span>
+<span id="cb139-8"><a href="prompt.html#cb139-8" tabindex="-1"></a></span>
+<span id="cb139-9"><a href="prompt.html#cb139-9" tabindex="-1"></a><span class="fu">chattr</span>(prompt)</span></code></pre></div>
 </div>
 <div id="caso-3-explicar-traceback-complexo" class="section level4 hasAnchor" number="11.0.0.2">
 <h4><span class="header-section-number">11.0.0.2</span> Caso 3: Explicar traceback complexo<a href="prompt.html#caso-3-explicar-traceback-complexo" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="prompt.html#cb139-1" tabindex="-1"></a><span class="co"># Erro complexo</span></span>
-<span id="cb139-2"><a href="prompt.html#cb139-2" tabindex="-1"></a>erro <span class="ot">&lt;-</span> <span class="st">&quot;</span></span>
-<span id="cb139-3"><a href="prompt.html#cb139-3" tabindex="-1"></a><span class="st">Error in mutate(., nova_col = antiga_col * 2) : </span></span>
-<span id="cb139-4"><a href="prompt.html#cb139-4" tabindex="-1"></a><span class="st">  ℹ In argument: `nova_col = antiga_col * 2`.</span></span>
-<span id="cb139-5"><a href="prompt.html#cb139-5" tabindex="-1"></a><span class="st">Caused by error:</span></span>
-<span id="cb139-6"><a href="prompt.html#cb139-6" tabindex="-1"></a><span class="st">! object &#39;antiga_col&#39; not found</span></span>
-<span id="cb139-7"><a href="prompt.html#cb139-7" tabindex="-1"></a><span class="st">Run `rlang::last_trace()` to see where the error occurred.</span></span>
-<span id="cb139-8"><a href="prompt.html#cb139-8" tabindex="-1"></a><span class="st">&quot;</span></span>
-<span id="cb139-9"><a href="prompt.html#cb139-9" tabindex="-1"></a></span>
-<span id="cb139-10"><a href="prompt.html#cb139-10" tabindex="-1"></a><span class="co"># Prompt para Claude:</span></span>
-<span id="cb139-11"><a href="prompt.html#cb139-11" tabindex="-1"></a><span class="st">&quot;Explique este erro do R e como corrigi-lo:</span></span>
-<span id="cb139-12"><a href="prompt.html#cb139-12" tabindex="-1"></a><span class="st">[cole o erro acima]&quot;</span></span>
-<span id="cb139-13"><a href="prompt.html#cb139-13" tabindex="-1"></a></span>
-<span id="cb139-14"><a href="prompt.html#cb139-14" tabindex="-1"></a><span class="co"># Claude explica:</span></span>
-<span id="cb139-15"><a href="prompt.html#cb139-15" tabindex="-1"></a><span class="co"># - O que significa cada linha do erro</span></span>
-<span id="cb139-16"><a href="prompt.html#cb139-16" tabindex="-1"></a><span class="co"># - Por que ocorreu (coluna não existe)</span></span>
-<span id="cb139-17"><a href="prompt.html#cb139-17" tabindex="-1"></a><span class="co"># - Como diagnosticar (verificar names(dados))</span></span>
-<span id="cb139-18"><a href="prompt.html#cb139-18" tabindex="-1"></a><span class="co"># - Como corrigir (usar nome correto ou criar coluna)</span></span>
-<span id="cb139-19"><a href="prompt.html#cb139-19" tabindex="-1"></a><span class="co"># - Dicas para evitar no futuro</span></span></code></pre></div>
+<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="prompt.html#cb140-1" tabindex="-1"></a><span class="co"># Erro complexo</span></span>
+<span id="cb140-2"><a href="prompt.html#cb140-2" tabindex="-1"></a>erro <span class="ot">&lt;-</span> <span class="st">&quot;</span></span>
+<span id="cb140-3"><a href="prompt.html#cb140-3" tabindex="-1"></a><span class="st">Error in mutate(., nova_col = antiga_col * 2) : </span></span>
+<span id="cb140-4"><a href="prompt.html#cb140-4" tabindex="-1"></a><span class="st">  ℹ In argument: `nova_col = antiga_col * 2`.</span></span>
+<span id="cb140-5"><a href="prompt.html#cb140-5" tabindex="-1"></a><span class="st">Caused by error:</span></span>
+<span id="cb140-6"><a href="prompt.html#cb140-6" tabindex="-1"></a><span class="st">! object &#39;antiga_col&#39; not found</span></span>
+<span id="cb140-7"><a href="prompt.html#cb140-7" tabindex="-1"></a><span class="st">Run `rlang::last_trace()` to see where the error occurred.</span></span>
+<span id="cb140-8"><a href="prompt.html#cb140-8" tabindex="-1"></a><span class="st">&quot;</span></span>
+<span id="cb140-9"><a href="prompt.html#cb140-9" tabindex="-1"></a></span>
+<span id="cb140-10"><a href="prompt.html#cb140-10" tabindex="-1"></a><span class="fu">chattr</span>(erro)</span></code></pre></div>
 <hr />
 </div>
 <div id="exercício-guiado-de-integração-21h30---22h00" class="section level2 hasAnchor" number="11.1">
 <h2><span class="header-section-number">11.1</span> Exercício Guiado de Integração (21h30 - 22h00)<a href="#exerc%C3%ADcio-guiado-de-integra%C3%A7%C3%A3o-21h30---22h00" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="tarefa-1-revisar-código-com-gptstudio" class="section level3 hasAnchor" number="11.1.1">
-<h3><span class="header-section-number">11.1.1</span> Tarefa 1: Revisar código com gptstudio<a href="#tarefa-1-revisar-c%C3%B3digo-com-gptstudio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>Objetivo:</strong> Usar ChatGPT para revisar um script tidyverse e propor melhorias.</p>
+<div id="tarefa-1-revisar-código-com-chattr" class="section level3 hasAnchor" number="11.1.1">
+<h3><span class="header-section-number">11.1.1</span> Tarefa 1: Revisar código com chattr<a href="#tarefa-1-revisar-c%C3%B3digo-com-chattr" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Objetivo:</strong> Usar IA para revisar um script tidyverse e propor melhorias.</p>
 <p><strong>Código para revisar:</strong></p>
-<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="prompt.html#cb140-1" tabindex="-1"></a><span class="co"># Salve este código em: scripts/04_ia_integracao_gptstudio.R</span></span>
-<span id="cb140-2"><a href="prompt.html#cb140-2" tabindex="-1"></a></span>
-<span id="cb140-3"><a href="prompt.html#cb140-3" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb140-4"><a href="prompt.html#cb140-4" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb140-5"><a href="prompt.html#cb140-5" tabindex="-1"></a></span>
-<span id="cb140-6"><a href="prompt.html#cb140-6" tabindex="-1"></a><span class="co"># Análise de pinguins</span></span>
-<span id="cb140-7"><a href="prompt.html#cb140-7" tabindex="-1"></a>dados <span class="ot">&lt;-</span> penguins</span>
-<span id="cb140-8"><a href="prompt.html#cb140-8" tabindex="-1"></a>dados <span class="ot">&lt;-</span> dados <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(bill_length_mm))</span>
-<span id="cb140-9"><a href="prompt.html#cb140-9" tabindex="-1"></a>dados <span class="ot">&lt;-</span> dados <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(bill_depth_mm))</span>
-<span id="cb140-10"><a href="prompt.html#cb140-10" tabindex="-1"></a>dados <span class="ot">&lt;-</span> dados <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(flipper_length_mm))</span>
-<span id="cb140-11"><a href="prompt.html#cb140-11" tabindex="-1"></a>dados <span class="ot">&lt;-</span> dados <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(body_mass_g))</span>
-<span id="cb140-12"><a href="prompt.html#cb140-12" tabindex="-1"></a></span>
-<span id="cb140-13"><a href="prompt.html#cb140-13" tabindex="-1"></a>resultado <span class="ot">&lt;-</span> dados <span class="sc">%&gt;%</span></span>
-<span id="cb140-14"><a href="prompt.html#cb140-14" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">bill_ratio =</span> bill_length_mm <span class="sc">/</span> bill_depth_mm) <span class="sc">%&gt;%</span></span>
-<span id="cb140-15"><a href="prompt.html#cb140-15" tabindex="-1"></a>  <span class="fu">group_by</span>(species) <span class="sc">%&gt;%</span></span>
-<span id="cb140-16"><a href="prompt.html#cb140-16" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
-<span id="cb140-17"><a href="prompt.html#cb140-17" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
-<span id="cb140-18"><a href="prompt.html#cb140-18" tabindex="-1"></a>    <span class="at">bill_ratio_mean =</span> <span class="fu">mean</span>(bill_ratio),</span>
-<span id="cb140-19"><a href="prompt.html#cb140-19" tabindex="-1"></a>    <span class="at">bill_ratio_sd =</span> <span class="fu">sd</span>(bill_ratio),</span>
-<span id="cb140-20"><a href="prompt.html#cb140-20" tabindex="-1"></a>    <span class="at">mass_mean =</span> <span class="fu">mean</span>(body_mass_g),</span>
-<span id="cb140-21"><a href="prompt.html#cb140-21" tabindex="-1"></a>    <span class="at">mass_sd =</span> <span class="fu">sd</span>(body_mass_g)</span>
-<span id="cb140-22"><a href="prompt.html#cb140-22" tabindex="-1"></a>  )</span>
-<span id="cb140-23"><a href="prompt.html#cb140-23" tabindex="-1"></a></span>
-<span id="cb140-24"><a href="prompt.html#cb140-24" tabindex="-1"></a><span class="fu">print</span>(resultado)</span></code></pre></div>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="prompt.html#cb141-1" tabindex="-1"></a><span class="co"># Salve este código em: scripts/04_ia_integracao_gptstudio.R</span></span>
+<span id="cb141-2"><a href="prompt.html#cb141-2" tabindex="-1"></a></span>
+<span id="cb141-3"><a href="prompt.html#cb141-3" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb141-4"><a href="prompt.html#cb141-4" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb141-5"><a href="prompt.html#cb141-5" tabindex="-1"></a></span>
+<span id="cb141-6"><a href="prompt.html#cb141-6" tabindex="-1"></a><span class="co"># Análise de pinguins</span></span>
+<span id="cb141-7"><a href="prompt.html#cb141-7" tabindex="-1"></a>dados <span class="ot">&lt;-</span> penguins</span>
+<span id="cb141-8"><a href="prompt.html#cb141-8" tabindex="-1"></a>dados <span class="ot">&lt;-</span> dados <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(bill_length_mm))</span>
+<span id="cb141-9"><a href="prompt.html#cb141-9" tabindex="-1"></a>dados <span class="ot">&lt;-</span> dados <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(bill_depth_mm))</span>
+<span id="cb141-10"><a href="prompt.html#cb141-10" tabindex="-1"></a>dados <span class="ot">&lt;-</span> dados <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(flipper_length_mm))</span>
+<span id="cb141-11"><a href="prompt.html#cb141-11" tabindex="-1"></a>dados <span class="ot">&lt;-</span> dados <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(body_mass_g))</span>
+<span id="cb141-12"><a href="prompt.html#cb141-12" tabindex="-1"></a></span>
+<span id="cb141-13"><a href="prompt.html#cb141-13" tabindex="-1"></a>resultado <span class="ot">&lt;-</span> dados <span class="sc">%&gt;%</span></span>
+<span id="cb141-14"><a href="prompt.html#cb141-14" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">bill_ratio =</span> bill_length_mm <span class="sc">/</span> bill_depth_mm) <span class="sc">%&gt;%</span></span>
+<span id="cb141-15"><a href="prompt.html#cb141-15" tabindex="-1"></a>  <span class="fu">group_by</span>(species) <span class="sc">%&gt;%</span></span>
+<span id="cb141-16"><a href="prompt.html#cb141-16" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb141-17"><a href="prompt.html#cb141-17" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
+<span id="cb141-18"><a href="prompt.html#cb141-18" tabindex="-1"></a>    <span class="at">bill_ratio_mean =</span> <span class="fu">mean</span>(bill_ratio),</span>
+<span id="cb141-19"><a href="prompt.html#cb141-19" tabindex="-1"></a>    <span class="at">bill_ratio_sd =</span> <span class="fu">sd</span>(bill_ratio),</span>
+<span id="cb141-20"><a href="prompt.html#cb141-20" tabindex="-1"></a>    <span class="at">mass_mean =</span> <span class="fu">mean</span>(body_mass_g),</span>
+<span id="cb141-21"><a href="prompt.html#cb141-21" tabindex="-1"></a>    <span class="at">mass_sd =</span> <span class="fu">sd</span>(body_mass_g)</span>
+<span id="cb141-22"><a href="prompt.html#cb141-22" tabindex="-1"></a>  )</span>
+<span id="cb141-23"><a href="prompt.html#cb141-23" tabindex="-1"></a></span>
+<span id="cb141-24"><a href="prompt.html#cb141-24" tabindex="-1"></a><span class="fu">print</span>(resultado)</span>
+<span id="cb141-25"><a href="prompt.html#cb141-25" tabindex="-1"></a></span>
+<span id="cb141-26"><a href="prompt.html#cb141-26" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb141-27"><a href="prompt.html#cb141-27" tabindex="-1"></a><span class="co"># Seus codigos aqui</span></span></code></pre></div>
 <p><strong>Passos:</strong></p>
 <ol style="list-style-type: decimal">
 <li>Selecione todo o código</li>
-<li>Use gptstudio → Explain Code</li>
-<li>Depois use gptstudio → Write Code com prompt:
+<li>Use chattr → Explain Code</li>
+<li>Depois use chattr → Write Code com prompt:
 “Sugira 2 melhorias para este código”</li>
 </ol>
-<p><strong>Melhorias esperadas do ChatGPT:</strong></p>
-<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="prompt.html#cb141-1" tabindex="-1"></a><span class="co"># VERSÃO MELHORADA</span></span>
-<span id="cb141-2"><a href="prompt.html#cb141-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb141-3"><a href="prompt.html#cb141-3" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb141-4"><a href="prompt.html#cb141-4" tabindex="-1"></a></span>
-<span id="cb141-5"><a href="prompt.html#cb141-5" tabindex="-1"></a><span class="co"># Melhoria 1: Usar drop_na() em vez de múltiplos filter</span></span>
-<span id="cb141-6"><a href="prompt.html#cb141-6" tabindex="-1"></a><span class="co"># Melhoria 2: Encadear operações em um único pipeline</span></span>
-<span id="cb141-7"><a href="prompt.html#cb141-7" tabindex="-1"></a>resultado <span class="ot">&lt;-</span> penguins <span class="sc">%&gt;%</span></span>
-<span id="cb141-8"><a href="prompt.html#cb141-8" tabindex="-1"></a>  <span class="fu">drop_na</span>(bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g) <span class="sc">%&gt;%</span></span>
-<span id="cb141-9"><a href="prompt.html#cb141-9" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">bill_ratio =</span> bill_length_mm <span class="sc">/</span> bill_depth_mm) <span class="sc">%&gt;%</span></span>
-<span id="cb141-10"><a href="prompt.html#cb141-10" tabindex="-1"></a>  <span class="fu">group_by</span>(species) <span class="sc">%&gt;%</span></span>
-<span id="cb141-11"><a href="prompt.html#cb141-11" tabindex="-1"></a>  <span class="fu">summarize</span>(</span>
-<span id="cb141-12"><a href="prompt.html#cb141-12" tabindex="-1"></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
-<span id="cb141-13"><a href="prompt.html#cb141-13" tabindex="-1"></a>    <span class="fu">across</span>(</span>
-<span id="cb141-14"><a href="prompt.html#cb141-14" tabindex="-1"></a>      <span class="fu">c</span>(bill_ratio, body_mass_g),</span>
-<span id="cb141-15"><a href="prompt.html#cb141-15" tabindex="-1"></a>      <span class="fu">list</span>(<span class="at">mean =</span> mean, <span class="at">sd =</span> sd),</span>
-<span id="cb141-16"><a href="prompt.html#cb141-16" tabindex="-1"></a>      <span class="at">.names =</span> <span class="st">&quot;{.col}_{.fn}&quot;</span></span>
-<span id="cb141-17"><a href="prompt.html#cb141-17" tabindex="-1"></a>    )</span>
-<span id="cb141-18"><a href="prompt.html#cb141-18" tabindex="-1"></a>  )</span>
-<span id="cb141-19"><a href="prompt.html#cb141-19" tabindex="-1"></a></span>
-<span id="cb141-20"><a href="prompt.html#cb141-20" tabindex="-1"></a><span class="fu">print</span>(resultado)</span></code></pre></div>
 <hr />
 </div>
 <div id="tarefa-2-gerar-função-com-chattr-claude" class="section level3 hasAnchor" number="11.1.2">
 <h3><span class="header-section-number">11.1.2</span> Tarefa 2: Gerar função com chattr (Claude)<a href="#tarefa-2-gerar-fun%C3%A7%C3%A3o-com-chattr-claude" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Objetivo:</strong> Usar Claude para gerar uma função robusta.</p>
-<p><strong>Especificações:</strong>
-- Receber um data.frame e nome de coluna numérica
-- Remover NAs
-- Retornar média e desvio-padrão com nomes claros
-- Incluir validação de tipos e mensagens de erro úteis</p>
+<p><strong>Especificações:</strong></p>
+<ul>
+<li>Receber um data.frame e nome de coluna numérica</li>
+<li>Remover NAs</li>
+<li>Retornar média e desvio-padrão com nomes claros</li>
+<li>Incluir validação de tipos e mensagens de erro úteis</li>
+</ul>
 <p><strong>Prompt para Claude:</strong></p>
 <div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="prompt.html#cb142-1" tabindex="-1"></a><span class="co"># No console R:</span></span>
 <span id="cb142-2"><a href="prompt.html#cb142-2" tabindex="-1"></a><span class="fu">chattr</span>(<span class="st">&quot;</span></span>
@@ -666,14 +593,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="comparação-chatgpt-vs-claude" class="section level3 hasAnchor" number="11.1.4">
 <h3><span class="header-section-number">11.1.4</span> Comparação ChatGPT vs Claude<a href="#compara%C3%A7%C3%A3o-chatgpt-vs-claude" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><strong>ChatGPT:</strong>
-- Velocidade: [sua observação]
-- Qualidade: [sua observação]
-- Melhor para: [sua conclusão]</p>
-<p><strong>Claude:</strong>
-- Velocidade: [sua observação]
-- Qualidade: [sua observação]
-- Melhor para: [sua conclusão]</p>
+<p><strong>ChatGPT:</strong></p>
+<ul>
+<li>Velocidade: [sua observação]</li>
+<li>Qualidade: [sua observação]</li>
+<li>Melhor para: [sua conclusão]</li>
+</ul>
+<p><strong>Claude:</strong></p>
+<ul>
+<li>Velocidade: [sua observação]</li>
+<li>Qualidade: [sua observação]</li>
+<li>Melhor para: [sua conclusão]</li>
+</ul>
 </div>
 <div id="reflexão-final" class="section level3 hasAnchor" number="11.1.5">
 <h3><span class="header-section-number">11.1.5</span> Reflexão Final<a href="#reflex%C3%A3o-final" class="anchor-section" aria-label="Anchor link to header"></a></h3>
