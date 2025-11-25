@@ -589,11 +589,11 @@ Aproveite para:
 
 ---
 
-## RStudio + gptstudio (ChatGPT) (20h30 - 21h00)
+## RStudio + chattr (20h30 - 21h00)
 
-### Conhecendo o gptstudio
+### Conhecendo o chattr
 
-**gptstudio** adiciona superpoderes de IA ao RStudio através de Addins.
+**chattr** adiciona superpoderes de IA ao RStudio através de Addins.
 
 **Recursos principais:**
 
@@ -605,48 +605,46 @@ Aproveite para:
 
 ### Acessando os Addins
 
-**Menu:** `Addins → GPTSTUDIO → ...`
+**Menu:** `Addins → chattr → ...`
 
 **Atalhos de teclado (configuráveis):**
 
 - Tools → Modify Keyboard Shortcuts
-- Busque "GPTSTUDIO"
+- Busque "chattr"
 - Configure atalhos personalizados
 
 ---
+
+### Definindo o modelo de IA para ser utilizado
+
+Modelos disponíveis no **ChatGPT (OpenAI)**
+```{r}
+models_openai()
+```
+
+Modelos disponíveis no **Claude (Anthropic)**. 
+```{r}
+models_anthropic()
+```
+
+Escolhendo o modelo para uso:
+```{r}
+my_chat <- ellmer::chat_anthropic()
+my_chat <- ellmer::chat_anthropic(model = 'claude-opus-4-1-20250805')
+
+my_chat <- ellmer::chat_openai()
+my_chat <- ellmer::chat_openai(model = 'gpt-5.1-codex-mini')
+
+chattr_use(my_chat)
+```
 
 ### Chat Integrado
 
 **Como abrir:**
 
 ```{r}
-library(chattr)
-
-chattr_use("gpt41-mini")  # Recomendado: rápido e econômico
-
 # Abre o chat no painel lateral do RStudio
 chattr_app(as_job = TRUE)
-
-# Ou use o Addin: Tools > Addins > Browse Addins > "chattr"
-```
-
-```{r}
-# OpenAI Models (requer OPENAI_API_KEY)
-# chattr_use("gpt35")        # gpt-3.5-turbo
-chattr_use("gpt41")         # gpt-4
-chattr_use("gpt4o")        # gpt-4o
-chattr_use("gpt41-mini")   # gpt-4o-mini
-
-# Anthropic Models (requer ANTHROPIC_API_KEY)
-# Configure o provider diretamente
-chattr_defaults(
-  provider = "anthropic",
-  model = "claude-3-5-sonnet-20241022"
-)
-```
-```{r}
-# Lista de provedores suportados
-chattr_defaults()
 ```
 
 **Interface do Chat:**
