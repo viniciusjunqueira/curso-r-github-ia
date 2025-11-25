@@ -681,12 +681,6 @@ chattr("Por que este código dá erro: mean(NA)")
 
 ### Explicar Código Selecionado
 
-**Como usar:**
-
-1. Selecione código no editor
-2. `Addins → GPTSTUDIO → Explain Code`
-3. Explicação aparece no console ou chat
-
 **Exemplo:**
 
 ```{r}
@@ -714,7 +708,7 @@ chattr("Explique este codigo: dados %>%
   arrange(desc(media))")
 ```
 
-**O que o ChatGPT explica:**
+**O que o LLM explica:**
 
 - O que cada linha faz
 - Ordem de execução
@@ -723,51 +717,7 @@ chattr("Explique este codigo: dados %>%
 
 ---
 
-### Comentar Código Automaticamente
-
-**Como usar:**
-
-1. Selecione código sem comentários
-2. `Addins → GPTSTUDIO → Comment Code`
-3. Comentários são inseridos automaticamente
-
-**Exemplo:**
-
-```{r comentar-codigo}
-# ANTES (sem comentários)
-calcular_estatisticas <- function(x) {
-  x <- x[!is.na(x)]
-  list(
-    n = length(x),
-    media = mean(x),
-    mediana = median(x),
-    dp = sd(x),
-    min = min(x),
-    max = max(x)
-  )
-}
-
-# DEPOIS (com comentários gerados)
-# Calcula estatísticas descritivas de um vetor numérico
-calcular_estatisticas <- function(x) {
-  # Remove valores NA do vetor
-  x <- x[!is.na(x)]
-  
-  # Retorna lista com estatísticas básicas
-  list(
-    n = length(x),           # Tamanho da amostra
-    media = mean(x),         # Média aritmética
-    mediana = median(x),     # Mediana (valor central)
-    dp = sd(x),             # Desvio padrão
-    min = min(x),           # Valor mínimo
-    max = max(x)            # Valor máximo
-  )
-}
-```
-
----
-
-### Casos de Uso Práticos com ChatGPT
+### Casos de Uso Práticos
 
 #### Caso 1: Explicar um erro
 
@@ -826,71 +776,6 @@ chattr(
 
 ---
 
-## RStudio + chattr (Claude) (21h00 - 21h30)
-
-### Conhecendo o chattr
-
-**chattr** é uma interface unificada para múltiplos modelos de IA, incluindo Claude.
-
-**Vantagens:**
-
-- Suporta Claude, ChatGPT, Google Gemini, outros
-- Interface simples e consistente
-- Chat interativo no console
-- Fácil trocar entre modelos
-
-### Configuração inicial
-
-```{r chattr-config}
-library(chattr)
-
-# Ver modelos disponíveis
-chattr_models()
-
-# Configurar Claude como padrão
-chattr_defaults(
-  provider = "anthropic",
-  model = "claude-3-5-sonnet-latest",
-  max_tokens = 1000
-)
-
-# Verificar configuração
-chattr_defaults()
-```
-
----
-
-### Chat Interativo
-
-**Como usar:**
-
-```{r chattr-uso}
-# Iniciar chat no console
-# chattr()
-# The function chattr() is not an R function. If you meant `chart()`, please clarify.
-# If you want to create a plot or a chart in R, please specify the data & type.
-# Example: a ggplot2 scatter plot using the mpg dataset.
-
-library(ggplot2)
-ggplot(mpg, aes(x = displ, y = hwy)) +
-  geom_point() +
-  labs(title = "Engine Displacement)
-
-# Interface interativa aparece
-# Digite sua pergunta e Enter
-# "Como criar um data.frame em R?"
-
-# Para sair: digite "exit" ou "quit"
-```
-
-**Recursos do chat:**
-
-- Histórico de conversa mantido na sessão
-- Contexto preservado (lembra conversa anterior)
-- Copy/paste de código facilmente
-
----
-
 ### Chat Programático
 
 ```{r chattr-programatico}
@@ -916,8 +801,6 @@ print(historico)
 ```
 
 ---
-
-### Casos de Uso Práticos com Claude
 
 #### Caso 1: Análise profunda de código
 
@@ -1043,98 +926,15 @@ print(resultado)
 
 ### Tarefa 2: Gerar função com chattr (Claude)
 
-**Objetivo:** Usar Claude para gerar uma função robusta.
-
-**Especificações:**
-
-- Receber um data.frame e nome de coluna numérica
-- Remover NAs
-- Retornar média e desvio-padrão com nomes claros
-- Incluir validação de tipos e mensagens de erro úteis
-
-**Prompt para Claude:**
-
-```{r tarefa2-prompt}
-# No console R:
-chattr("
-Crie uma função em R chamada 'estatisticas_coluna' que:
-
-1. Receba dois argumentos:
-   - df: um data.frame
-   - col_name: string com nome da coluna
-
-2. Valide que:
-   - df é um data.frame (se não, erro claro)
-   - col_name existe em df (se não, erro claro)
-   - A coluna é numérica (se não, erro claro)
-
-3. Remova valores NA e avise quantos foram removidos
-
-4. Retorne uma lista nomeada com:
-   - media: média da coluna
-   - desvio_padrao: desvio padrão da coluna
-   - n_validos: número de observações válidas
-   - n_nas: número de NAs removidos
-
-5. Adicione documentação roxygen2 e comentários
-
-6. Inclua exemplo de uso
-")
-```
+**Objetivo:** Usar LLM para gerar um arquivo de dados.
 
 **Salve a resposta em:** `scripts/04_ia_integracao_claude.R`
 
 ---
 
-### Tarefa 3: Documento de Reflexão
+### Tarefa 3: Criar um gráfico a partir do data.frame criado
 
-**Objetivo:** Documentar o processo e aprendizados.
-
-**Crie:** `docs/relatorio_ia.Rmd`
-
-```{r tarefa3-relatorio}
-# Arquivo: docs/relatorio_ia.Rmd
----
-title: "Integração de IA no RStudio - Reflexões"
-author: "Seu Nome"
-date: "`r Sys.Date()`"
-output: html_document
----
-
-## Tarefa 1: Revisão com ChatGPT
-
-**Código Original:**
-[Cole o código original aqui]
-
-**Sugestões do ChatGPT:**
-1. [Descreva a primeira sugestão]
-2. [Descreva a segunda sugestão]
-
-**O que adotei e por quê:**
-[Explique quais sugestões você implementou e sua justificativa]
-
-**O que não adotei e por quê:**
-[Se houver, explique o que não usou e por quê]
-
-## Tarefa 2: Função com Claude
-
-**Especificações solicitadas:**
-- [Liste as especificações]
-
-**Código gerado pelo Claude:**
-```{r}
-# [Cole a função gerada]
-```
-
-**Testes realizados:**
-```{r}
-# [Cole seus testes]
-```
-
-**Avaliação:**
-- **Pontos positivos:** [O que funcionou bem]
-- **Ajustes necessários:** [O que você teve que modificar]
-- **Aprendizados:** [O que você aprendeu no processo]
+**Objetivo:** Usar LLM para automatizar o processo
 
 ### Comparação ChatGPT vs Claude
 
@@ -1153,7 +953,6 @@ output: html_document
 ### Reflexão Final
 
 [Escreva um parágrafo sobre como você pretende usar IA no seu trabalho com R]
-```
 
 ---
 
@@ -1408,7 +1207,7 @@ Error: Could not resolve host
 **Dia 4:**
 - Integração de IA no workflow
 - APIs OpenAI e Anthropic
-- gptstudio e chattr
+- Pacote chattr
 - Uso responsável de IA
 
 ## Próximos passos:
