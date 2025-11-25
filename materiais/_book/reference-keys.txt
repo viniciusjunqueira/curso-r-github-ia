@@ -193,7 +193,6 @@ acessando-os-addins
 chat-integrado
 explicar-código-selecionado
 comentar-código-automaticamente
-chamadas-via-api-manual-httr2
 casos-de-uso-práticos-com-chatgpt
 caso-1-explicar-um-erro
 caso-2-refatorar-função
@@ -203,9 +202,9 @@ conhecendo-o-chattr
 configuração-inicial
 chat-interativo
 chat-programático
-chamadas-via-api-manual-claude
 casos-de-uso-práticos-com-claude
 caso-1-análise-profunda-de-código
+prompt
 caso-2-gerar-função-robusta
 caso-3-explicar-traceback-complexo
 exercício-guiado-de-integração-21h30---22h00

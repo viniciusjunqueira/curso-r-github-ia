@@ -165,6 +165,7 @@ library(tidyverse)
 **API = Application Programming Interface** (Interface de Programação de Aplicações)
 
 **Analogia do restaurante:**
+
 - **Você** = seu código R
 - **Cozinha** = servidor da OpenAI/Anthropic com o modelo de IA
 - **Garçom** = API que leva seu pedido e traz a resposta
@@ -178,10 +179,12 @@ library(tidyverse)
    ```
 
 2. **API envia para o modelo de IA**
+
    - Viaja pela internet até os servidores
    - Processa sua pergunta
 
 3. **Modelo gera resposta**
+
    - Analisa contexto
    - Gera texto/código
 
@@ -320,6 +323,7 @@ git commit -m "feat: adiciona função zscore (gerada com ChatGPT)"
 **Processo recomendado:**
 
 1. **Entenda** o código gerado
+
    - Leia linha por linha
    - Pergunte à IA se não entender algo
    - Pesquise funções desconhecidas
@@ -334,11 +338,13 @@ git commit -m "feat: adiciona função zscore (gerada com ChatGPT)"
    ```
 
 3. **Valide** resultados
+
    - Compare com métodos conhecidos
    - Verifique casos conhecidos
    - Use diferentes inputs
 
 4. **Refatore** se necessário
+
    - Melhore legibilidade
    - Adicione validações
    - Otimize performance
@@ -526,9 +532,10 @@ Sys.getenv("ANTHROPIC_API_KEY")
 # Pacotes necessários
 install.packages(c(
   "gptstudio",    # Interface para ChatGPT no RStudio
-  "chattr",       # Interface para múltiplos LLMs (incluindo Claude)
+  "chattr",       # Interface para múltiplos LLMs
   "httr2",        # Cliente HTTP moderno (para APIs)
-  "jsonlite"      # Trabalhar com JSON
+  "jsonlite",      # Trabalhar com JSON
+  "shiny"
 ))
 
 # Verificar instalação
@@ -536,6 +543,8 @@ library(gptstudio)
 library(chattr)
 library(httr2)
 library(jsonlite)
+library(shiny)
+library(tidyverse)
 ```
 
 ### O que cada pacote faz
@@ -611,41 +620,33 @@ Aproveite para:
 **Como abrir:**
 
 ```{r}
-gptstudio_chat(host = getOption("shiny.host", "127.0.0.1"))
+library(chattr)
+
+chattr_use("gpt41-mini")  # Recomendado: rápido e econômico
+
+# Abre o chat no painel lateral do RStudio
+chattr_app(as_job = TRUE)
+
+# Ou use o Addin: Tools > Addins > Browse Addins > "chattr"
 ```
 
 ```{r}
-# Para OpenAI
-gptstudio::get_available_models(service = "openai")
+# OpenAI Models (requer OPENAI_API_KEY)
+# chattr_use("gpt35")        # gpt-3.5-turbo
+chattr_use("gpt41")         # gpt-4
+chattr_use("gpt4o")        # gpt-4o
+chattr_use("gpt41-mini")   # gpt-4o-mini
 
-# Para Anthropic (Claude)
-gptstudio::get_available_models(service = "anthropic")
-
-# Para Google (Gemini)
-# gptstudio::get_available_models(service = "google")
-
-# Para Azure OpenAI
-# gptstudio::get_available_models(service = "azure_openai")
+# Anthropic Models (requer ANTHROPIC_API_KEY)
+# Configure o provider diretamente
+chattr_defaults(
+  provider = "anthropic",
+  model = "claude-3-5-sonnet-20241022"
+)
 ```
-
 ```{r}
-# Configurar o modelo globalmente via variável de ambiente
-# Sys.setenv(OPENAI_MODEL = "gpt-4")
-Sys.setenv(OPENAI_MODEL = "gpt-3.5-turbo")
-# Sys.setenv(OPENAI_MODEL = "gpt-4-turbo-preview")
-```
-
-```{r}
-# Especificar o modelo diretamente na chamada
-# gptstudio::chat(
-  # prompt = "Sua pergunta aqui",
-  # model = "gpt-4"
-# )
-```
-
-```{r}
-# No console
-gptstudio::chat("Qual é a capital do Brasil?")
+# Lista de provedores suportados
+chattr_defaults()
 ```
 
 **Interface do Chat:**
@@ -658,19 +659,17 @@ gptstudio::chat("Qual é a capital do Brasil?")
 **Uso básico:**
 
 ```{r}
-# Perguntas gerais
-
-gptstudio::chat("Como criar um vetor em R?")
-
+# Criar um vetor numérico em R
+chattr("Como criar um vetor em R?")
 
 # Explicar conceitos
-# "O que é um data.frame?"
+chattr("O que é um data.frame?")
 
 # Gerar código
-# "Crie uma função que calcule média e desvio padrão"
+chattr("Crie uma função que calcule média e desvio padrão")
 
 # Debugging
-# "Por que este código dá erro: mean(NA)"
+chattr("Por que este código dá erro: mean(NA)")
 ```
 
 **Dicas para bons prompts:**
@@ -703,6 +702,18 @@ dados %>%
     dp = sd(valor)
   ) %>%
   arrange(desc(media))
+```
+
+```{r}
+chattr("Explique este codigo: dados %>%
+  filter(!is.na(valor)) %>%
+  group_by(categoria) %>%
+  summarize(
+    n = n(),
+    media = mean(valor),
+    dp = sd(valor)
+  ) %>%
+  arrange(desc(media))")
 ```
 
 **O que o ChatGPT explica:**
@@ -758,73 +769,6 @@ calcular_estatisticas <- function(x) {
 
 ---
 
-### Chamadas via API Manual (httr2)
-
-Para mais controle e automação, podemos chamar a API diretamente.
-
-**Estrutura básica:**
-
-```{r api-chatgpt-manual}
-library(httr2)
-library(jsonlite)
-
-# 1. ENDPOINT da API
-endpoint <- "https://api.openai.com/v1/chat/completions"
-
-# 2. SEU PROMPT
-prompt <- "Explique o que este código faz: x <- mean(1:10)"
-
-# 3. CORPO DA REQUISIÇÃO (body)
-body <- list(
-  model = "gpt-4o-mini",  # Modelo a usar
-  messages = list(
-    list(
-      role = "user",       # Quem está falando (user/assistant/system)
-      content = prompt     # O que está dizendo
-    )
-  ),
-  temperature = 0.7,       # Criatividade (0-2, padrão 1)
-  max_tokens = 500         # Máximo de tokens na resposta
-)
-
-# 4. CRIAR REQUISIÇÃO
-req <- request(endpoint) |>
-  req_method("POST") |>    # Método HTTP
-  req_headers(
-    Authorization = paste("Bearer", Sys.getenv("OPENAI_API_KEY")),
-    "Content-Type" = "application/json"
-  ) |>
-  req_body_json(body)      # Corpo em JSON
-
-# 5. EXECUTAR REQUISIÇÃO
-resp <- req_perform(req)
-
-# 6. EXTRAIR RESPOSTA
-json <- resp_body_json(resp)
-resposta <- json$choices[[1]]$message$content
-
-# 7. MOSTRAR
-cat(resposta)
-```
-
-**Parâmetros importantes:**
-
-- **model**: Qual modelo usar
-  - `gpt-4o-mini`: Mais barato, rápido
-  - `gpt-4o`: Mais inteligente
-  - `gpt-4-turbo`: Balanceado
-
-- **temperature**: Criatividade (0-2)
-  - `0`: Determinístico, sempre mesma resposta
-  - `1` (padrão): Balanceado
-  - `2`: Muito criativo, imprevisível
-
-- **max_tokens**: Limite de resposta
-  - Controla tamanho e custo
-  - ~500 tokens = ~375 palavras
-
----
-
 ### Casos de Uso Práticos com ChatGPT
 
 #### Caso 1: Explicar um erro
@@ -835,12 +779,7 @@ dados <- data.frame(x = 1:5, y = c(2, 4, NA, 8, 10))
 mean(dados$y)  # Retorna NA
 
 # Prompt para ChatGPT:
-"Por que mean(dados$y) retorna NA? Como corrigir?"
-
-# ChatGPT explica:
-# "mean() retorna NA quando há valores ausentes.
-#  Solução: use na.rm = TRUE
-#  Exemplo: mean(dados$y, na.rm = TRUE)"
+chattr("Por que mean(dados$y) retorna NA? Como corrigir?")
 ```
 
 #### Caso 2: Refatorar função
@@ -859,41 +798,32 @@ calcular <- function(x, y) {
 }
 
 # Prompt:
-"Refatore esta função para ser mais concisa e clara"
+# Armazene o código em uma variável primeiro
+codigo <- 'calcular <- function(x, y) {{
+  resultado1 <- x + y
+  resultado2 <- x * y
+  resultado3 <- x / y
+  output <- list()
+  output$soma <- resultado1
+  output$produto <- resultado2
+  output$divisao <- resultado3
+  return(output)
+}}'
 
-# ChatGPT sugere:
-calcular <- function(x, y) {
-  list(
-    soma = x + y,
-    produto = x * y,
-    divisao = x / y
-  )
-}
+chattr(paste("Refatore esta função para ser mais concisa e clara:\n\n", codigo))
+
+
 ```
 
 #### Caso 3: Gerar testes unitários
 
 ```{r caso-testes}
 # Sua função
-zscore <- function(x) {
-  (x - mean(x, na.rm = TRUE)) / sd(x, na.rm = TRUE)
-}
+codigo <- "zscore <- function(x) (x - mean(x, na.rm = TRUE)) / sd(x, na.rm = TRUE)"
 
 # Prompt:
-"Gere testes unitários simples para validar esta função zscore"
-
-# ChatGPT gera:
-# Teste 1: vetor normal
-teste1 <- zscore(c(1, 2, 3, 4, 5))
-stopifnot(abs(mean(teste1)) < 0.0001)  # Média ~0
-
-# Teste 2: vetor com NA
-teste2 <- zscore(c(1, NA, 3))
-stopifnot(!is.na(teste2[1]))  # Remove NA
-
-# Teste 3: vetor constante
-teste3 <- zscore(c(5, 5, 5))
-stopifnot(all(is.nan(teste3)))  # sd=0 → NaN
+chattr(
+  paste("Gere 3 testes unitários simples para validar esta função zscore:",codigo))
 ```
 
 ---
@@ -938,7 +868,15 @@ chattr_defaults()
 
 ```{r chattr-uso}
 # Iniciar chat no console
-chattr()
+# chattr()
+# The function chattr() is not an R function. If you meant `chart()`, please clarify.
+# If you want to create a plot or a chart in R, please specify the data & type.
+# Example: a ggplot2 scatter plot using the mpg dataset.
+
+library(ggplot2)
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point() +
+  labs(title = "Engine Displacement)
 
 # Interface interativa aparece
 # Digite sua pergunta e Enter
@@ -981,66 +919,6 @@ print(historico)
 
 ---
 
-### Chamadas via API Manual (Claude)
-
-Para controle total e automação com Claude:
-
-```{r api-claude-manual}
-library(httr2)
-library(jsonlite)
-
-# 1. ENDPOINT
-endpoint <- "https://api.anthropic.com/v1/messages"
-
-# 2. PROMPT
-prompt <- "Revise esta função e torne-a mais robusta a NAs:
-
-soma_media <- function(x) { 
-  sum(x) / length(x) 
-}"
-
-# 3. CORPO DA REQUISIÇÃO
-body <- list(
-  model = "claude-3-5-sonnet-latest",
-  max_tokens = 1000,
-  messages = list(
-    list(
-      role = "user",
-      content = prompt
-    )
-  )
-)
-
-# 4. CRIAR REQUISIÇÃO
-req <- request(endpoint) |>
-  req_method("POST") |>
-  req_headers(
-    Authorization = paste("Bearer", Sys.getenv("ANTHROPIC_API_KEY")),
-    "anthropic-version" = "2023-06-01",  # Versão da API
-    "content-type" = "application/json"
-  ) |>
-  req_body_json(body)
-
-# 5. EXECUTAR
-resp <- req_perform(req)
-
-# 6. EXTRAIR RESPOSTA
-json <- resp_body_json(resp)
-resposta <- json$content[[1]]$text
-
-# 7. MOSTRAR
-cat(resposta)
-```
-
-**Diferenças da API Claude:**
-
-- Header extra: `anthropic-version`
-- Estrutura de resposta diferente: `json$content[[1]]$text`
-- Sem parâmetro `temperature` (usa `top_p` e `top_k`)
-- `max_tokens` é obrigatório
-
----
-
 ### Casos de Uso Práticos com Claude
 
 #### Caso 1: Análise profunda de código
@@ -1069,22 +947,22 @@ resultado <- mtcars %>%
   filter(n >= 3) %>%
   arrange(desc(media_ef))
 "
+```
 
-# Prompt para Claude:
+# Prompt:
 "Analise este pipeline tidyverse em detalhes:
+
 1. O que cada etapa faz?
 2. Há potenciais problemas ou melhorias?
 3. O código está otimizado?
 
-Código:
-[cole o código acima]"
+Claude fornece análise profunda:
 
-# Claude fornece análise profunda:
-# - Explicação linha por linha
-# - Identificação de possíveis NAs não tratados
-# - Sugestões de otimização
-# - Alertas sobre edge cases
-```
+  - Explicação linha por linha
+  - Identificação de possíveis NAs não tratados
+  - Sugestões de otimização
+  - Alertas sobre edge cases
+
 
 #### Caso 2: Gerar função robusta
 
