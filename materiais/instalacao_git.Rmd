@@ -1,0 +1,204 @@
+---
+title: "Instalação do Git"
+author: "Vinícius Junqueira"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    number_sections: true
+    theme: flatly
+    highlight: tango
+  pdf_document:
+    toc: true
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = FALSE)
+```
+
+# Instalar Git
+
+Antes de começar a trabalhar com controle de versão no RStudio, você precisa ter o Git instalado no seu computador. Siga as instruções específicas para o seu sistema operacional.
+
+## Verificar se o Git já está instalado
+
+Primeiro, verifique se o Git já está disponível no seu sistema. Abra o Terminal (Mac/Linux) ou Prompt de Comando (Windows) e digite:
+
+```{bash}
+git --version
+```
+
+Se o Git estiver instalado, você verá algo como `git version 2.x.x`. Caso contrário, siga as instruções abaixo para o seu sistema operacional.
+
+---
+
+## Instalação no Windows
+
+### Passo 1: Baixar o instalador
+
+- Acesse [https://git-scm.com/download/win](https://git-scm.com/download/win)
+- O download deve iniciar automaticamente
+
+### Passo 2: Executar o instalador
+
+1. Execute o arquivo baixado (`Git-2.x.x-64-bit.exe`)
+2. Na tela de seleção de componentes, mantenha as opções padrão
+3. **IMPORTANTE:** Na tela "Adjusting your PATH environment", selecione:
+   - **"Git from the command line and also from 3rd-party software"**
+4. Na tela do editor padrão, você pode escolher o editor de sua preferência (Vim, Nano, Notepad++, etc.)
+5. Continue clicando em "Next" mantendo as opções padrão
+6. Clique em "Install" e aguarde a conclusão
+
+### Passo 3: Verificar a instalação
+
+- Feche e reabra o Prompt de Comando ou PowerShell
+- Digite:
+
+```{bash}
+git --version
+```
+
+- Você deve ver a versão do Git instalada
+
+---
+
+## Instalação no macOS
+
+### Opção 1: Xcode Command Line Tools (Recomendado)
+
+1. Abra o Terminal (pressione `Cmd + Espaço` e digite "Terminal")
+
+2. Digite o seguinte comando:
+
+```{bash}
+git --version
+```
+
+3. Se o Git não estiver instalado, o macOS oferecerá automaticamente para instalar as ferramentas de linha de comando do Xcode. Clique em "Instalar" e siga as instruções.
+
+### Opção 2: Instalação via Homebrew
+
+Se você já tem o Homebrew instalado:
+
+1. Abra o Terminal
+
+2. Digite:
+
+```{bash}
+brew install git
+```
+
+3. Aguarde a conclusão da instalação
+
+### Opção 3: Instalador oficial
+
+1. Acesse [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
+2. Baixe o instalador `.dmg`
+3. Execute o instalador e siga as instruções na tela
+
+---
+
+## Instalação no Linux
+
+### Ubuntu/Debian
+
+Abra o Terminal e execute:
+
+```{bash}
+sudo apt-get update
+sudo apt-get install git
+```
+
+### Fedora/RedHat/CentOS
+
+```{bash}
+sudo dnf install git
+```
+
+ou (versões mais antigas):
+
+```{bash}
+sudo yum install git
+```
+
+### Arch Linux
+
+```{bash}
+sudo pacman -S git
+```
+
+---
+
+## Configuração Inicial do Git
+
+Após instalar o Git, é necessário configurar seu nome e email. Essas informações serão associadas aos seus commits.
+
+Abra o Terminal/Prompt de Comando e execute os seguintes comandos (substituindo pelos seus dados):
+
+```{bash}
+git config --global user.name "Seu Nome Completo"
+git config --global user.email "seu.email@exemplo.com"
+```
+
+> **Nota:** Use o mesmo email que você utilizará no GitHub.
+
+Para verificar suas configurações:
+
+```{bash}
+git config --global --list
+```
+
+---
+
+## Integração com o RStudio
+
+Após instalar e configurar o Git:
+
+1. **Abra o RStudio**
+
+2. Vá em: **Tools → Global Options → Git/SVN**
+
+3. Verifique se o campo **"Git executable"** mostra o caminho correto para o Git:
+   - **Windows:** geralmente `C:/Program Files/Git/bin/git.exe`
+   - **macOS:** geralmente `/usr/bin/git`
+   - **Linux:** geralmente `/usr/bin/git`
+
+4. Se o campo estiver vazio, clique em **"Browse..."** e localize o executável do Git manualmente
+
+5. Clique em **"OK"**
+
+6. **Reinicie o RStudio** para que as alterações tenham efeito
+
+---
+
+## Verificação Final
+
+Para confirmar que tudo está funcionando corretamente no RStudio:
+
+1. Vá em **Tools → Terminal → New Terminal**
+
+2. No terminal integrado do RStudio, digite:
+
+```{bash}
+git --version
+```
+
+3. Você deve ver a versão do Git instalada
+
+---
+
+<div class="alert alert-success">
+**✓ Pronto!** Agora você está pronto para usar Git e GitHub integrados ao RStudio.
+</div>
+
+---
+
+## Recursos Adicionais
+
+- [Documentação oficial do Git](https://git-scm.com/doc)
+- [Pro Git Book (gratuito)](https://git-scm.com/book/pt-br/v2)
+- [GitHub Guides](https://guides.github.com/)
+- [Happy Git and GitHub for the useR](https://happygitwithr.com/)

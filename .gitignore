@@ -1,0 +1,273 @@
+# ==============================================================================
+# .gitignore para Curso R + GitHub + IA
+# ==============================================================================
+
+# R e RStudio ----------------------------------------------------------------
+
+# Arquivos de sessão do R
+.Rhistory
+.RData
+.Rproj.user/
+.Rapp.history
+
+# Arquivos temporários do RStudio
+*.Rproj.user
+*.Rproj.user/
+
+# OAuth tokens (usuário específico)
+.httr-oauth
+.secrets
+
+# Arquivos de ambiente R
+.Renviron
+.Rprofile
+
+# ==============================================================================
+# RMarkdown / Knitr ----------------------------------------------------------
+
+# Arquivos intermediários do knitr
+*_cache/
+*_files/
+/*.html
+#/*.pdf  # Descomente se NÃO quiser versionar PDFs gerados
+/*.tex
+/*.log
+/*.aux
+/*.out
+/*.toc
+
+# Cache de chunks
+*_cache/
+/cache/
+
+# ==============================================================================
+# LaTeX / TinyTeX ------------------------------------------------------------
+
+*.log
+*.aux
+*.out
+*.toc
+*.nav
+*.snm
+*.vrb
+*.bbl
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.xdv
+
+# ==============================================================================
+# Dados ----------------------------------------------------------------------
+
+# Dados grandes ou sensíveis (descomente conforme necessário)
+# data/raw/*.csv
+# data/raw/*.xlsx
+# data/raw/*.rds
+
+# Dados processados temporários
+data/temp/
+data/tmp/
+
+# Backups de dados
+*.backup
+*~
+
+# ==============================================================================
+# Output ---------------------------------------------------------------------
+
+# PDFs e HTMLs gerados (descomente se não quiser versionar)
+# output/*.pdf
+# output/*.html
+
+# Figuras temporárias
+output/temp/
+output/tmp/
+
+# ==============================================================================
+# Sistema Operacional --------------------------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ==============================================================================
+# IDEs e Editores ------------------------------------------------------------
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+
+# ==============================================================================
+# Compilação e Build ---------------------------------------------------------
+
+# Diretórios de build
+build/
+dist/
+*.egg-info/
+
+# Arquivos compilados
+*.o
+*.so
+*.dll
+*.dylib
+
+# ==============================================================================
+# Credenciais e Configurações Pessoais ---------------------------------------
+
+# Chaves de API e secrets
+.env
+.env.local
+*.key
+secrets.R
+config_local.R
+
+# Tokens de autenticação
+.Renviron.local
+credentials.R
+
+# ==============================================================================
+# Pacotes R ------------------------------------------------------------------
+
+# Pacotes instalados localmente
+packrat/lib*/
+renv/library/
+renv/staging/
+
+# renv (descomente se NÃO usar renv)
+# renv.lock
+
+# ==============================================================================
+# Notebooks e Jupyter --------------------------------------------------------
+
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# ==============================================================================
+# Arquivos Temporários -------------------------------------------------------
+
+# Arquivos temporários gerais
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Arquivos de lock
+*.lock
+!renv.lock  # Manter renv.lock se usar renv
+!package-lock.json  # Para projetos com node
+
+# ==============================================================================
+# Logs -----------------------------------------------------------------------
+
+# Logs de aplicação
+*.log
+logs/
+log/
+
+# ==============================================================================
+# Específico do Projeto ------------------------------------------------------
+
+# Materiais em desenvolvimento (descomente conforme necessário)
+# materiais/rascunhos/
+# materiais/nao_publicar/
+
+# Submissões de alunos (se aplicável)
+# submissoes/
+# projetos_alunos/
+
+# Dados não públicos
+# data/privado/
+# data/confidencial/
+
+# ==============================================================================
+# Arquivos de Exemplo --------------------------------------------------------
+
+# Mantenha um arquivo de exemplo versionado, ignore os outros
+# exemplo_config.R
+# !exemplo_config_TEMPLATE.R
+
+# ==============================================================================
+# Git e GitHub ---------------------------------------------------------------
+
+# Arquivos do git
+.git/
+.gitattributes
+
+# GitHub específico
+.github/workflows/*.log
+
+# ==============================================================================
+# Outros ---------------------------------------------------------------------
+
+# Arquivos ZIP e compactados (geralmente não versionar)
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Arquivos de banco de dados
+*.db
+*.sqlite
+*.sqlite3
+
+# ==============================================================================
+# IMPORTANTE: Arquivos que DEVEM ser versionados
+# ==============================================================================
+
+# NÃO ignore estes (certifique-se de que não estão listados acima):
+# - README.md
+# - LICENSE
+# - .Rmd files (material do curso)
+# - scripts/*.R (scripts de exemplo)
+# - data/raw/exemplo.csv (dados de exemplo pequenos)
+# - .gitignore (este arquivo)
+# - curso-r-github-ia.Rproj (arquivo do projeto)
+
+# ==============================================================================
+# Fim do .gitignore
+# ==============================================================================
+/.quarto/
+**/*.quarto_ipynb
+docs/*.html
+docs/search_index.json

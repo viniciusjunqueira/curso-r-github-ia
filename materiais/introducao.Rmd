@@ -1,0 +1,88 @@
+<!--
+---
+title: "Sobre o Curso"
+output:
+  html_document:
+    df_print: paged
+geometry: margin=2.5cm
+fontsize: 11pt
+---
+-->
+
+\newpage
+
+# Bem-vindo ao curso 
+
+**Introdução Programação em R com GitHub, ChatGPT e Claude**
+
+Este curso foi desenvolvido para quem deseja dar os primeiros passos no mundo da análise de dados usando R, uma das linguagens mais poderosas e populares para ciência de dados. Em 16 horas de conteúdo prático e objetivo, você aprenderá não apenas a programar em R, mas também a integrar ferramentas modernas que potencializam seu aprendizado e produtividade.
+
+## Pré-requisitos
+
+Este curso foi pensado para ser **acessível a todos**, independentemente da sua experiência prévia com programação. Os únicos requisitos são:
+
+- **Computador** com acesso à internet (Windows, Mac ou Linux)
+- **Curiosidade** e vontade de aprender
+- **Disposição** para praticar e experimentar
+
+**Não é necessário** conhecimento prévio em programação, estatística ou análise de dados. Se você nunca escreveu uma linha de código, não se preocupe! O curso foi estruturado pensando exatamente em você. Iniciaremos do zero, apresentando cada conceito de forma clara e progressiva.
+
+## Objetivos de Aprendizagem
+
+Ao final deste curso, você será capaz de:
+
+**Fundamentos de R e Análise de Dados:**
+
+- Compreender a sintaxe básica da linguagem R e executar operações fundamentais
+- Importar, manipular e transformar dados de diferentes fontes utilizando o tidyverse
+- Aplicar técnicas de limpeza e preparação de dados para análises robustas
+- Realizar análises exploratórias e extrair insights relevantes de conjuntos de dados
+
+**Visualização de Dados:**
+
+- Criar visualizações profissionais e informativas usando ggplot2
+- Escolher o tipo adequado de gráfico para diferentes tipos de dados e mensagens
+- Personalizar cores, temas e elementos visuais para comunicar resultados com clareza
+- Produzir gráficos prontos para apresentações, relatórios e publicações
+
+**Controle de Versão e Colaboração:**
+
+- Utilizar Git e GitHub para versionar e documentar seu código
+- Colaborar em projetos de dados de forma organizada e profissional
+- Compreender fluxos de trabalho modernos em ciência de dados
+- Publicar e compartilhar seus projetos com a comunidade
+
+**Aprendizado Assistido por IA:**
+
+- Utilizar ferramentas de IA (ChatGPT e Claude) como assistentes no aprendizado
+- Formular perguntas eficazes para obter ajuda precisa na resolução de problemas
+- Interpretar e adaptar sugestões de código geradas por IA
+- Acelerar seu processo de aprendizagem combinando estudo tradicional e ferramentas modernas
+
+## Metodologia
+
+O curso adota uma abordagem **prática e hands-on**, onde você aprenderá fazendo. Nossa metodologia se baseia em três pilares fundamentais:
+
+**Aprendizagem Ativa:**
+
+Cada conceito apresentado é imediatamente seguido de exercícios práticos. Acreditamos que a melhor forma de aprender programação é escrevendo código. Você trabalhará com dados reais e enfrentará problemas autênticos desde o primeiro dia, construindo confiança e competência progressivamente.
+
+**Estrutura Modular:**
+
+O conteúdo está organizado em módulos que se constroem de forma lógica e incremental. Começamos com os fundamentos do R, avançamos para manipulação de dados com tidyverse, exploramos visualização com ggplot2, e integramos controle de versão e ferramentas de IA ao longo do caminho. Cada módulo é independente mas conectado, permitindo que você compreenda tanto os detalhes quanto o panorama geral.
+
+**Aprendizado Assistido por IA:**
+
+Uma das características mais inovadoras deste curso é o uso integrado de inteligência artificial como ferramenta pedagógica. Você aprenderá não apenas R, mas também como usar ChatGPT e Claude para tirar dúvidas, debugar código, explorar alternativas e acelerar seu aprendizado. Esta é uma habilidade essencial no cenário atual da programação e ciência de dados.
+
+**Projetos Práticos:**
+
+Ao invés de exercícios isolados, você desenvolverá pequenos projetos que simulam situações reais de análise de dados. Isso inclui trabalhar com datasets públicos, criar visualizações para comunicar resultados, e documentar seu trabalho de forma profissional usando GitHub.
+
+**Suporte e Comunidade:**
+
+Durante todo o curso, você terá acesso a materiais de referência, exemplos comentados e uma comunidade de colegas aprendendo junto com você. Incentivamos a colaboração e a troca de experiências, pois aprendemos muito ao ensinar e compartilhar conhecimento.
+
+\vspace{1em}
+
+**Prepare-se para uma jornada transformadora!** Ao final destas 16 horas, você não apenas saberá programar em R, mas terá desenvolvido uma mentalidade analítica e as ferramentas necessárias para continuar evoluindo de forma autônoma. Seja bem-vindo ao fascinante mundo da análise de dados!

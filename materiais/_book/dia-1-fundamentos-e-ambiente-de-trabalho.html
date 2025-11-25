@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xml:lang="pt-BR">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7 Dia 1: Fundamentos e Ambiente de Trabalho | Curso_Completo_R_GitHub_IA.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7 Dia 1: Fundamentos e Ambiente de Trabalho | Curso_Completo_R_GitHub_IA.knit" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 Dia 1: Fundamentos e Ambiente de Trabalho | Curso_Completo_R_GitHub_IA.knit" />
+  
+  
+  
+
+<meta name="author" content="" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="contato.html"/>
+<link rel="next" href="dia-2-lógica-funções-e-introdução-ao-tidyverse.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="sobre-o-autor.html"><a href="sobre-o-autor.html"><i class="fa fa-check"></i><b>1</b> Sobre o Autor</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="dia1_fundamentos.html"><a href="#vin%C3%ADcius-junqueira"><i class="fa fa-check"></i><b>1.1</b> Vinícius Junqueira</a></li>
+<li class="chapter" data-level="1.2" data-path="dia1_fundamentos.html"><a href="#forma%C3%A7%C3%A3o-acad%C3%AAmica"><i class="fa fa-check"></i><b>1.2</b> Formação Acadêmica</a></li>
+<li class="chapter" data-level="1.3" data-path="dia1_fundamentos.html"><a href="#trajet%C3%B3ria-profissional"><i class="fa fa-check"></i><b>1.3</b> Trajetória Profissional</a></li>
+<li class="chapter" data-level="1.4" data-path="dia1_fundamentos.html"><a href="#expertise-e-%C3%A1reas-de-atua%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>1.4</b> Expertise e Áreas de Atuação</a></li>
+<li class="chapter" data-level="1.5" data-path="sobre-o-autor.html"><a href="sobre-o-autor.html#por-que-ensino-r"><i class="fa fa-check"></i><b>1.5</b> Por Que Ensino R?</a></li>
+<li class="chapter" data-level="1.6" data-path="dia1_fundamentos.html"><a href="#minha-miss%C3%A3o-com-este-curso"><i class="fa fa-check"></i><b>1.6</b> Minha Missão com Este Curso</a></li>
+<li class="chapter" data-level="1.7" data-path="sobre-o-autor.html"><a href="sobre-o-autor.html#vamos-juntos"><i class="fa fa-check"></i><b>1.7</b> Vamos Juntos!</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="bem-vindo-ao-curso.html"><a href="bem-vindo-ao-curso.html"><i class="fa fa-check"></i><b>2</b> Bem-vindo ao curso</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="dia1_fundamentos.html"><a href="#pr%C3%A9-requisitos"><i class="fa fa-check"></i><b>2.1</b> Pré-requisitos</a></li>
+<li class="chapter" data-level="2.2" data-path="bem-vindo-ao-curso.html"><a href="bem-vindo-ao-curso.html#objetivos-de-aprendizagem"><i class="fa fa-check"></i><b>2.2</b> Objetivos de Aprendizagem</a></li>
+<li class="chapter" data-level="2.3" data-path="bem-vindo-ao-curso.html"><a href="bem-vindo-ao-curso.html#metodologia"><i class="fa fa-check"></i><b>2.3</b> Metodologia</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cronograma.html"><a href="cronograma.html"><i class="fa fa-check"></i><b>3</b> Cronograma</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="dia1_fundamentos.html"><a href="#pr%C3%A9-requisitos-t%C3%A9cnicos"><i class="fa fa-check"></i><b>3.1</b> Pré-requisitos Técnicos</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="dia1_fundamentos.html"><a href="#instala%C3%A7%C3%B5es-obrigat%C3%B3rias-para-todos-os-sistemas"><i class="fa fa-check"></i><b>3.1.1</b> Instalações obrigatórias (para todos os sistemas)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="dia1_fundamentos.html"><a href="#estrutura-pedag%C3%B3gica-e-filosofia"><i class="fa fa-check"></i><b>3.2</b> Estrutura Pedagógica e Filosofia</a></li>
+<li class="chapter" data-level="3.3" data-path="dia1_fundamentos.html"><a href="#pacotes-r-necess%C3%A1rios"><i class="fa fa-check"></i><b>3.3</b> Pacotes R Necessários</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="dia1_fundamentos.html"><a href="#instala%C3%A7%C3%A3o-no-dia-1-a-3-n%C3%BAcleo-do-curso"><i class="fa fa-check"></i><b>3.3.1</b> Instalação no Dia 1 a 3 (núcleo do curso)</a></li>
+<li class="chapter" data-level="3.3.2" data-path="cronograma.html"><a href="cronograma.html#pacotes-de-ia-dia-4"><i class="fa fa-check"></i><b>3.3.2</b> Pacotes de IA (Dia 4)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="cronograma.html"><a href="cronograma.html#dia-1-1711-segunda-fundamentos-e-ambiente-de-trabalho"><i class="fa fa-check"></i><b>3.4</b> Dia 1: 17/11 (Segunda) — Fundamentos e Ambiente de Trabalho</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="dia1_fundamentos.html"><a href="#h00---20h30-ambienta%C3%A7%C3%A3o-e-setup-completo"><i class="fa fa-check"></i><b>3.4.1</b> 19h00 - 20h30 | Ambientação e Setup Completo</a></li>
+<li class="chapter" data-level="3.4.2" data-path="cronograma.html"><a href="cronograma.html#h30---20h50-intervalo"><i class="fa fa-check"></i><b>3.4.2</b> 20h30 - 20h50 | Intervalo</a></li>
+<li class="chapter" data-level="3.4.3" data-path="cronograma.html"><a href="cronograma.html#h50---22h00-fundamentos-do-r"><i class="fa fa-check"></i><b>3.4.3</b> 20h50 - 22h00 | Fundamentos do R</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="dia1_fundamentos.html"><a href="#dia-2-1811-ter%C3%A7a-l%C3%B3gica-fun%C3%A7%C3%B5es-e-introdu%C3%A7%C3%A3o-ao-tidyverse"><i class="fa fa-check"></i><b>3.5</b> Dia 2: 18/11 (Terça) — Lógica, Funções e Introdução ao Tidyverse</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="dia1_fundamentos.html"><a href="#h00---20h30-programa%C3%A7%C3%A3o-em-r"><i class="fa fa-check"></i><b>3.5.1</b> 19h00 - 20h30 | Programação em R</a></li>
+<li class="chapter" data-level="3.5.2" data-path="cronograma.html"><a href="cronograma.html#h30---20h50-intervalo-1"><i class="fa fa-check"></i><b>3.5.2</b> 20h30 - 20h50 | Intervalo</a></li>
+<li class="chapter" data-level="3.5.3" data-path="dia1_fundamentos.html"><a href="#h50---22h00-introdu%C3%A7%C3%A3o-ao-tidyverse"><i class="fa fa-check"></i><b>3.5.3</b> 20h50 - 22h00 | Introdução ao Tidyverse</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="dia1_fundamentos.html"><a href="#dia-3-2411-segunda-transforma%C3%A7%C3%A3o-io-e-visualiza%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>3.6</b> Dia 3: 24/11 (Segunda) — Transformação, I/O e Visualização</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="dia1_fundamentos.html"><a href="#h00---20h30-transforma%C3%A7%C3%A3o-e-io-de-dados"><i class="fa fa-check"></i><b>3.6.1</b> 19h00 - 20h30 | Transformação e I/O de Dados</a></li>
+<li class="chapter" data-level="3.6.2" data-path="cronograma.html"><a href="cronograma.html#h30---20h50-intervalo-2"><i class="fa fa-check"></i><b>3.6.2</b> 20h30 - 20h50 | Intervalo</a></li>
+<li class="chapter" data-level="3.6.3" data-path="dia1_fundamentos.html"><a href="#h50---22h00-visualiza%C3%A7%C3%A3o-com-ggplot2"><i class="fa fa-check"></i><b>3.6.3</b> 20h50 - 22h00 | Visualização com ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="dia1_fundamentos.html"><a href="#dia-4-2511-ter%C3%A7a-integra%C3%A7%C3%A3o-do-chatgpt-e-claude-no-rstudio"><i class="fa fa-check"></i><b>3.7</b> Dia 4: 25/11 (Terça) — Integração do ChatGPT e Claude no RStudio</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="cronograma.html"><a href="cronograma.html#h00---19h30-conceitos-e-modelos"><i class="fa fa-check"></i><b>3.7.1</b> 19h00 - 19h30 | Conceitos e modelos</a></li>
+<li class="chapter" data-level="3.7.2" data-path="dia1_fundamentos.html"><a href="#h30---20h15-configura%C3%A7%C3%A3o-de-chaves-e-ambiente"><i class="fa fa-check"></i><b>3.7.2</b> 19h30 - 20h15 | Configuração de chaves e ambiente</a></li>
+<li class="chapter" data-level="3.7.3" data-path="cronograma.html"><a href="cronograma.html#h15---20h30-intervalo"><i class="fa fa-check"></i><b>3.7.3</b> 20h15 - 20h30 | Intervalo</a></li>
+<li class="chapter" data-level="3.7.4" data-path="cronograma.html"><a href="cronograma.html#h30---21h00-rstudio-gptstudio-chatgpt"><i class="fa fa-check"></i><b>3.7.4</b> 20h30 - 21h00 | RStudio + gptstudio (ChatGPT)</a></li>
+<li class="chapter" data-level="3.7.5" data-path="cronograma.html"><a href="cronograma.html#h00---21h30-rstudio-chattr-claude"><i class="fa fa-check"></i><b>3.7.5</b> 21h00 - 21h30 | RStudio + chattr (Claude)</a></li>
+<li class="chapter" data-level="3.7.6" data-path="dia1_fundamentos.html"><a href="#h30---22h00-exerc%C3%ADcio-guiado-de-integra%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>3.7.6</b> 21h30 - 22h00 | Exercício guiado de integração</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="troubleshooting-por-sistema-operacional.html"><a href="troubleshooting-por-sistema-operacional.html"><i class="fa fa-check"></i><b>4</b> Troubleshooting por Sistema Operacional</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="troubleshooting-por-sistema-operacional.html"><a href="troubleshooting-por-sistema-operacional.html#windows"><i class="fa fa-check"></i><b>4.1</b> Windows</a></li>
+<li class="chapter" data-level="4.2" data-path="troubleshooting-por-sistema-operacional.html"><a href="troubleshooting-por-sistema-operacional.html#macos"><i class="fa fa-check"></i><b>4.2</b> macOS</a></li>
+<li class="chapter" data-level="4.3" data-path="troubleshooting-por-sistema-operacional.html"><a href="troubleshooting-por-sistema-operacional.html#linux-ubuntudebian"><i class="fa fa-check"></i><b>4.3</b> Linux (Ubuntu/Debian)</a></li>
+<li class="chapter" data-level="4.4" data-path="troubleshooting-por-sistema-operacional.html"><a href="troubleshooting-por-sistema-operacional.html#problemas-comuns-todos-os-so"><i class="fa fa-check"></i><b>4.4</b> Problemas comuns (todos os SO)</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="recursos-adicionais.html"><a href="recursos-adicionais.html"><i class="fa fa-check"></i><b>5</b> Recursos Adicionais</a></li>
+<li class="chapter" data-level="6" data-path="contato.html"><a href="contato.html"><i class="fa fa-check"></i><b>6</b> Contato</a></li>
+<li class="chapter" data-level="7" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html"><i class="fa fa-check"></i><b>7</b> Dia 1: Fundamentos e Ambiente de Trabalho</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#abertura"><i class="fa fa-check"></i><b>7.1</b> Abertura</a></li>
+<li class="chapter" data-level="7.2" data-path="dia1_fundamentos.html"><a href="#apresenta%C3%A7%C3%A3o-do-curso-15-min"><i class="fa fa-check"></i><b>7.2</b> Apresentação do Curso (15 min)</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#bem-vindos"><i class="fa fa-check"></i><b>7.2.1</b> Bem-vindos!</a></li>
+<li class="chapter" data-level="7.2.2" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#objetivos-gerais-do-curso"><i class="fa fa-check"></i><b>7.2.2</b> Objetivos Gerais do Curso</a></li>
+<li class="chapter" data-level="7.2.3" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#metodologia-1"><i class="fa fa-check"></i><b>7.2.3</b> Metodologia</a></li>
+<li class="chapter" data-level="7.2.4" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#estrutura-dos-4-dias"><i class="fa fa-check"></i><b>7.2.4</b> Estrutura dos 4 Dias</a></li>
+<li class="chapter" data-level="7.2.5" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#materiais-e-suporte"><i class="fa fa-check"></i><b>7.2.5</b> Materiais e Suporte</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#por-que-r-github-e-ia-15-min"><i class="fa fa-check"></i><b>7.3</b> Por Que R, GitHub e IA? (15 min)</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#por-que-r"><i class="fa fa-check"></i><b>7.3.1</b> Por Que R?</a></li>
+<li class="chapter" data-level="7.3.2" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#por-que-github"><i class="fa fa-check"></i><b>7.3.2</b> Por Que GitHub?</a></li>
+<li class="chapter" data-level="7.3.3" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#por-que-ia-chatgpt-e-claude"><i class="fa fa-check"></i><b>7.3.3</b> Por Que IA (ChatGPT e Claude)?</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="dia1_fundamentos.html"><a href="#ambienta%C3%A7%C3%A3o-e-setup-40-min"><i class="fa fa-check"></i><b>7.4</b> Ambientação e Setup (40 min)</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="dia1_fundamentos.html"><a href="#verifica%C3%A7%C3%B5es-r%C3%A1pidas"><i class="fa fa-check"></i><b>7.4.1</b> Verificações rápidas</a></li>
+<li class="chapter" data-level="7.4.2" data-path="dia1_fundamentos.html"><a href="#instalar-git-se-n%C3%A3o-estiver-dispon%C3%ADvel"><i class="fa fa-check"></i><b>7.4.2</b> Instalar Git (se não estiver disponível)</a></li>
+<li class="chapter" data-level="7.4.3" data-path="dia1_fundamentos.html"><a href="#configurar-git-uma-vez-s%C3%B3"><i class="fa fa-check"></i><b>7.4.3</b> Configurar Git (uma vez só)</a></li>
+<li class="chapter" data-level="7.4.4" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#autenticar-no-github-pat-recomendado"><i class="fa fa-check"></i><b>7.4.4</b> Autenticar no GitHub (PAT recomendado)</a></li>
+<li class="chapter" data-level="7.4.5" data-path="dia1_fundamentos.html"><a href="#instalar-pacotes-necess%C3%A1rios"><i class="fa fa-check"></i><b>7.4.5</b> Instalar pacotes necessários</a></li>
+<li class="chapter" data-level="7.4.6" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#criar-o-token-no-github"><i class="fa fa-check"></i><b>7.4.6</b> Criar o token no GitHub</a></li>
+<li class="chapter" data-level="7.4.7" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#salvar-o-token-no-rstudio"><i class="fa fa-check"></i><b>7.4.7</b> Salvar o token no RStudio</a></li>
+<li class="chapter" data-level="7.4.8" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#verificar-se-funcionou"><i class="fa fa-check"></i><b>7.4.8</b> Verificar se funcionou</a></li>
+<li class="chapter" data-level="7.4.9" data-path="dia1_fundamentos.html"><a href="#workflow-com-fork-obrigat%C3%B3rio-para-a-turma"><i class="fa fa-check"></i><b>7.4.9</b> Workflow com Fork (obrigatório para a turma)</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#estrutura-de-projeto-e-portabilidade"><i class="fa fa-check"></i><b>7.5</b> Estrutura de projeto e portabilidade</a></li>
+<li class="chapter" data-level="7.6" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#fundamentos-de-r-50-min"><i class="fa fa-check"></i><b>7.6</b> Fundamentos de R (50 min)</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="dia1_fundamentos.html"><a href="#objetos-b%C3%A1sicos-e-opera%C3%A7%C3%B5es"><i class="fa fa-check"></i><b>7.6.1</b> Objetos básicos e operações</a></li>
+<li class="chapter" data-level="7.6.2" data-path="dia1_fundamentos.html"><a href="#vetores-e-indexa%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>7.6.2</b> Vetores e indexação</a></li>
+<li class="chapter" data-level="7.6.3" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#listas-e-data.frames"><i class="fa fa-check"></i><b>7.6.3</b> Listas e data.frames</a></li>
+<li class="chapter" data-level="7.6.4" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#fatores"><i class="fa fa-check"></i><b>7.6.4</b> Fatores</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="dia1_fundamentos.html"><a href="#explora%C3%A7%C3%A3o-inicial-de-dados-40-min"><i class="fa fa-check"></i><b>7.7</b> Exploração inicial de dados (40 min)</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#comparando-str-vs-glimpse"><i class="fa fa-check"></i><b>7.7.1</b> Comparando str() vs glimpse()</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="dia1_fundamentos.html"><a href="#exerc%C3%ADcios-guiados-20-min"><i class="fa fa-check"></i><b>7.8</b> Exercícios guiados (20 min)</a>
+<ul>
+<li class="chapter" data-level="7.8.1" data-path="dia1_fundamentos.html"><a href="#exerc%C3%ADcio-1-vetores"><i class="fa fa-check"></i><b>7.8.1</b> Exercício 1 — Vetores</a></li>
+<li class="chapter" data-level="7.8.2" data-path="dia1_fundamentos.html"><a href="#exerc%C3%ADcio-2-data-frame"><i class="fa fa-check"></i><b>7.8.2</b> Exercício 2 — Data frame</a></li>
+<li class="chapter" data-level="7.8.3" data-path="dia1_fundamentos.html"><a href="#exerc%C3%ADcio-3-explora%C3%A7%C3%A3o-palmerpenguins"><i class="fa fa-check"></i><b>7.8.3</b> Exercício 3 — Exploração <code>palmerpenguins</code></a></li>
+</ul></li>
+<li class="chapter" data-level="7.9" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#primeiro-commit-5-min"><i class="fa fa-check"></i><b>7.9</b> Primeiro commit (5 min)</a></li>
+<li class="chapter" data-level="7.10" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#checklist-de-encerramento"><i class="fa fa-check"></i><b>7.10</b> Checklist de encerramento</a></li>
+<li class="chapter" data-level="7.11" data-path="dia1_fundamentos.html"><a href="#refer%C3%AAncias-r%C3%A1pidas"><i class="fa fa-check"></i><b>7.11</b> Referências rápidas</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="dia1_fundamentos.html"><a href="#dia-2-l%C3%B3gica-fun%C3%A7%C3%B5es-e-introdu%C3%A7%C3%A3o-ao-tidyverse"><i class="fa fa-check"></i><b>8</b> Dia 2: Lógica, Funções e Introdução ao Tidyverse</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="dia-2-lógica-funções-e-introdução-ao-tidyverse.html"><a href="dia-2-lógica-funções-e-introdução-ao-tidyverse.html"><i class="fa fa-check"></i><b>8.1</b> Operadores e Condicionais (30 min)</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="dia1_fundamentos.html"><a href="#o-que-s%C3%A3o-operadores"><i class="fa fa-check"></i><b>8.1.1</b> O que são operadores?</a></li>
+<li class="chapter" data-level="8.1.2" data-path="dia1_fundamentos.html"><a href="#operadores-l%C3%B3gicos-e-relacionais"><i class="fa fa-check"></i><b>8.1.2</b> Operadores lógicos e relacionais</a></li>
+<li class="chapter" data-level="8.1.3" data-path="dia1_fundamentos.html"><a href="#condicionais-tomando-decis%C3%B5es-no-c%C3%B3digo"><i class="fa fa-check"></i><b>8.1.3</b> Condicionais: tomando decisões no código</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="dia1_fundamentos.html"><a href="#loops-vetoriza%C3%A7%C3%A3o-e-fun%C3%A7%C3%B5es-25-min"><i class="fa fa-check"></i><b>8.2</b> Loops, Vetorização e Funções (25 min)</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="dia1_fundamentos.html"><a href="#o-que-s%C3%A3o-loops"><i class="fa fa-check"></i><b>8.2.1</b> O que são loops?</a></li>
+<li class="chapter" data-level="8.2.2" data-path="dia-2-lógica-funções-e-introdução-ao-tidyverse.html"><a href="dia-2-lógica-funções-e-introdução-ao-tidyverse.html#tipos-de-loops-no-r"><i class="fa fa-check"></i><b>8.2.2</b> Tipos de loops no R</a></li>
+<li class="chapter" data-level="8.2.3" data-path="dia1_fundamentos.html"><a href="#loops-vs.-vetoriza%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>8.2.3</b> Loops vs. Vetorização</a></li>
+<li class="chapter" data-level="8.2.4" data-path="dia1_fundamentos.html"><a href="#fun%C3%A7%C3%B5es-empacotando-l%C3%B3gica-reutiliz%C3%A1vel"><i class="fa fa-check"></i><b>8.2.4</b> Funções: empacotando lógica reutilizável</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="dia1_fundamentos.html"><a href="#introdu%C3%A7%C3%A3o-ao-tidyverse-45-min"><i class="fa fa-check"></i><b>8.3</b> Introdução ao Tidyverse (45 min)</a></li>
+<li class="chapter" data-level="8.4" data-path="dia-2-lógica-funções-e-introdução-ao-tidyverse.html"><a href="dia-2-lógica-funções-e-introdução-ao-tidyverse.html#pipe-vs."><i class="fa fa-check"></i><b>8.4</b> Pipe: <code>%&gt;%</code> vs. <code>|&gt;</code></a></li>
+<li class="chapter" data-level="8.5" data-path="dia-2-lógica-funções-e-introdução-ao-tidyverse.html"><a href="dia-2-lógica-funções-e-introdução-ao-tidyverse.html#datas-com-lubridate-10-min"><i class="fa fa-check"></i><b>8.5</b> Datas com <code>lubridate</code> (10 min)</a></li>
+<li class="chapter" data-level="8.6" data-path="dia1_fundamentos.html"><a href="#exerc%C3%ADcios-pr%C3%A1ticos-2025-min"><i class="fa fa-check"></i><b>8.6</b> Exercícios Práticos (20–25 min)</a>
+<ul>
+<li class="chapter" data-level="8.6.1" data-path="dia1_fundamentos.html"><a href="#exerc%C3%ADcio-1-condicionais"><i class="fa fa-check"></i><b>8.6.1</b> Exercício 1 — Condicionais</a></li>
+<li class="chapter" data-level="8.6.2" data-path="dia1_fundamentos.html"><a href="#exerc%C3%ADcio-2-fun%C3%A7%C3%B5es"><i class="fa fa-check"></i><b>8.6.2</b> Exercício 2 — Funções</a></li>
+<li class="chapter" data-level="8.6.3" data-path="dia1_fundamentos.html"><a href="#exerc%C3%ADcio-3-pipeline-dplyr"><i class="fa fa-check"></i><b>8.6.3</b> Exercício 3 — Pipeline <code>dplyr</code></a></li>
+<li class="chapter" data-level="8.6.4" data-path="dia1_fundamentos.html"><a href="#exerc%C3%ADcio-4-datas-com-lubridate"><i class="fa fa-check"></i><b>8.6.4</b> Exercício 4 — Datas com <code>lubridate</code></a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="dia1_fundamentos.html"><a href="#boas-pr%C3%A1ticas-e-debugging-20-min"><i class="fa fa-check"></i><b>8.7</b> Boas Práticas e Debugging (20 min)</a></li>
+<li class="chapter" data-level="8.8" data-path="dia1_fundamentos.html"><a href="#ferramentas-%C3%BAteis"><i class="fa fa-check"></i><b>8.8</b> Ferramentas úteis</a></li>
+<li class="chapter" data-level="8.9" data-path="dia-2-lógica-funções-e-introdução-ao-tidyverse.html"><a href="dia-2-lógica-funções-e-introdução-ao-tidyverse.html#commit-do-dia"><i class="fa fa-check"></i><b>8.9</b> Commit do Dia</a></li>
+<li class="chapter" data-level="8.10" data-path="dia-2-lógica-funções-e-introdução-ao-tidyverse.html"><a href="dia-2-lógica-funções-e-introdução-ao-tidyverse.html#checklist-de-encerramento-1"><i class="fa fa-check"></i><b>8.10</b> Checklist de encerramento</a></li>
+<li class="chapter" data-level="8.11" data-path="dia1_fundamentos.html"><a href="#refer%C3%AAncias-r%C3%A1pidas-1"><i class="fa fa-check"></i><b>8.11</b> Referências rápidas</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="dia1_fundamentos.html"><a href="#dia-3-transforma%C3%A7%C3%A3o-io-e-visualiza%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>9</b> Dia 3: Transformação, I/O e Visualização</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="dia1_fundamentos.html"><a href="#transforma%C3%A7%C3%A3o-e-io-de-dados-19h00---20h30"><i class="fa fa-check"></i><b>9.1</b> Transformação e I/O de Dados (19h00 - 20h30)</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html"><i class="fa fa-check"></i><b>9.1.1</b> Tidyr: Transformando estruturas de dados</a></li>
+<li class="chapter" data-level="9.1.2" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html#tratamento-de-valores-ausentes-na"><i class="fa fa-check"></i><b>9.1.2</b> Tratamento de Valores Ausentes (NA)</a></li>
+<li class="chapter" data-level="9.1.3" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html#leitura-e-escrita-de-dados-io"><i class="fa fa-check"></i><b>9.1.3</b> Leitura e Escrita de Dados (I/O)</a></li>
+<li class="chapter" data-level="9.1.4" data-path="dia1_fundamentos.html"><a href="#ferramentas-%C3%BAteis-1"><i class="fa fa-check"></i><b>9.1.4</b> Ferramentas Úteis</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html#intervalo-20h30---20h50"><i class="fa fa-check"></i><b>9.2</b> INTERVALO (20h30 - 20h50)</a></li>
+<li class="chapter" data-level="9.3" data-path="dia1_fundamentos.html"><a href="#visualiza%C3%A7%C3%A3o-com-ggplot2-20h50---22h00"><i class="fa fa-check"></i><b>9.3</b> Visualização com ggplot2 (20h50 - 22h00)</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="dia1_fundamentos.html"><a href="#gram%C3%A1tica-de-gr%C3%A1ficos"><i class="fa fa-check"></i><b>9.3.1</b> Gramática de Gráficos</a></li>
+<li class="chapter" data-level="9.3.2" data-path="dia1_fundamentos.html"><a href="#tipos-de-gr%C3%A1ficos-geoms"><i class="fa fa-check"></i><b>9.3.2</b> Tipos de Gráficos (geoms)</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="dia1_fundamentos.html"><a href="#personaliza%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>9.4</b> Personalização</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html#labels-labs---comunicando-claramente"><i class="fa fa-check"></i><b>9.4.1</b> Labels (labs) - Comunicando claramente</a></li>
+<li class="chapter" data-level="9.4.2" data-path="dia1_fundamentos.html"><a href="#temas-themes---definindo-a-apar%C3%AAncia"><i class="fa fa-check"></i><b>9.4.2</b> Temas (themes) - Definindo a aparência</a></li>
+<li class="chapter" data-level="9.4.3" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html#escalas-scales---controle-fino"><i class="fa fa-check"></i><b>9.4.3</b> Escalas (scales) - Controle fino</a></li>
+<li class="chapter" data-level="9.4.4" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html#temas-themes"><i class="fa fa-check"></i><b>9.4.4</b> Temas (themes)</a></li>
+<li class="chapter" data-level="9.4.5" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html#escalas-scales"><i class="fa fa-check"></i><b>9.4.5</b> Escalas (scales)</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="dia1_fundamentos.html"><a href="#combinando-gr%C3%A1ficos-patchwork"><i class="fa fa-check"></i><b>9.5</b> Combinando Gráficos (patchwork)</a></li>
+<li class="chapter" data-level="9.6" data-path="dia1_fundamentos.html"><a href="#salvando-gr%C3%A1ficos-ggsave"><i class="fa fa-check"></i><b>9.6</b> Salvando Gráficos (ggsave)</a></li>
+<li class="chapter" data-level="9.7" data-path="dia1_fundamentos.html"><a href="#exerc%C3%ADcios-pr%C3%A1ticos"><i class="fa fa-check"></i><b>9.7</b> Exercícios Práticos</a>
+<ul>
+<li class="chapter" data-level="9.7.1" data-path="dia1_fundamentos.html"><a href="#exerc%C3%ADcio-1-transforma%C3%A7%C3%A3o-de-dados"><i class="fa fa-check"></i><b>9.7.1</b> Exercício 1: Transformação de dados</a></li>
+<li class="chapter" data-level="9.7.2" data-path="dia1_fundamentos.html"><a href="#exerc%C3%ADcio-2-limpeza-e-io"><i class="fa fa-check"></i><b>9.7.2</b> Exercício 2: Limpeza e I/O</a></li>
+<li class="chapter" data-level="9.7.3" data-path="dia1_fundamentos.html"><a href="#exerc%C3%ADcio-3-visualiza%C3%A7%C3%A3o-completa"><i class="fa fa-check"></i><b>9.7.3</b> Exercício 3: Visualização completa</a></li>
+</ul></li>
+<li class="chapter" data-level="9.8" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html#commit-do-dia-1"><i class="fa fa-check"></i><b>9.8</b> Commit do Dia</a></li>
+<li class="chapter" data-level="9.9" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html#checklist-de-encerramento-2"><i class="fa fa-check"></i><b>9.9</b> Checklist de Encerramento</a></li>
+<li class="chapter" data-level="9.10" data-path="dia1_fundamentos.html"><a href="#refer%C3%AAncias-r%C3%A1pidas-2"><i class="fa fa-check"></i><b>9.10</b> Referências Rápidas</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="dia1_fundamentos.html"><a href="#dia-4-integra%C3%A7%C3%A3o-do-chatgpt-e-claude-no-rstudio"><i class="fa fa-check"></i><b>10</b> Dia 4: Integração do ChatGPT e Claude no RStudio</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="dia1_fundamentos.html"><a href="#revis%C3%A3o-r%C3%A1pida-dos-dias-anteriores-10-min"><i class="fa fa-check"></i><b>10.0.1</b> Revisão Rápida dos Dias Anteriores (≈ 10 min)</a></li>
+<li class="chapter" data-level="10.1" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><i class="fa fa-check"></i><b>10.1</b> Conceitos e Modelos (19h00 - 19h30)</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="dia1_fundamentos.html"><a href="#o-que-s%C3%A3o-llms-large-language-models"><i class="fa fa-check"></i><b>10.1.1</b> O que são LLMs (Large Language Models)?</a></li>
+<li class="chapter" data-level="10.1.2" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#modelos-principais-que-usaremos"><i class="fa fa-check"></i><b>10.1.2</b> Modelos principais que usaremos</a></li>
+<li class="chapter" data-level="10.1.3" data-path="dia1_fundamentos.html"><a href="#compara%C3%A7%C3%A3o-pr%C3%A1tica"><i class="fa fa-check"></i><b>10.1.3</b> Comparação prática</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="dia1_fundamentos.html"><a href="#o-que-s%C3%A3o-apis"><i class="fa fa-check"></i><b>10.2</b> O que são APIs?</a></li>
+<li class="chapter" data-level="10.3" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#limites-e-custos"><i class="fa fa-check"></i><b>10.3</b> Limites e Custos</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#custos-por-modelo"><i class="fa fa-check"></i><b>10.3.1</b> Custos por modelo</a></li>
+<li class="chapter" data-level="10.3.2" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#rate-limits-limites-de-taxa"><i class="fa fa-check"></i><b>10.3.2</b> Rate Limits (Limites de taxa)</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="dia1_fundamentos.html"><a href="#boas-pr%C3%A1ticas-de-uso-respons%C3%A1vel-de-ia"><i class="fa fa-check"></i><b>10.4</b> Boas Práticas de Uso Responsável de IA</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="dia1_fundamentos.html"><a href="#privacidade-e-dados-sens%C3%ADveis"><i class="fa fa-check"></i><b>10.4.1</b> Privacidade e Dados Sensíveis</a></li>
+<li class="chapter" data-level="10.4.2" data-path="dia1_fundamentos.html"><a href="#versionamento-de-c%C3%B3digo-gerado-por-ia"><i class="fa fa-check"></i><b>10.4.2</b> Versionamento de Código Gerado por IA</a></li>
+<li class="chapter" data-level="10.4.3" data-path="dia1_fundamentos.html"><a href="#valida%C3%A7%C3%A3o-e-teste"><i class="fa fa-check"></i><b>10.4.3</b> Validação e Teste</a></li>
+<li class="chapter" data-level="10.4.4" data-path="dia1_fundamentos.html"><a href="#uso-%C3%A9tico"><i class="fa fa-check"></i><b>10.4.4</b> Uso Ético</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="dia1_fundamentos.html"><a href="#configura%C3%A7%C3%A3o-de-chaves-e-ambiente-19h30---20h15"><i class="fa fa-check"></i><b>10.5</b> Configuração de Chaves e Ambiente (19h30 - 20h15)</a>
+<ul>
+<li class="chapter" data-level="10.5.1" data-path="dia1_fundamentos.html"><a href="#vari%C3%A1veis-de-ambiente-no-r"><i class="fa fa-check"></i><b>10.5.1</b> Variáveis de Ambiente no R</a></li>
+<li class="chapter" data-level="10.5.2" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#o-arquivo-.renviron"><i class="fa fa-check"></i><b>10.5.2</b> O arquivo .Renviron</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#criando-chaves-de-api"><i class="fa fa-check"></i><b>10.6</b> Criando Chaves de API</a>
+<ul>
+<li class="chapter" data-level="10.6.1" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#openai-chatgpt"><i class="fa fa-check"></i><b>10.6.1</b> OpenAI (ChatGPT)</a></li>
+<li class="chapter" data-level="10.6.2" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#anthropic-claude"><i class="fa fa-check"></i><b>10.6.2</b> Anthropic (Claude)</a></li>
+</ul></li>
+<li class="chapter" data-level="10.7" data-path="dia1_fundamentos.html"><a href="#instala%C3%A7%C3%A3o-de-pacotes"><i class="fa fa-check"></i><b>10.7</b> Instalação de Pacotes</a>
+<ul>
+<li class="chapter" data-level="10.7.1" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#o-que-cada-pacote-faz"><i class="fa fa-check"></i><b>10.7.1</b> O que cada pacote faz</a></li>
+</ul></li>
+<li class="chapter" data-level="10.8" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#intervalo-20h15---20h30"><i class="fa fa-check"></i><b>10.8</b> INTERVALO (20h15 - 20h30)</a></li>
+<li class="chapter" data-level="10.9" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#rstudio-gptstudio-chatgpt-20h30---21h00"><i class="fa fa-check"></i><b>10.9</b> RStudio + gptstudio (ChatGPT) (20h30 - 21h00)</a>
+<ul>
+<li class="chapter" data-level="10.9.1" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#conhecendo-o-gptstudio"><i class="fa fa-check"></i><b>10.9.1</b> Conhecendo o gptstudio</a></li>
+<li class="chapter" data-level="10.9.2" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#acessando-os-addins"><i class="fa fa-check"></i><b>10.9.2</b> Acessando os Addins</a></li>
+<li class="chapter" data-level="10.9.3" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#chat-integrado"><i class="fa fa-check"></i><b>10.9.3</b> Chat Integrado</a></li>
+<li class="chapter" data-level="10.9.4" data-path="dia1_fundamentos.html"><a href="#explicar-c%C3%B3digo-selecionado"><i class="fa fa-check"></i><b>10.9.4</b> Explicar Código Selecionado</a></li>
+<li class="chapter" data-level="10.9.5" data-path="dia1_fundamentos.html"><a href="#comentar-c%C3%B3digo-automaticamente"><i class="fa fa-check"></i><b>10.9.5</b> Comentar Código Automaticamente</a></li>
+<li class="chapter" data-level="10.9.6" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#chamadas-via-api-manual-httr2"><i class="fa fa-check"></i><b>10.9.6</b> Chamadas via API Manual (httr2)</a></li>
+<li class="chapter" data-level="10.9.7" data-path="dia1_fundamentos.html"><a href="#casos-de-uso-pr%C3%A1ticos-com-chatgpt"><i class="fa fa-check"></i><b>10.9.7</b> Casos de Uso Práticos com ChatGPT</a></li>
+</ul></li>
+<li class="chapter" data-level="10.10" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#rstudio-chattr-claude-21h00---21h30"><i class="fa fa-check"></i><b>10.10</b> RStudio + chattr (Claude) (21h00 - 21h30)</a>
+<ul>
+<li class="chapter" data-level="10.10.1" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#conhecendo-o-chattr"><i class="fa fa-check"></i><b>10.10.1</b> Conhecendo o chattr</a></li>
+<li class="chapter" data-level="10.10.2" data-path="dia1_fundamentos.html"><a href="#configura%C3%A7%C3%A3o-inicial"><i class="fa fa-check"></i><b>10.10.2</b> Configuração inicial</a></li>
+<li class="chapter" data-level="10.10.3" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#chat-interativo"><i class="fa fa-check"></i><b>10.10.3</b> Chat Interativo</a></li>
+<li class="chapter" data-level="10.10.4" data-path="dia1_fundamentos.html"><a href="#chat-program%C3%A1tico"><i class="fa fa-check"></i><b>10.10.4</b> Chat Programático</a></li>
+<li class="chapter" data-level="10.10.5" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#chamadas-via-api-manual-claude"><i class="fa fa-check"></i><b>10.10.5</b> Chamadas via API Manual (Claude)</a></li>
+<li class="chapter" data-level="10.10.6" data-path="dia1_fundamentos.html"><a href="#casos-de-uso-pr%C3%A1ticos-com-claude"><i class="fa fa-check"></i><b>10.10.6</b> Casos de Uso Práticos com Claude</a></li>
+</ul></li>
+<li class="chapter" data-level="10.11" data-path="dia1_fundamentos.html"><a href="#exerc%C3%ADcio-guiado-de-integra%C3%A7%C3%A3o-21h30---22h00"><i class="fa fa-check"></i><b>10.11</b> Exercício Guiado de Integração (21h30 - 22h00)</a>
+<ul>
+<li class="chapter" data-level="10.11.1" data-path="dia1_fundamentos.html"><a href="#tarefa-1-revisar-c%C3%B3digo-com-gptstudio"><i class="fa fa-check"></i><b>10.11.1</b> Tarefa 1: Revisar código com gptstudio</a></li>
+<li class="chapter" data-level="10.11.2" data-path="dia1_fundamentos.html"><a href="#tarefa-2-gerar-fun%C3%A7%C3%A3o-com-chattr-claude"><i class="fa fa-check"></i><b>10.11.2</b> Tarefa 2: Gerar função com chattr (Claude)</a></li>
+<li class="chapter" data-level="10.11.3" data-path="dia1_fundamentos.html"><a href="#tarefa-3-documento-de-reflex%C3%A3o"><i class="fa fa-check"></i><b>10.11.3</b> Tarefa 3: Documento de Reflexão</a></li>
+<li class="chapter" data-level="10.11.4" data-path="dia1_fundamentos.html"><a href="#compara%C3%A7%C3%A3o-chatgpt-vs-claude"><i class="fa fa-check"></i><b>10.11.4</b> Comparação ChatGPT vs Claude</a></li>
+<li class="chapter" data-level="10.11.5" data-path="dia1_fundamentos.html"><a href="#reflex%C3%A3o-final"><i class="fa fa-check"></i><b>10.11.5</b> Reflexão Final</a></li>
+<li class="chapter" data-level="10.11.6" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#commit-e-push"><i class="fa fa-check"></i><b>10.11.6</b> Commit e Push</a></li>
+</ul></li>
+<li class="chapter" data-level="10.12" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#recursos-adicionais-1"><i class="fa fa-check"></i><b>10.12</b> Recursos Adicionais</a>
+<ul>
+<li class="chapter" data-level="10.12.1" data-path="dia1_fundamentos.html"><a href="#documenta%C3%A7%C3%A3o-oficial"><i class="fa fa-check"></i><b>10.12.1</b> Documentação Oficial</a></li>
+<li class="chapter" data-level="10.12.2" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#tutoriais-e-cursos"><i class="fa fa-check"></i><b>10.12.2</b> Tutoriais e Cursos</a></li>
+<li class="chapter" data-level="10.12.3" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#comunidades"><i class="fa fa-check"></i><b>10.12.3</b> Comunidades</a></li>
+</ul></li>
+<li class="chapter" data-level="10.13" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#troubleshooting"><i class="fa fa-check"></i><b>10.13</b> Troubleshooting</a>
+<ul>
+<li class="chapter" data-level="10.13.1" data-path="dia1_fundamentos.html"><a href="#erro-api-key-inv%C3%A1lida"><i class="fa fa-check"></i><b>10.13.1</b> Erro: API Key inválida</a></li>
+<li class="chapter" data-level="10.13.2" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#erro-rate-limit-excedido"><i class="fa fa-check"></i><b>10.13.2</b> Erro: Rate Limit excedido</a></li>
+<li class="chapter" data-level="10.13.3" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#erro-insufficient-credits"><i class="fa fa-check"></i><b>10.13.3</b> Erro: Insufficient credits</a></li>
+<li class="chapter" data-level="10.13.4" data-path="dia1_fundamentos.html"><a href="#gptstudio-n%C3%A3o-aparece-nos-addins"><i class="fa fa-check"></i><b>10.13.4</b> gptstudio não aparece nos Addins</a></li>
+</ul></li>
+<li class="chapter" data-level="10.14" data-path="dia1_fundamentos.html"><a href="#problemas-de-conex%C3%A3o"><i class="fa fa-check"></i><b>10.14</b> Problemas de conexão</a></li>
+<li class="chapter" data-level="10.15" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#dicas-finais"><i class="fa fa-check"></i><b>10.15</b> Dicas Finais</a>
+<ul>
+<li class="chapter" data-level="10.15.1" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#prompts-eficazes"><i class="fa fa-check"></i><b>10.15.1</b> Prompts Eficazes</a></li>
+<li class="chapter" data-level="10.15.2" data-path="dia1_fundamentos.html"><a href="#itera%C3%A7%C3%A3o-com-ia"><i class="fa fa-check"></i><b>10.15.2</b> Iteração com IA</a></li>
+<li class="chapter" data-level="10.15.3" data-path="dia1_fundamentos.html"><a href="#quando-n%C3%A3o-usar-ia"><i class="fa fa-check"></i><b>10.15.3</b> Quando NÃO usar IA</a></li>
+<li class="chapter" data-level="10.15.4" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#quando-sim-usar-ia"><i class="fa fa-check"></i><b>10.15.4</b> Quando SIM usar IA</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="dia1_fundamentos.html"><a href="#conclus%C3%A3o-do-curso"><i class="fa fa-check"></i><b>11</b> Conclusão do Curso</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="dia1_fundamentos.html"><a href="#o-que-voc%C3%AA-aprendeu"><i class="fa fa-check"></i><b>11.1</b> O que você aprendeu:</a></li>
+<li class="chapter" data-level="11.2" data-path="dia1_fundamentos.html"><a href="#pr%C3%B3ximos-passos"><i class="fa fa-check"></i><b>11.2</b> Próximos passos:</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="dia-1-fundamentos-e-ambiente-de-trabalho" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">7</span> Dia 1: Fundamentos e Ambiente de Trabalho<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#dia-1-fundamentos-e-ambiente-de-trabalho" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="abertura" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Abertura<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#abertura" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Tempo previsto</strong> 19h00–22h00 (intervalo 20h30–20h50)</p>
+<hr />
+</div>
+<div id="apresentação-do-curso-15-min" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Apresentação do Curso (15 min)<a href="#apresenta%C3%A7%C3%A3o-do-curso-15-min" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="bem-vindos" class="section level3 hasAnchor" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> Bem-vindos!<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#bem-vindos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Olá! Seja muito bem-vindo ao <strong>Curso Intensivo de R com GitHub e IA</strong>. Esta jornada de 16 horas foi cuidadosamente estruturada para transformar você de iniciante a alguém capaz de realizar análises de dados completas usando ferramentas modernas e profissionais.</p>
+</div>
+<div id="objetivos-gerais-do-curso" class="section level3 hasAnchor" number="7.2.2">
+<h3><span class="header-section-number">7.2.2</span> Objetivos Gerais do Curso<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#objetivos-gerais-do-curso" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ao final deste curso, você será capaz de:</p>
+<ul>
+<li>Programar em R e descobrir como resolver problemas com o seu código</li>
+<li>Manipular e transformar dados usando o ecossistema tidyverse</li>
+<li>Criar visualizações profissionais e informativas com ggplot2</li>
+<li>Versionar seu código com Git e colaborar via GitHub</li>
+<li>Usar inteligência artificial (ChatGPT e Claude) para acelerar seu aprendizado e resolver problemas</li>
+</ul>
+</div>
+<div id="metodologia-1" class="section level3 hasAnchor" number="7.2.3">
+<h3><span class="header-section-number">7.2.3</span> Metodologia<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#metodologia-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Abordagem <strong>100% prática e hands-on</strong>:</p>
+<ul>
+<li><strong>Teoria mínima necessária</strong> seguida de prática imediata</li>
+<li><strong>Datasets reais</strong> desde o primeiro dia</li>
+<li><strong>Commits diários</strong> no seu fork do repositório</li>
+<li><strong>IA como assistente</strong> para explicação, depuração e geração de código</li>
+<li><strong>Multiplataforma</strong>: todo conteúdo funciona em Windows, macOS e Linux</li>
+</ul>
+</div>
+<div id="estrutura-dos-4-dias" class="section level3 hasAnchor" number="7.2.4">
+<h3><span class="header-section-number">7.2.4</span> Estrutura dos 4 Dias<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#estrutura-dos-4-dias" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Dia 1 (hoje)</strong>: Fundamentos de R + Ambiente reprodutível (RStudio, Git, GitHub, fork)</li>
+<li><strong>Dia 2</strong>: Lógica de programação, condicionais, funções e tidyverse básico</li>
+<li><strong>Dia 3</strong>: Transformações com tidyr/dplyr, leitura/escrita de dados e visualização com ggplot2</li>
+<li><strong>Dia 4</strong>: Integração prática do ChatGPT e Claude dentro do RStudio</li>
+</ul>
+</div>
+<div id="materiais-e-suporte" class="section level3 hasAnchor" number="7.2.5">
+<h3><span class="header-section-number">7.2.5</span> Materiais e Suporte<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#materiais-e-suporte" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Repositório GitHub</strong>: <a href="https://github.com/viniciusjunqueira/curso-r-github-ia" class="uri">https://github.com/viniciusjunqueira/curso-r-github-ia</a></li>
+<li><strong>Datasets</strong>: incluídos no repositório + pacote palmerpenguins</li>
+<li><strong>Contato</strong>: <a href="mailto:junqueiravinicius@hotmail.com" class="email">junqueiravinicius@hotmail.com</a></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="por-que-r-github-e-ia-15-min" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Por Que R, GitHub e IA? (15 min)<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#por-que-r-github-e-ia-15-min" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="por-que-r" class="section level3 hasAnchor" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> Por Que R?<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#por-que-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>R é uma linguagem poderosa e gratuita</strong>, criada especificamente para análise de dados e estatística. Algumas razões para aprender R:</p>
+<p><strong>Ecosistema rico</strong></p>
+<ul>
+<li>Mais de 20.000 pacotes disponíveis para praticamente qualquer análise</li>
+<li>tidyverse: conjunto integrado de ferramentas modernas para ciência de dados</li>
+<li>ggplot2: sistema de visualização elegante e profissional</li>
+</ul>
+<p><strong>Reprodutibilidade</strong></p>
+<ul>
+<li>Tudo que você faz fica documentado em código</li>
+<li>Fácil repetir análises com novos dados</li>
+<li>R Markdown permite combinar código, resultados e narrativa</li>
+</ul>
+<p><strong>Comunidade ativa</strong></p>
+<ul>
+<li>Grande comunidade brasileira e internacional</li>
+<li>Milhares de tutoriais, cursos e fóruns de ajuda</li>
+<li>TidyTuesday: prática semanal com dados reais</li>
+</ul>
+<p><strong>Demanda no mercado</strong></p>
+<ul>
+<li>Usado em empresas, universidades e governos</li>
+<li>Essencial para ciência de dados, bioinformática, economia, ciências sociais</li>
+<li>Combina bem com Python em pipelines modernos de dados</li>
+</ul>
+</div>
+<div id="por-que-github" class="section level3 hasAnchor" number="7.3.2">
+<h3><span class="header-section-number">7.3.2</span> Por Que GitHub?<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#por-que-github" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>GitHub não é apenas para programadores!</strong> É uma plataforma essencial para:</p>
+<p><strong>Controle de versão</strong></p>
+<ul>
+<li>Histórico completo de todas as mudanças no seu código</li>
+<li>Possibilidade de voltar a versões anteriores</li>
+<li>Nunca mais perder trabalho por acidente</li>
+</ul>
+<p><strong>Colaboração</strong></p>
+<ul>
+<li>Trabalhe em equipe sem conflitos</li>
+<li>Contribua para projetos open-source</li>
+<li>Receba feedback e sugestões</li>
+</ul>
+<p><strong>Portfólio profissional</strong></p>
+<ul>
+<li>Mostre seus projetos para empregadores</li>
+<li>Demonstre evolução e consistência</li>
+<li>Compartilhe conhecimento com a comunidade</li>
+</ul>
+<p><strong>Integração moderna</strong></p>
+<ul>
+<li>Funciona perfeitamente com RStudio</li>
+<li>Base para deployment de aplicações</li>
+<li>Padrão da indústria para ciência de dados</li>
+</ul>
+</div>
+<div id="por-que-ia-chatgpt-e-claude" class="section level3 hasAnchor" number="7.3.3">
+<h3><span class="header-section-number">7.3.3</span> Por Que IA (ChatGPT e Claude)?<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#por-que-ia-chatgpt-e-claude" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A inteligência artificial revolucionou o aprendizado de programação. <strong>Não é trapaça, é trabalhar de forma inteligente!</strong></p>
+<p><strong>Acelera o aprendizado</strong></p>
+<ul>
+<li>Explicações personalizadas para seu nível</li>
+<li>Respostas imediatas para dúvidas específicas</li>
+<li>Exemplos sob medida para seu contexto</li>
+</ul>
+<p><strong>Assistência na depuração</strong></p>
+<ul>
+<li>Interpretação de mensagens de erro</li>
+<li>Sugestões de correção</li>
+<li>Identificação de problemas de lógica</li>
+</ul>
+<p><strong>Aumenta produtividade</strong></p>
+<ul>
+<li>Geração de código boilerplate</li>
+<li>Refatoração e otimização</li>
+<li>Criação de documentação</li>
+</ul>
+<p><strong>Ferramentas do curso</strong></p>
+<ul>
+<li><strong>ChatGPT (OpenAI)</strong>: excelente para explicações didáticas e geração rápida de código</li>
+<li><strong>Claude (Anthropic)</strong>: ótimo para análises mais profundas e revisão de código complexo</li>
+</ul>
+<blockquote>
+<p><strong>Importante</strong>: IA é uma ferramenta, não uma substituição do aprendizado. Use-a para entender conceitos, não apenas copiar código!</p>
+</blockquote>
+<hr />
+</div>
+</div>
+<div id="ambientação-e-setup-40-min" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Ambientação e Setup (40 min)<a href="#ambienta%C3%A7%C3%A3o-e-setup-40-min" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<blockquote>
+<p><strong>Objetivos desta seção</strong></p>
+<ul>
+<li>Verificar instalações (R, RStudio, Git)</li>
+<li>Configurar Git e autenticar no GitHub</li>
+<li>Entender e aplicar o <strong>workflow com fork</strong></li>
+<li>Preparar ambiente reprodutível com projetos <code>.Rproj</code> e <code>here()</code></li>
+</ul>
+</blockquote>
+<div id="verificações-rápidas" class="section level3 hasAnchor" number="7.4.1">
+<h3><span class="header-section-number">7.4.1</span> Verificações rápidas<a href="#verifica%C3%A7%C3%B5es-r%C3%A1pidas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb9-1" tabindex="-1"></a>R.version.string           <span class="co"># Versão do R</span></span>
+<span id="cb9-2"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb9-2" tabindex="-1"></a><span class="fu">RStudio.Version</span>()<span class="sc">$</span>version  <span class="co"># Versão do RStudio</span></span>
+<span id="cb9-3"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb9-3" tabindex="-1"></a><span class="fu">system</span>(<span class="st">&quot;git --version&quot;</span>)    <span class="co"># Confirma Git disponível</span></span></code></pre></div>
+</div>
+<div id="instalar-git-se-não-estiver-disponível" class="section level3 hasAnchor" number="7.4.2">
+<h3><span class="header-section-number">7.4.2</span> Instalar Git (se não estiver disponível)<a href="#instalar-git-se-n%C3%A3o-estiver-dispon%C3%ADvel" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Antes de começar a trabalhar com controle de versão no RStudio, você precisa ter o Git instalado no seu computador. Siga as instruções específicas para o seu sistema operacional.</p>
+</div>
+<div id="configurar-git-uma-vez-só" class="section level3 hasAnchor" number="7.4.3">
+<h3><span class="header-section-number">7.4.3</span> Configurar Git (uma vez só)<a href="#configurar-git-uma-vez-s%C3%B3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>No <strong>Terminal do RStudio</strong> (funciona em Windows/macOS/Linux):</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb10-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb10-1" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">&quot;Seu Nome&quot;</span></span>
+<span id="cb10-2"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb10-2" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">&quot;seu@email.com&quot;</span></span>
+<span id="cb10-3"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb10-3" tabindex="-1"></a><span class="co"># Verificar</span></span>
+<span id="cb10-4"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb10-4" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> <span class="at">--list</span></span></code></pre></div>
+</div>
+<div id="autenticar-no-github-pat-recomendado" class="section level3 hasAnchor" number="7.4.4">
+<h3><span class="header-section-number">7.4.4</span> Autenticar no GitHub (PAT recomendado)<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#autenticar-no-github-pat-recomendado" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>O que é um PAT?</strong></p>
+<p>Um Personal Access Token (PAT) é como uma “senha especial” que permite ao RStudio se comunicar com o GitHub de forma segura. O GitHub não aceita mais senhas normais para operações via linha de comando, então o PAT é obrigatório.</p>
+<p><strong>Passo a passo para criar e configurar o PAT:</strong></p>
+</div>
+<div id="instalar-pacotes-necessários" class="section level3 hasAnchor" number="7.4.5">
+<h3><span class="header-section-number">7.4.5</span> Instalar pacotes necessários<a href="#instalar-pacotes-necess%C3%A1rios" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb11-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;usethis&quot;</span>)</span>
+<span id="cb11-2"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb11-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;gitcreds&quot;</span>)</span></code></pre></div>
+</div>
+<div id="criar-o-token-no-github" class="section level3 hasAnchor" number="7.4.6">
+<h3><span class="header-section-number">7.4.6</span> Criar o token no GitHub<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#criar-o-token-no-github" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb12-1" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span></code></pre></div>
+<p>Este comando abrirá seu navegador automaticamente na página de criação de tokens do GitHub. Você verá uma página pré-configurada com as permissões necessárias.</p>
+<p><strong>No navegador:</strong></p>
+<ol style="list-style-type: decimal">
+<li><strong>Faça login no GitHub</strong> (se ainda não estiver logado)</li>
+<li><strong>Note (New personal access token - classic)</strong>:
+<ul>
+<li>O campo “Note” já virá preenchido com algo como “DESCRIBE THE TOKEN’S USE CASE”</li>
+<li>Renomeie para algo descritivo como: <code>RStudio-Curso-R-2024</code></li>
+</ul></li>
+<li><strong>Expiration</strong>: escolha a duração do token
+<ul>
+<li>Para o curso: <code>90 days</code> é suficiente</li>
+<li>Para uso contínuo: <code>No expiration</code> (menos seguro, mas mais prático)</li>
+</ul></li>
+<li><strong>Permissões (Scopes)</strong>: o <code>usethis</code> já marca as principais
+<ul>
+<li>✅ <code>repo</code> (controle total de repositórios privados)</li>
+<li>✅ <code>workflow</code> (atualizar workflows do GitHub Actions)</li>
+<li>✅ <code>gist</code> (criar gists)</li>
+<li>✅ <code>user</code> (atualizar dados do usuário)</li>
+<li><strong>Não altere nada</strong>, as permissões pré-selecionadas são ideais</li>
+</ul></li>
+<li><strong>Clique em “Generate token”</strong> no final da página</li>
+<li><strong>ATENÇÃO</strong>: copie o token que aparece (começa com <code>ghp_...</code>)
+<ul>
+<li>⚠️ <strong>VOCÊ SÓ VERÁ ESTE TOKEN UMA VEZ!</strong></li>
+<li>Cole em um lugar seguro temporariamente (bloco de notas)</li>
+</ul></li>
+</ol>
+</div>
+<div id="salvar-o-token-no-rstudio" class="section level3 hasAnchor" number="7.4.7">
+<h3><span class="header-section-number">7.4.7</span> Salvar o token no RStudio<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#salvar-o-token-no-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb13-1" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code></pre></div>
+<p>Quando executar este comando, você verá algo assim no Console:</p>
+<pre><code>? Enter password or token: </code></pre>
+<p><strong>Cole o token</strong> que você copiou do GitHub e pressione <strong>Enter</strong>.</p>
+<p>Você verá uma mensagem de confirmação:</p>
+<pre><code>-&gt; Adding new credentials...
+-&gt; Removing credentials from cache...
+-&gt; Done.</code></pre>
+</div>
+<div id="verificar-se-funcionou" class="section level3 hasAnchor" number="7.4.8">
+<h3><span class="header-section-number">7.4.8</span> Verificar se funcionou<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#verificar-se-funcionou" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb16-1" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">git_sitrep</span>()</span></code></pre></div>
+<p>Este comando mostra o status da sua configuração Git/GitHub. Procure por:</p>
+<pre><code>✔ GitHub user: &#39;seu-usuario&#39;
+✔ Token: &#39;&lt;discovered&gt;&#39;</code></pre>
+<p>Se você ver isso, está tudo configurado! ✅</p>
+<p><strong>Alternativas ao PAT:</strong></p>
+<ul>
+<li><strong>GitHub Desktop</strong> (aplicativo com interface gráfica - mais simples para iniciantes)</li>
+<li><strong>SSH</strong> (método avançado, requer configuração de chaves públicas/privadas)</li>
+</ul>
+<hr />
+</div>
+<div id="workflow-com-fork-obrigatório-para-a-turma" class="section level3 hasAnchor" number="7.4.9">
+<h3><span class="header-section-number">7.4.9</span> Workflow com Fork (obrigatório para a turma)<a href="#workflow-com-fork-obrigat%C3%B3rio-para-a-turma" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>Original (instrutor)  →  FORK (sua conta)  →  CLONE (seu PC)  →  PUSH (para seu fork)</code></pre>
+<ol style="list-style-type: decimal">
+<li>Abra: <a href="https://github.com/viniciusjunqueira/curso-r-github-ia" class="uri">https://github.com/viniciusjunqueira/curso-r-github-ia</a></li>
+<li>Clique <strong>Fork</strong> → escolha <strong>sua conta</strong> → <em>Create fork</em>.<br />
+</li>
+<li>Clone <strong>SEU fork</strong>:</li>
+</ol>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb19-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb19-1" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/SEU-USUARIO/curso-r-github-ia.git</span>
+<span id="cb19-2"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb19-2" tabindex="-1"></a><span class="bu">cd</span> curso-r-github-ia</span></code></pre></div>
+<ol start="4" style="list-style-type: decimal">
+<li>Abra o projeto <code>.Rproj</code> no RStudio.<br />
+</li>
+<li><strong>Cheque o remote</strong>:</li>
+</ol>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb20-1" tabindex="-1"></a><span class="fu">git</span> remote <span class="at">-v</span></span>
+<span id="cb20-2"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb20-2" tabindex="-1"></a><span class="co"># Deve mostrar seu usuário em origin</span></span></code></pre></div>
+<blockquote>
+<p><strong>Por que fork?</strong> Você controla seu repositório, faz commits/push à vontade e não altera o repo do instrutor.</p>
+</blockquote>
+<hr />
+</div>
+</div>
+<div id="estrutura-de-projeto-e-portabilidade" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Estrutura de projeto e portabilidade<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#estrutura-de-projeto-e-portabilidade" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<pre><code>curso-r-github-ia/
+├── curso-r-github-ia.Rproj
+├── data/
+│   ├── raw/
+│   └── processed/
+├── scripts/
+├── output/
+│   ├── figures/
+│   └── tables/
+└── docs/</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb22-1" tabindex="-1"></a><span class="co"># Caminhos: sempre prefira here::here()</span></span>
+<span id="cb22-2"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb22-2" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;here&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb22-3"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb22-3" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;here&quot;</span>)</span>
+<span id="cb22-4"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb22-4" tabindex="-1"></a>}</span>
+<span id="cb22-5"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb22-5" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb22-6"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb22-6" tabindex="-1"></a>caminho <span class="ot">&lt;-</span> <span class="fu">here</span>(<span class="st">&quot;data&quot;</span>, <span class="st">&quot;raw&quot;</span>, <span class="st">&quot;dados.csv&quot;</span>)</span>
+<span id="cb22-7"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb22-7" tabindex="-1"></a>caminho</span></code></pre></div>
+<blockquote>
+<p><strong>UTF-8</strong>: salve arquivos com <code>File → Save with Encoding → UTF-8</code> (evita problemas de acentuação em todos os SOs).</p>
+</blockquote>
+<hr />
+</div>
+<div id="fundamentos-de-r-50-min" class="section level2 hasAnchor" number="7.6">
+<h2><span class="header-section-number">7.6</span> Fundamentos de R (50 min)<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#fundamentos-de-r-50-min" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="objetos-básicos-e-operações" class="section level3 hasAnchor" number="7.6.1">
+<h3><span class="header-section-number">7.6.1</span> Objetos básicos e operações<a href="#objetos-b%C3%A1sicos-e-opera%C3%A7%C3%B5es" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>O que são objetos em R?</strong></p>
+<p>Em R, tudo é um objeto! Quando você cria uma variável, você está criando um objeto que armazena informação na memória do computador. Os tipos básicos mais importantes são:</p>
+<ul>
+<li><strong>Numérico (numeric)</strong>: números decimais como <code>3.14</code>, <code>10.5</code>, <code>-2.7</code></li>
+<li><strong>Inteiro (integer)</strong>: números inteiros como <code>1L</code>, <code>100L</code> (o <code>L</code> indica inteiro)</li>
+<li><strong>Lógico (logical)</strong>: valores verdadeiro/falso - <code>TRUE</code> ou <code>FALSE</code></li>
+<li><strong>Caractere (character)</strong>: texto entre aspas como <code>"Olá"</code>, <code>"R"</code>, <code>"2024"</code></li>
+</ul>
+<p>Você cria objetos usando o operador de atribuição <code>&lt;-</code> (preferido) ou <code>=</code>.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-1" tabindex="-1"></a><span class="co"># Números, lógicos, strings</span></span>
+<span id="cb23-2"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-2" tabindex="-1"></a>x_num <span class="ot">&lt;-</span> <span class="fl">3.14</span></span>
+<span id="cb23-3"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-3" tabindex="-1"></a>x_log <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
+<span id="cb23-4"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-4" tabindex="-1"></a>x_chr <span class="ot">&lt;-</span> <span class="st">&quot;Olá, R!&quot;</span></span>
+<span id="cb23-5"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-5" tabindex="-1"></a><span class="fu">class</span>(x_num)</span>
+<span id="cb23-6"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-6" tabindex="-1"></a><span class="fu">typeof</span>(x_num)</span>
+<span id="cb23-7"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-7" tabindex="-1"></a><span class="fu">class</span>(x_log)</span>
+<span id="cb23-8"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-8" tabindex="-1"></a><span class="fu">typeof</span>(x_log)</span>
+<span id="cb23-9"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-9" tabindex="-1"></a><span class="fu">class</span>(x_chr)</span>
+<span id="cb23-10"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-10" tabindex="-1"></a><span class="fu">typeof</span>(x_chr)</span>
+<span id="cb23-11"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-11" tabindex="-1"></a></span>
+<span id="cb23-12"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-12" tabindex="-1"></a><span class="co"># Aritmética</span></span>
+<span id="cb23-13"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-13" tabindex="-1"></a><span class="dv">10</span> <span class="sc">+</span> <span class="dv">2</span>  <span class="co"># somatório</span></span>
+<span id="cb23-14"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-14" tabindex="-1"></a><span class="dv">10</span> <span class="sc">-</span> <span class="dv">2</span>  <span class="co"># subtração</span></span>
+<span id="cb23-15"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-15" tabindex="-1"></a><span class="dv">10</span> <span class="sc">*</span> <span class="dv">2</span>  <span class="co"># multiplicação</span></span>
+<span id="cb23-16"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-16" tabindex="-1"></a><span class="dv">10</span> <span class="sc">/</span> <span class="dv">3</span>  <span class="co"># divisão</span></span>
+<span id="cb23-17"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-17" tabindex="-1"></a><span class="dv">2</span> <span class="sc">^</span> <span class="dv">3</span>   <span class="co"># exponecial </span></span>
+<span id="cb23-18"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-18" tabindex="-1"></a></span>
+<span id="cb23-19"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-19" tabindex="-1"></a><span class="co"># Infinito positivo. Significa que o valor tende ao infinito positivo.</span></span>
+<span id="cb23-20"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-20" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">/</span> <span class="dv">0</span></span>
+<span id="cb23-21"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-21" tabindex="-1"></a>a</span>
+<span id="cb23-22"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-22" tabindex="-1"></a></span>
+<span id="cb23-23"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-23" tabindex="-1"></a><span class="co"># Infinito negativo. Significa que o valor tende ao infinito negativo.</span></span>
+<span id="cb23-24"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-24" tabindex="-1"></a>b <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">1</span> <span class="sc">/</span> <span class="dv">0</span></span>
+<span id="cb23-25"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-25" tabindex="-1"></a>b</span>
+<span id="cb23-26"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-26" tabindex="-1"></a></span>
+<span id="cb23-27"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-27" tabindex="-1"></a><span class="co"># Not a Number (NaN). Indica uma operação indefinida matematicamente.</span></span>
+<span id="cb23-28"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-28" tabindex="-1"></a>c <span class="ot">&lt;-</span> <span class="dv">0</span> <span class="sc">/</span> <span class="dv">0</span></span>
+<span id="cb23-29"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-29" tabindex="-1"></a>c</span>
+<span id="cb23-30"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-30" tabindex="-1"></a></span>
+<span id="cb23-31"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-31" tabindex="-1"></a><span class="co"># Valor ausente (NA). Representa um valor desconhecido ou faltante.</span></span>
+<span id="cb23-32"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-32" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="cn">NA</span>, <span class="dv">8</span>)</span>
+<span id="cb23-33"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-33" tabindex="-1"></a>d</span>
+<span id="cb23-34"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-34" tabindex="-1"></a></span>
+<span id="cb23-35"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-35" tabindex="-1"></a><span class="co"># -------------------------------------------------------------</span></span>
+<span id="cb23-36"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-36" tabindex="-1"></a><span class="co"># Testando os tipos de valores</span></span>
+<span id="cb23-37"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-37" tabindex="-1"></a><span class="co"># -------------------------------------------------------------</span></span>
+<span id="cb23-38"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-38" tabindex="-1"></a></span>
+<span id="cb23-39"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-39" tabindex="-1"></a><span class="fu">is.infinite</span>(a)   <span class="co"># TRUE</span></span>
+<span id="cb23-40"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-40" tabindex="-1"></a><span class="fu">is.nan</span>(c)        <span class="co"># TRUE</span></span>
+<span id="cb23-41"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-41" tabindex="-1"></a><span class="fu">is.na</span>(d)         <span class="co"># TRUE para o elemento ausente</span></span>
+<span id="cb23-42"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-42" tabindex="-1"></a><span class="fu">is.na</span>(<span class="cn">NaN</span>)       <span class="co"># TRUE — NaN é considerado um tipo especial de NA</span></span>
+<span id="cb23-43"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-43" tabindex="-1"></a><span class="fu">is.finite</span>(a)     <span class="co"># FALSE — porque Inf não é finito</span></span>
+<span id="cb23-44"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-44" tabindex="-1"></a><span class="fu">is.finite</span>(<span class="dv">10</span>)    <span class="co"># TRUE  — número normal é finito</span></span>
+<span id="cb23-45"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-45" tabindex="-1"></a></span>
+<span id="cb23-46"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-46" tabindex="-1"></a><span class="co"># -------------------------------------------------------------</span></span>
+<span id="cb23-47"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-47" tabindex="-1"></a><span class="co"># Operações que produzem resultados especiais</span></span>
+<span id="cb23-48"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-48" tabindex="-1"></a><span class="co"># -------------------------------------------------------------</span></span>
+<span id="cb23-49"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-49" tabindex="-1"></a><span class="cn">Inf</span> <span class="sc">+</span> (<span class="sc">-</span><span class="cn">Inf</span>)     <span class="co"># NaN (infinito positivo menos infinito negativo é indefinido)</span></span>
+<span id="cb23-50"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-50" tabindex="-1"></a><span class="cn">Inf</span> <span class="sc">/</span> <span class="cn">Inf</span>        <span class="co"># NaN</span></span>
+<span id="cb23-51"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-51" tabindex="-1"></a><span class="dv">0</span> <span class="sc">*</span> <span class="cn">Inf</span>          <span class="co"># NaN</span></span>
+<span id="cb23-52"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb23-52" tabindex="-1"></a><span class="cn">NA</span> <span class="sc">+</span> <span class="dv">1</span>           <span class="co"># NA</span></span></code></pre></div>
+</div>
+<div id="vetores-e-indexação" class="section level3 hasAnchor" number="7.6.2">
+<h3><span class="header-section-number">7.6.2</span> Vetores e indexação<a href="#vetores-e-indexa%C3%A7%C3%A3o" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>O que são vetores?</strong></p>
+<p>Vetores são a estrutura de dados mais fundamental do R. Um vetor é uma <strong>coleção de elementos do mesmo tipo</strong> (todos números, ou todos textos, ou todos lógicos). Você pode pensar em um vetor como uma linha de dados em uma planilha.</p>
+<p><strong>Características importantes:</strong>
+- Criados com a função <code>c()</code> (de “combine” ou “concatenar”)
+- Todos os elementos devem ser do mesmo tipo
+- R é <strong>1-indexed</strong> (o primeiro elemento está na posição 1, não 0)
+- Operações são <strong>vetorizadas</strong> (aplicadas a todos elementos automaticamente)</p>
+<p><strong>Indexação</strong> é o processo de acessar elementos específicos de um vetor usando colchetes <code>[]</code>.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb24-1" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>)</span>
+<span id="cb24-2"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb24-2" tabindex="-1"></a><span class="fu">length</span>(v); <span class="fu">mean</span>(v); <span class="fu">sum</span>(v)</span>
+<span id="cb24-3"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb24-3" tabindex="-1"></a></span>
+<span id="cb24-4"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb24-4" tabindex="-1"></a>v[<span class="dv">1</span>]; v[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>]; v[<span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb24-5"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb24-5" tabindex="-1"></a>sel <span class="ot">&lt;-</span> v <span class="sc">&gt;</span> <span class="dv">25</span>; sel; v[sel]</span></code></pre></div>
+<p><strong>Utilizando a função</strong> <code>names()</code>: Essa função serve para dar nomes (ou cabeçalhos) aos elementos de um vetor, lista ou outro objeto em R. Esses nomes tornam os dados mais organizados e permitem acessar valores pelo nome, em vez de usar apenas posições numéricas. É útil quando você quer que cada elemento tenha um rótulo identificador, como nomes de amostras, variáveis, tratamentos ou categorias — o que deixa o código mais legível e fácil de interpretar.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb25-1" tabindex="-1"></a><span class="fu">names</span>(v) <span class="ot">&lt;-</span> letters[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
+<span id="cb25-2"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb25-2" tabindex="-1"></a><span class="co"># Mostrando o vetor com nomes</span></span>
+<span id="cb25-3"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb25-3" tabindex="-1"></a>v</span>
+<span id="cb25-4"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb25-4" tabindex="-1"></a><span class="co"># Acessando um elemento pelo nome</span></span>
+<span id="cb25-5"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb25-5" tabindex="-1"></a>v[<span class="st">&quot;c&quot;</span>]</span></code></pre></div>
+<p><strong>Type coercion</strong>. Em R, um vetor é uma estrutura homogênea, ou seja, todos os seus elementos precisam ser do mesmo tipo. Quando você cria um vetor com elementos de tipos diferentes, o R automaticamente converte (ou “coage”) todos os valores para um tipo comum que consiga representar todos eles. Esse processo é chamado de coerção de tipos (type coercion).</p>
+<p>Regras básicas de coerção:
+O R segue uma hierarquia de tipos, do mais simples para o mais geral:
+logical → integer → double → character</p>
+<p>Isso significa:
+Se você misturar lógicos (TRUE, FALSE) com números, eles viram números (TRUE = 1, FALSE = 0).</p>
+<p>Se misturar números com texto, tudo vira texto.</p>
+<p>O tipo character tem sempre prioridade, porque é o único que pode representar qualquer coisa como texto.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb26-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="st">&quot;a&quot;</span>)</span>
+<span id="cb26-2"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb26-2" tabindex="-1"></a>x</span>
+<span id="cb26-3"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb26-3" tabindex="-1"></a></span>
+<span id="cb26-4"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb26-4" tabindex="-1"></a><span class="fu">class</span>(x)</span></code></pre></div>
+</div>
+<div id="listas-e-data.frames" class="section level3 hasAnchor" number="7.6.3">
+<h3><span class="header-section-number">7.6.3</span> Listas e data.frames<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#listas-e-data.frames" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="listas-estruturas-flexíveis" class="section level4 hasAnchor" number="7.6.3.1">
+<h4><span class="header-section-number">7.6.3.1</span> Listas: estruturas flexíveis<a href="#listas-estruturas-flex%C3%ADveis" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Uma <strong>lista</strong> (<code>list</code>) é uma estrutura que pode conter elementos de <strong>diferentes tipos</strong> — ao contrário dos vetores, que são homogêneos.<br />
+Listas são extremamente versáteis e podem armazenar <strong>números, textos, vetores, outras listas</strong> e até <strong>data.frames</strong>!</p>
+</div>
+<div id="uso-típico-de-listas" class="section level4 hasAnchor" number="7.6.3.2">
+<h4><span class="header-section-number">7.6.3.2</span> Uso típico de listas:<a href="#uso-t%C3%ADpico-de-listas" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li>Armazenar resultados complexos de análises</li>
+<li>Combinar diferentes tipos de informação</li>
+<li>Retornar múltiplos valores de uma função</li>
+</ul>
+<hr />
+</div>
+<div id="exemplo-1-criando-uma-lista-simples" class="section level4 hasAnchor" number="7.6.3.3">
+<h4><span class="header-section-number">7.6.3.3</span> Exemplo 1 – Criando uma lista simples<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#exemplo-1-criando-uma-lista-simples" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb27-1" tabindex="-1"></a><span class="co"># Criando uma lista com diferentes tipos de objetos</span></span>
+<span id="cb27-2"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb27-2" tabindex="-1"></a>info <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb27-3"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb27-3" tabindex="-1"></a>  <span class="at">nome =</span> <span class="st">&quot;Ana&quot;</span>,</span>
+<span id="cb27-4"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb27-4" tabindex="-1"></a>  <span class="at">idade =</span> <span class="dv">25</span>,</span>
+<span id="cb27-5"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb27-5" tabindex="-1"></a>  <span class="at">notas =</span> <span class="fu">c</span>(<span class="fl">8.5</span>, <span class="fl">9.0</span>, <span class="fl">7.5</span>),</span>
+<span id="cb27-6"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb27-6" tabindex="-1"></a>  <span class="at">aprovado =</span> <span class="cn">TRUE</span></span>
+<span id="cb27-7"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb27-7" tabindex="-1"></a>)</span>
+<span id="cb27-8"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb27-8" tabindex="-1"></a></span>
+<span id="cb27-9"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb27-9" tabindex="-1"></a><span class="co"># Visualizando a lista completa</span></span>
+<span id="cb27-10"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb27-10" tabindex="-1"></a>info</span></code></pre></div>
+<p>A função <code>str()</code> (de <em>structure</em>) exibe um resumo compacto da estrutura de qualquer objeto em R.<br />
+É muito útil para entender rapidamente o conteúdo de listas e data.frames, mostrando:</p>
+<ul>
+<li>O tipo de cada elemento (numérico, lógico, texto, etc.)</li>
+<li>O tamanho dos vetores internos</li>
+<li>Uma prévia dos valores armazenados</li>
+</ul>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb28-1" tabindex="-1"></a><span class="fu">str</span>(info)</span></code></pre></div>
+<p><strong>Data.frames: a estrutura tabular</strong></p>
+<p>Um <strong>data.frame</strong> (<code>data.frame</code>) é a estrutura mais importante para análise de dados em R. É similar a uma planilha do Excel ou uma tabela de banco de dados: tem linhas (observações) e colunas (variáveis).</p>
+<p><strong>Características do data.frame:</strong></p>
+<ul>
+<li>Cada coluna pode ser de um tipo diferente (uma coluna numérica, outra texto)</li>
+<li>Cada coluna é um vetor e deve ter o mesmo comprimento</li>
+<li>É como uma lista especial onde todos os elementos têm o mesmo tamanho</li>
+<li>Ideal para dados tabulares (como datasets de pesquisa)</li>
+</ul>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-1" tabindex="-1"></a><span class="co"># Lista: tipos mistos</span></span>
+<span id="cb29-2"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-2" tabindex="-1"></a>lst <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">id =</span> <span class="dv">1</span>, <span class="at">nome =</span> <span class="st">&quot;Ana&quot;</span>, <span class="at">aprovado =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb29-3"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-3" tabindex="-1"></a>lst<span class="sc">$</span>nome</span>
+<span id="cb29-4"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-4" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-5" tabindex="-1"></a><span class="co"># Data frame</span></span>
+<span id="cb29-6"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-6" tabindex="-1"></a>alunos <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb29-7"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-7" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,</span>
+<span id="cb29-8"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-8" tabindex="-1"></a>  <span class="at">nome =</span> <span class="fu">c</span>(<span class="st">&quot;Ana&quot;</span>, <span class="st">&quot;Bruno&quot;</span>, <span class="st">&quot;Caio&quot;</span>, <span class="st">&quot;Dani&quot;</span>),</span>
+<span id="cb29-9"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-9" tabindex="-1"></a>  <span class="at">nota =</span> <span class="fu">c</span>(<span class="fl">8.5</span>, <span class="fl">7.2</span>, <span class="fl">9.1</span>, <span class="fl">6.8</span>),</span>
+<span id="cb29-10"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-10" tabindex="-1"></a>  <span class="at">ativo =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">TRUE</span>, <span class="cn">FALSE</span>, <span class="cn">TRUE</span>),</span>
+<span id="cb29-11"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-11" tabindex="-1"></a>  <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span></span>
+<span id="cb29-12"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-12" tabindex="-1"></a>)</span>
+<span id="cb29-13"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-13" tabindex="-1"></a><span class="fu">str</span>(alunos)</span>
+<span id="cb29-14"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-14" tabindex="-1"></a><span class="fu">nrow</span>(alunos)</span>
+<span id="cb29-15"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-15" tabindex="-1"></a><span class="fu">ncol</span>(alunos)</span>
+<span id="cb29-16"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-16" tabindex="-1"></a><span class="fu">names</span>(alunos)</span>
+<span id="cb29-17"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-17" tabindex="-1"></a><span class="fu">head</span>(alunos, <span class="dv">2</span>)</span>
+<span id="cb29-18"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-18" tabindex="-1"></a><span class="fu">tail</span>(alunos, <span class="dv">2</span>)</span>
+<span id="cb29-19"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-19" tabindex="-1"></a></span>
+<span id="cb29-20"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-20" tabindex="-1"></a><span class="co"># Acesso e novas colunas</span></span>
+<span id="cb29-21"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-21" tabindex="-1"></a>alunos<span class="sc">$</span>nome</span>
+<span id="cb29-22"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb29-22" tabindex="-1"></a>alunos<span class="sc">$</span>aprov <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(alunos<span class="sc">$</span>nota <span class="sc">&gt;=</span> <span class="dv">7</span>, <span class="st">&quot;Aprovado&quot;</span>, <span class="st">&quot;Recuperação&quot;</span>)</span></code></pre></div>
+</div>
+<div id="diferença-entre-lista-e-data.frame" class="section level4 hasAnchor" number="7.6.3.4">
+<h4><span class="header-section-number">7.6.3.4</span> Diferença entre lista e data.frame<a href="#diferen%C3%A7a-entre-lista-e-data.frame" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<table>
+<colgroup>
+<col width="21%" />
+<col width="43%" />
+<col width="34%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspecto</th>
+<th><strong>Lista</strong></th>
+<th><strong>Data.frame</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Estrutura</td>
+<td>Coleção genérica de objetos</td>
+<td>Lista especial com vetores de mesmo comprimento</td>
+</tr>
+<tr class="even">
+<td>Tipos de elementos</td>
+<td>Pode misturar tipos livremente</td>
+<td>Cada coluna pode ter tipo diferente, mas mesmo tamanho</td>
+</tr>
+<tr class="odd">
+<td>Acesso</td>
+<td>Por nome, índice ou <code>$</code></td>
+<td>Por nome de coluna ou índice de coluna</td>
+</tr>
+<tr class="even">
+<td>Tamanho dos elementos</td>
+<td>Pode variar</td>
+<td>Todos têm o mesmo número de linhas</td>
+</tr>
+<tr class="odd">
+<td>Uso típico</td>
+<td>Armazenar resultados complexos</td>
+<td>Manipular dados tabulares</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div>
+<div id="conversão-entre-listas-e-data.frames" class="section level4 hasAnchor" number="7.6.3.5">
+<h4><span class="header-section-number">7.6.3.5</span> Conversão entre listas e data.frames<a href="#convers%C3%A3o-entre-listas-e-data.frames" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb30-1" tabindex="-1"></a><span class="co"># Converter data.frame em lista</span></span>
+<span id="cb30-2"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb30-2" tabindex="-1"></a><span class="fu">as.list</span>(alunos)</span>
+<span id="cb30-3"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb30-3" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb30-4" tabindex="-1"></a><span class="co"># Converter lista em data.frame</span></span>
+<span id="cb30-5"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb30-5" tabindex="-1"></a>nova_lista <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb30-6"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb30-6" tabindex="-1"></a><span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,</span>
+<span id="cb30-7"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb30-7" tabindex="-1"></a><span class="at">nome =</span> <span class="fu">c</span>(<span class="st">&quot;Eva&quot;</span>, <span class="st">&quot;Fábio&quot;</span>, <span class="st">&quot;Gabi&quot;</span>),</span>
+<span id="cb30-8"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb30-8" tabindex="-1"></a><span class="at">nota =</span> <span class="fu">c</span>(<span class="fl">9.0</span>, <span class="fl">8.7</span>, <span class="fl">7.5</span>)</span>
+<span id="cb30-9"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb30-9" tabindex="-1"></a>)</span>
+<span id="cb30-10"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb30-10" tabindex="-1"></a></span>
+<span id="cb30-11"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb30-11" tabindex="-1"></a><span class="fu">as.data.frame</span>(nova_lista)</span></code></pre></div>
+<p><strong>Resumo:</strong></p>
+<ul>
+<li>Todo <code>data.frame</code> é uma <strong>lista</strong>, mas nem toda lista é um <code>data.frame</code>.</li>
+<li>Um <code>data.frame</code> é basicamente uma <strong>lista disciplinada</strong>, ideal para armazenar dados organizados em linhas e colunas.</li>
+</ul>
+</div>
+</div>
+<div id="fatores" class="section level3 hasAnchor" number="7.6.4">
+<h3><span class="header-section-number">7.6.4</span> Fatores<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#fatores" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>O que são fatores?</strong></p>
+<p><strong>Fatores</strong> (<code>factor</code>) são a forma do R representar <strong>variáveis categóricas</strong> (também chamadas de qualitativas). São usados para dados que podem assumir um número limitado de valores distintos, chamados de “níveis” (levels).</p>
+<p><strong>Quando usar fatores:</strong></p>
+<ul>
+<li>Variáveis categóricas: sexo (M/F), região (Norte/Sul/Leste/Oeste), tratamento (Controle/Teste)</li>
+<li>Variáveis ordinais: nível de escolaridade, grau de satisfação (Baixo/Médio/Alto)</li>
+<li>Respostas de questionários com opções fixas</li>
+</ul>
+<p><strong>Vantagens dos fatores:</strong></p>
+<ul>
+<li>Economizam memória (armazenam códigos internos, não strings repetidas)</li>
+<li>Permitem ordenação lógica (ex: Baixo &lt; Médio &lt; Alto)</li>
+<li>Facilitam análises estatísticas e gráficos</li>
+<li>Controlam quais valores são válidos</li>
+</ul>
+<p><strong>Tipos de fatores:</strong></p>
+<ul>
+<li><strong>Nominais</strong> (sem ordem): cores, categorias</li>
+<li><strong>Ordinais</strong> (com ordem): níveis de satisfação, graus acadêmicos</li>
+</ul>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb31-1" tabindex="-1"></a>sexo <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;F&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;M&quot;</span>, <span class="st">&quot;F&quot;</span>), <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;F&quot;</span>, <span class="st">&quot;M&quot;</span>))</span>
+<span id="cb31-2"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb31-2" tabindex="-1"></a><span class="fu">levels</span>(sexo)</span>
+<span id="cb31-3"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb31-3" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb31-4" tabindex="-1"></a>conceito <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">&quot;B&quot;</span>, <span class="st">&quot;A&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;A&quot;</span>), <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">&quot;C&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;A&quot;</span>), <span class="at">ordered =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb31-5"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb31-5" tabindex="-1"></a><span class="fu">summary</span>(conceito)</span></code></pre></div>
+<hr />
+</div>
+</div>
+<div id="exploração-inicial-de-dados-40-min" class="section level2 hasAnchor" number="7.7">
+<h2><span class="header-section-number">7.7</span> Exploração inicial de dados (40 min)<a href="#explora%C3%A7%C3%A3o-inicial-de-dados-40-min" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<blockquote>
+<p>Vamos usar um dataset real (<code>palmerpenguins</code>) para praticar <strong>inspeção e resumo</strong> com diferentes funções, incluindo <code>dplyr::glimpse()</code>.</p>
+</blockquote>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb32-1" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">&quot;palmerpenguins&quot;</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb32-2"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb32-2" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">&quot;palmerpenguins&quot;</span>)</span>
+<span id="cb32-3"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb32-3" tabindex="-1"></a>}</span>
+<span id="cb32-4"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb32-4" tabindex="-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb32-5"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb32-5" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb32-6"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb32-6" tabindex="-1"></a></span>
+<span id="cb32-7"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb32-7" tabindex="-1"></a><span class="co"># Informações básicas</span></span>
+<span id="cb32-8"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb32-8" tabindex="-1"></a><span class="fu">names</span>(penguins)            <span class="co"># nomes das colunas</span></span>
+<span id="cb32-9"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb32-9" tabindex="-1"></a><span class="fu">nrow</span>(penguins)             <span class="co"># número de linhas</span></span>
+<span id="cb32-10"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb32-10" tabindex="-1"></a><span class="fu">ncol</span>(penguins)             <span class="co"># número de colunas</span></span>
+<span id="cb32-11"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb32-11" tabindex="-1"></a><span class="fu">dim</span>(penguins)              <span class="co"># dimensões (linhas x colunas)</span></span>
+<span id="cb32-12"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb32-12" tabindex="-1"></a><span class="fu">class</span>(penguins)</span></code></pre></div>
+<p><strong>Tibble vs data.frame</strong></p>
+<p>O objeto <code>penguins</code> do pacote <code>palmerpenguins</code> não é um <code>data.frame</code> tradicional: ele é uma <strong>tibble</strong>.</p>
+<p>Uma tibble é uma versão mais moderna e segura de um data.frame, usada no tidyverse.</p>
+<p>Principais diferenças:</p>
+<ul>
+<li><p>Impressão:</p>
+<ul>
+<li><code>data.frame</code> imprime tudo (todas as linhas e todas as colunas, às vezes vira uma parede de texto).</li>
+<li><code>tibble</code> imprime só as primeiras linhas e corta na largura da tela, mostrando também o tipo de cada coluna.</li>
+</ul></li>
+<li><p>Tipos na impressão:</p>
+<ul>
+<li>tibbles sempre mostram o tipo de dado de cada coluna (<code>&lt;dbl&gt;</code>, <code>&lt;int&gt;</code>, <code>&lt;chr&gt;</code>, <code>&lt;fct&gt;</code>, etc.).</li>
+<li>data.frames não mostram isso.</li>
+</ul></li>
+<li><p>Subsetting:</p>
+<ul>
+<li>Em um <code>data.frame</code>, <code>df[, "coluna"]</code> pode virar vetor.</li>
+<li>Em uma tibble, <code>tb[ , "coluna"]</code> ainda é tibble (mais previsível).</li>
+<li>Para vetor puro, usa-se <code>tb[["coluna"]]</code> ou <code>tb$coluna</code>.</li>
+</ul></li>
+<li><p>Nomes estranhos:</p>
+<ul>
+<li>tibbles aceitam nomes de colunas não sintáticos (por exemplo <code>"2024 (%)"</code>), e você acessa com crase: <code>tb$</code>2024 (%)``.</li>
+<li>data.frames costumam tentar corrigir/alterar o nome automaticamente.</li>
+</ul></li>
+<li><p>Nunca converte string automaticamente para <code>factor</code>.</p>
+<ul>
+<li><code>data.frame(...)</code> antigamente convertia texto em fator (dependia de <code>stringsAsFactors</code>).</li>
+<li>tibbles NÃO fazem conversão automática de texto para fator. Texto fica texto.</li>
+</ul></li>
+</ul>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-1" tabindex="-1"></a><span class="co"># Visão geral do dataset</span></span>
+<span id="cb33-2"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-2" tabindex="-1"></a><span class="fu">str</span>(penguins)              <span class="co"># estrutura detalhada</span></span>
+<span id="cb33-3"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-3" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(penguins)   <span class="co"># visão compacta e moderna (tidyverse style)</span></span>
+<span id="cb33-4"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-4" tabindex="-1"></a></span>
+<span id="cb33-5"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-5" tabindex="-1"></a><span class="co"># Primeiras e últimas observações</span></span>
+<span id="cb33-6"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-6" tabindex="-1"></a><span class="fu">head</span>(penguins)             <span class="co"># 6 primeiras linhas</span></span>
+<span id="cb33-7"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-7" tabindex="-1"></a><span class="fu">tail</span>(penguins, <span class="dv">3</span>)          <span class="co"># 3 últimas linhas</span></span>
+<span id="cb33-8"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-8" tabindex="-1"></a></span>
+<span id="cb33-9"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-9" tabindex="-1"></a><span class="co"># Resumo estatístico</span></span>
+<span id="cb33-10"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-10" tabindex="-1"></a><span class="fu">summary</span>(penguins)          <span class="co"># resumo de cada coluna</span></span>
+<span id="cb33-11"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-11" tabindex="-1"></a><span class="fu">colSums</span>(<span class="fu">is.na</span>(penguins))   <span class="co"># contagem de NAs por coluna</span></span>
+<span id="cb33-12"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-12" tabindex="-1"></a></span>
+<span id="cb33-13"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-13" tabindex="-1"></a><span class="co"># Selecionar colunas principais (R base)</span></span>
+<span id="cb33-14"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-14" tabindex="-1"></a>peng_min <span class="ot">&lt;-</span> penguins[, <span class="fu">c</span>(<span class="st">&quot;species&quot;</span>,<span class="st">&quot;bill_length_mm&quot;</span>,<span class="st">&quot;bill_depth_mm&quot;</span>,</span>
+<span id="cb33-15"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-15" tabindex="-1"></a>                          <span class="st">&quot;flipper_length_mm&quot;</span>,<span class="st">&quot;body_mass_g&quot;</span>)]</span>
+<span id="cb33-16"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-16" tabindex="-1"></a><span class="fu">head</span>(peng_min)</span>
+<span id="cb33-17"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-17" tabindex="-1"></a></span>
+<span id="cb33-18"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-18" tabindex="-1"></a><span class="co"># Criar nova variável: razão do bico</span></span>
+<span id="cb33-19"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-19" tabindex="-1"></a>penguins<span class="sc">$</span>raz_bico <span class="ot">&lt;-</span> <span class="fu">with</span>(penguins, bill_length_mm <span class="sc">/</span> bill_depth_mm)</span>
+<span id="cb33-20"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-20" tabindex="-1"></a><span class="fu">head</span>(penguins<span class="sc">$</span>raz_bico)</span>
+<span id="cb33-21"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-21" tabindex="-1"></a></span>
+<span id="cb33-22"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-22" tabindex="-1"></a><span class="co"># Estatísticas descritivas</span></span>
+<span id="cb33-23"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-23" tabindex="-1"></a><span class="fu">mean</span>(penguins<span class="sc">$</span>flipper_length_mm, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb33-24"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-24" tabindex="-1"></a><span class="fu">sd</span>(penguins<span class="sc">$</span>body_mass_g, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb33-25"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-25" tabindex="-1"></a><span class="fu">range</span>(penguins<span class="sc">$</span>bill_length_mm, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb33-26"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-26" tabindex="-1"></a></span>
+<span id="cb33-27"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-27" tabindex="-1"></a><span class="co"># Estatísticas por grupo</span></span>
+<span id="cb33-28"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-28" tabindex="-1"></a><span class="fu">tapply</span>(penguins<span class="sc">$</span>flipper_length_mm, penguins<span class="sc">$</span>species, mean, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb33-29"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-29" tabindex="-1"></a><span class="fu">tapply</span>(penguins<span class="sc">$</span>body_mass_g, penguins<span class="sc">$</span>species, median, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb33-30"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-30" tabindex="-1"></a></span>
+<span id="cb33-31"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-31" tabindex="-1"></a><span class="co"># Tabelas de frequência</span></span>
+<span id="cb33-32"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-32" tabindex="-1"></a><span class="fu">table</span>(penguins<span class="sc">$</span>species)</span>
+<span id="cb33-33"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb33-33" tabindex="-1"></a><span class="co"># table(penguins$species, penguins$island)</span></span></code></pre></div>
+<div id="comparando-str-vs-glimpse" class="section level3 hasAnchor" number="7.7.1">
+<h3><span class="header-section-number">7.7.1</span> Comparando str() vs glimpse()<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#comparando-str-vs-glimpse" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ambas mostram a estrutura dos dados, mas com estilos diferentes:</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb34-1" tabindex="-1"></a><span class="co"># str(): estilo tradicional do R, mais verboso</span></span>
+<span id="cb34-2"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb34-2" tabindex="-1"></a><span class="fu">str</span>(penguins)</span>
+<span id="cb34-3"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb34-3" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb34-4" tabindex="-1"></a><span class="co"># glimpse(): estilo tidyverse, mais compacto e legível</span></span>
+<span id="cb34-5"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb34-5" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">glimpse</span>(penguins)</span></code></pre></div>
+<p><strong>Vantagens do <code>glimpse()</code>:</strong></p>
+<ul>
+<li>Mostra tipo de cada coluna de forma clara</li>
+<li>Apresenta primeiros valores de forma compacta</li>
+<li>Melhor para datasets com muitas colunas</li>
+<li>Estilo moderno e consistente com tidyverse</li>
+</ul>
+<blockquote>
+<p><strong>Dica</strong>: quando houver NAs, sempre use <code>na.rm = TRUE</code> nas funções de resumo estatístico.</p>
+</blockquote>
+<hr />
+</div>
+</div>
+<div id="exercícios-guiados-20-min" class="section level2 hasAnchor" number="7.8">
+<h2><span class="header-section-number">7.8</span> Exercícios guiados (20 min)<a href="#exerc%C3%ADcios-guiados-20-min" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="exercício-1-vetores" class="section level3 hasAnchor" number="7.8.1">
+<h3><span class="header-section-number">7.8.1</span> Exercício 1 — Vetores<a href="#exerc%C3%ADcio-1-vetores" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Crie um vetor numérico com 8 valores quaisquer.<br />
+</li>
+<li>Calcule média, mediana e desvio-padrão.<br />
+</li>
+<li>Filtre apenas os valores <strong>acima da média</strong>.</li>
+</ol>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb35-1" tabindex="-1"></a><span class="co"># Seu código aqui</span></span></code></pre></div>
+</div>
+<div id="exercício-2-data-frame" class="section level3 hasAnchor" number="7.8.2">
+<h3><span class="header-section-number">7.8.2</span> Exercício 2 — Data frame<a href="#exerc%C3%ADcio-2-data-frame" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Crie um <code>data.frame</code> com colunas: <code>id</code>, <code>nome</code>, <code>nota</code>, <code>ativo</code>.<br />
+</li>
+<li>Crie uma nova coluna <code>situacao</code> usando <code>ifelse(nota &gt;= 7, "Aprovado", "Recuperação")</code>.<br />
+</li>
+<li>Mostre apenas as colunas <code>nome</code> e <code>situacao</code> das 2 primeiras linhas.</li>
+</ol>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb36-1" tabindex="-1"></a><span class="co"># Seu código aqui</span></span></code></pre></div>
+</div>
+<div id="exercício-3-exploração-palmerpenguins" class="section level3 hasAnchor" number="7.8.3">
+<h3><span class="header-section-number">7.8.3</span> Exercício 3 — Exploração <code>palmerpenguins</code><a href="#exerc%C3%ADcio-3-explora%C3%A7%C3%A3o-palmerpenguins" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Use <code>glimpse()</code> para ter uma visão geral dos dados.</li>
+<li>Conte quantos NAs existem em cada coluna.<br />
+</li>
+<li>Crie uma nova coluna <code>massa_kg</code> convertendo <code>body_mass_g</code> para quilogramas.<br />
+</li>
+<li>Calcule a <strong>média de <code>flipper_length_mm</code> por espécie</strong> usando <code>tapply()</code>.</li>
+</ol>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb37-1" tabindex="-1"></a><span class="co"># Seu código aqui</span></span></code></pre></div>
+<hr />
+</div>
+</div>
+<div id="primeiro-commit-5-min" class="section level2 hasAnchor" number="7.9">
+<h2><span class="header-section-number">7.9</span> Primeiro commit (5 min)<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#primeiro-commit-5-min" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>No <strong>Terminal do RStudio</strong>:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb38-1"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb38-1" tabindex="-1"></a><span class="fu">git</span> add scripts/01_fundamentos.R</span>
+<span id="cb38-2"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb38-2" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Dia 1: fundamentos de R e setup&quot;</span></span>
+<span id="cb38-3"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#cb38-3" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div>
+<blockquote>
+<p>Confirme no seu repositório <strong>forkado</strong> no GitHub se o commit apareceu.</p>
+</blockquote>
+<hr />
+</div>
+<div id="checklist-de-encerramento" class="section level2 hasAnchor" number="7.10">
+<h2><span class="header-section-number">7.10</span> Checklist de encerramento<a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#checklist-de-encerramento" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />R, RStudio e Git instalados e funcionando.<br />
+</label></li>
+<li><label><input type="checkbox" />Git configurado com <code>user.name</code> e <code>user.email</code>.<br />
+</label></li>
+<li><label><input type="checkbox" /><strong>Fork criado</strong> no GitHub e <strong>clone realizado do SEU fork</strong>.<br />
+</label></li>
+<li><label><input type="checkbox" />Projeto <code>.Rproj</code> aberto; função <code>here()</code> testada.<br />
+</label></li>
+<li><label><input type="checkbox" />Entendeu a diferença entre <code>str()</code> e <code>glimpse()</code>.</label></li>
+<li><label><input type="checkbox" />Script <code>01_fundamentos.R</code> criado e salvo em UTF-8.<br />
+</label></li>
+<li><label><input type="checkbox" />Commit e push realizados com sucesso para <strong>SEU fork</strong>.</label></li>
+</ul>
+<hr />
+</div>
+<div id="referências-rápidas" class="section level2 hasAnchor" number="7.11">
+<h2><span class="header-section-number">7.11</span> Referências rápidas<a href="#refer%C3%AAncias-r%C3%A1pidas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>R for Data Science (2e)</strong>: <a href="https://r4ds.hadley.nz/" class="uri">https://r4ds.hadley.nz/</a><br />
+</li>
+<li><strong>Happy Git with R</strong>: <a href="https://happygitwithr.com/" class="uri">https://happygitwithr.com/</a><br />
+</li>
+<li><strong>Cheatsheets Posit</strong>: <a href="https://posit.co/resources/cheatsheets/" class="uri">https://posit.co/resources/cheatsheets/</a><br />
+</li>
+<li><strong>palmerpenguins</strong>: <a href="https://allisonhorst.github.io/palmerpenguins/" class="uri">https://allisonhorst.github.io/palmerpenguins/</a></li>
+<li><strong>dplyr documentation</strong>: <a href="https://dplyr.tidyverse.org/" class="uri">https://dplyr.tidyverse.org/</a></li>
+</ul>
+<hr />
+<p><strong>Nos vemos no Dia 2 para explorarmos lógica de programação e tidyverse!</strong> 🚀</p>
+
+<!--
+---
+title: "Dia 2"
+subtitle: "Lógica, Funções e Introdução ao Tidyverse"
+author: "Vinícius Silva Junqueira"
+date: "2025-11-25"
+output: 
+  pdf_document:
+    latex_engine: xelatex
+    toc: true
+    toc_depth: 2
+    number_sections: true
+lang: pt-BR
+fontsize: 11pt
+geometry: margin=2.5cm
+header-includes:
+  - \usepackage{fancyhdr}
+  - \pagestyle{fancy}
+  - \fancyhead[L]{\small Vinícius Silva Junqueira}
+  - \fancyhead[R]{\small \thepage}
+  - \fancyfoot[L]{\small Curso R + GitHub + IA}
+  - \fancyfoot[R]{\small junqueiravinicius@hotmail.com}
+  - \renewcommand{\headrulewidth}{0.4pt}
+  - \renewcommand{\footrulewidth}{0.4pt}
+---
+-->
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="contato.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="dia-2-lógica-funções-e-introdução-ao-tidyverse.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["Curso_Completo_R_GitHub_IA.pdf"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

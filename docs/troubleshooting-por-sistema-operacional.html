@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xml:lang="pt-BR">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Troubleshooting por Sistema Operacional | Curso_Completo_R_GitHub_IA.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Troubleshooting por Sistema Operacional | Curso_Completo_R_GitHub_IA.knit" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Troubleshooting por Sistema Operacional | Curso_Completo_R_GitHub_IA.knit" />
+  
+  
+  
+
+<meta name="author" content="" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="cronograma.html"/>
+<link rel="next" href="recursos-adicionais.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="sobre-o-autor.html"><a href="sobre-o-autor.html"><i class="fa fa-check"></i><b>1</b> Sobre o Autor</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="cronograma.html"><a href="#vin%C3%ADcius-junqueira"><i class="fa fa-check"></i><b>1.1</b> Vinícius Junqueira</a></li>
+<li class="chapter" data-level="1.2" data-path="cronograma.html"><a href="#forma%C3%A7%C3%A3o-acad%C3%AAmica"><i class="fa fa-check"></i><b>1.2</b> Formação Acadêmica</a></li>
+<li class="chapter" data-level="1.3" data-path="cronograma.html"><a href="#trajet%C3%B3ria-profissional"><i class="fa fa-check"></i><b>1.3</b> Trajetória Profissional</a></li>
+<li class="chapter" data-level="1.4" data-path="cronograma.html"><a href="#expertise-e-%C3%A1reas-de-atua%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>1.4</b> Expertise e Áreas de Atuação</a></li>
+<li class="chapter" data-level="1.5" data-path="sobre-o-autor.html"><a href="sobre-o-autor.html#por-que-ensino-r"><i class="fa fa-check"></i><b>1.5</b> Por Que Ensino R?</a></li>
+<li class="chapter" data-level="1.6" data-path="cronograma.html"><a href="#minha-miss%C3%A3o-com-este-curso"><i class="fa fa-check"></i><b>1.6</b> Minha Missão com Este Curso</a></li>
+<li class="chapter" data-level="1.7" data-path="sobre-o-autor.html"><a href="sobre-o-autor.html#vamos-juntos"><i class="fa fa-check"></i><b>1.7</b> Vamos Juntos!</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="bem-vindo-ao-curso.html"><a href="bem-vindo-ao-curso.html"><i class="fa fa-check"></i><b>2</b> Bem-vindo ao curso</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="cronograma.html"><a href="#pr%C3%A9-requisitos"><i class="fa fa-check"></i><b>2.1</b> Pré-requisitos</a></li>
+<li class="chapter" data-level="2.2" data-path="bem-vindo-ao-curso.html"><a href="bem-vindo-ao-curso.html#objetivos-de-aprendizagem"><i class="fa fa-check"></i><b>2.2</b> Objetivos de Aprendizagem</a></li>
+<li class="chapter" data-level="2.3" data-path="bem-vindo-ao-curso.html"><a href="bem-vindo-ao-curso.html#metodologia"><i class="fa fa-check"></i><b>2.3</b> Metodologia</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="cronograma.html"><a href="cronograma.html"><i class="fa fa-check"></i><b>3</b> Cronograma</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="cronograma.html"><a href="#pr%C3%A9-requisitos-t%C3%A9cnicos"><i class="fa fa-check"></i><b>3.1</b> Pré-requisitos Técnicos</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="cronograma.html"><a href="#instala%C3%A7%C3%B5es-obrigat%C3%B3rias-para-todos-os-sistemas"><i class="fa fa-check"></i><b>3.1.1</b> Instalações obrigatórias (para todos os sistemas)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="cronograma.html"><a href="#estrutura-pedag%C3%B3gica-e-filosofia"><i class="fa fa-check"></i><b>3.2</b> Estrutura Pedagógica e Filosofia</a></li>
+<li class="chapter" data-level="3.3" data-path="cronograma.html"><a href="#pacotes-r-necess%C3%A1rios"><i class="fa fa-check"></i><b>3.3</b> Pacotes R Necessários</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="cronograma.html"><a href="#instala%C3%A7%C3%A3o-no-dia-1-a-3-n%C3%BAcleo-do-curso"><i class="fa fa-check"></i><b>3.3.1</b> Instalação no Dia 1 a 3 (núcleo do curso)</a></li>
+<li class="chapter" data-level="3.3.2" data-path="cronograma.html"><a href="cronograma.html#pacotes-de-ia-dia-4"><i class="fa fa-check"></i><b>3.3.2</b> Pacotes de IA (Dia 4)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="cronograma.html"><a href="cronograma.html#dia-1-1711-segunda-fundamentos-e-ambiente-de-trabalho"><i class="fa fa-check"></i><b>3.4</b> Dia 1: 17/11 (Segunda) — Fundamentos e Ambiente de Trabalho</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="cronograma.html"><a href="#h00---20h30-ambienta%C3%A7%C3%A3o-e-setup-completo"><i class="fa fa-check"></i><b>3.4.1</b> 19h00 - 20h30 | Ambientação e Setup Completo</a></li>
+<li class="chapter" data-level="3.4.2" data-path="cronograma.html"><a href="cronograma.html#h30---20h50-intervalo"><i class="fa fa-check"></i><b>3.4.2</b> 20h30 - 20h50 | Intervalo</a></li>
+<li class="chapter" data-level="3.4.3" data-path="cronograma.html"><a href="cronograma.html#h50---22h00-fundamentos-do-r"><i class="fa fa-check"></i><b>3.4.3</b> 20h50 - 22h00 | Fundamentos do R</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="cronograma.html"><a href="#dia-2-1811-ter%C3%A7a-l%C3%B3gica-fun%C3%A7%C3%B5es-e-introdu%C3%A7%C3%A3o-ao-tidyverse"><i class="fa fa-check"></i><b>3.5</b> Dia 2: 18/11 (Terça) — Lógica, Funções e Introdução ao Tidyverse</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="cronograma.html"><a href="#h00---20h30-programa%C3%A7%C3%A3o-em-r"><i class="fa fa-check"></i><b>3.5.1</b> 19h00 - 20h30 | Programação em R</a></li>
+<li class="chapter" data-level="3.5.2" data-path="cronograma.html"><a href="cronograma.html#h30---20h50-intervalo-1"><i class="fa fa-check"></i><b>3.5.2</b> 20h30 - 20h50 | Intervalo</a></li>
+<li class="chapter" data-level="3.5.3" data-path="cronograma.html"><a href="#h50---22h00-introdu%C3%A7%C3%A3o-ao-tidyverse"><i class="fa fa-check"></i><b>3.5.3</b> 20h50 - 22h00 | Introdução ao Tidyverse</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="cronograma.html"><a href="#dia-3-2411-segunda-transforma%C3%A7%C3%A3o-io-e-visualiza%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>3.6</b> Dia 3: 24/11 (Segunda) — Transformação, I/O e Visualização</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="cronograma.html"><a href="#h00---20h30-transforma%C3%A7%C3%A3o-e-io-de-dados"><i class="fa fa-check"></i><b>3.6.1</b> 19h00 - 20h30 | Transformação e I/O de Dados</a></li>
+<li class="chapter" data-level="3.6.2" data-path="cronograma.html"><a href="cronograma.html#h30---20h50-intervalo-2"><i class="fa fa-check"></i><b>3.6.2</b> 20h30 - 20h50 | Intervalo</a></li>
+<li class="chapter" data-level="3.6.3" data-path="cronograma.html"><a href="#h50---22h00-visualiza%C3%A7%C3%A3o-com-ggplot2"><i class="fa fa-check"></i><b>3.6.3</b> 20h50 - 22h00 | Visualização com ggplot2</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="cronograma.html"><a href="#dia-4-2511-ter%C3%A7a-integra%C3%A7%C3%A3o-do-chatgpt-e-claude-no-rstudio"><i class="fa fa-check"></i><b>3.7</b> Dia 4: 25/11 (Terça) — Integração do ChatGPT e Claude no RStudio</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="cronograma.html"><a href="cronograma.html#h00---19h30-conceitos-e-modelos"><i class="fa fa-check"></i><b>3.7.1</b> 19h00 - 19h30 | Conceitos e modelos</a></li>
+<li class="chapter" data-level="3.7.2" data-path="cronograma.html"><a href="#h30---20h15-configura%C3%A7%C3%A3o-de-chaves-e-ambiente"><i class="fa fa-check"></i><b>3.7.2</b> 19h30 - 20h15 | Configuração de chaves e ambiente</a></li>
+<li class="chapter" data-level="3.7.3" data-path="cronograma.html"><a href="cronograma.html#h15---20h30-intervalo"><i class="fa fa-check"></i><b>3.7.3</b> 20h15 - 20h30 | Intervalo</a></li>
+<li class="chapter" data-level="3.7.4" data-path="cronograma.html"><a href="cronograma.html#h30---21h00-rstudio-gptstudio-chatgpt"><i class="fa fa-check"></i><b>3.7.4</b> 20h30 - 21h00 | RStudio + gptstudio (ChatGPT)</a></li>
+<li class="chapter" data-level="3.7.5" data-path="cronograma.html"><a href="cronograma.html#h00---21h30-rstudio-chattr-claude"><i class="fa fa-check"></i><b>3.7.5</b> 21h00 - 21h30 | RStudio + chattr (Claude)</a></li>
+<li class="chapter" data-level="3.7.6" data-path="cronograma.html"><a href="#h30---22h00-exerc%C3%ADcio-guiado-de-integra%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>3.7.6</b> 21h30 - 22h00 | Exercício guiado de integração</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="troubleshooting-por-sistema-operacional.html"><a href="troubleshooting-por-sistema-operacional.html"><i class="fa fa-check"></i><b>4</b> Troubleshooting por Sistema Operacional</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="troubleshooting-por-sistema-operacional.html"><a href="troubleshooting-por-sistema-operacional.html#windows"><i class="fa fa-check"></i><b>4.1</b> Windows</a></li>
+<li class="chapter" data-level="4.2" data-path="troubleshooting-por-sistema-operacional.html"><a href="troubleshooting-por-sistema-operacional.html#macos"><i class="fa fa-check"></i><b>4.2</b> macOS</a></li>
+<li class="chapter" data-level="4.3" data-path="troubleshooting-por-sistema-operacional.html"><a href="troubleshooting-por-sistema-operacional.html#linux-ubuntudebian"><i class="fa fa-check"></i><b>4.3</b> Linux (Ubuntu/Debian)</a></li>
+<li class="chapter" data-level="4.4" data-path="troubleshooting-por-sistema-operacional.html"><a href="troubleshooting-por-sistema-operacional.html#problemas-comuns-todos-os-so"><i class="fa fa-check"></i><b>4.4</b> Problemas comuns (todos os SO)</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="recursos-adicionais.html"><a href="recursos-adicionais.html"><i class="fa fa-check"></i><b>5</b> Recursos Adicionais</a></li>
+<li class="chapter" data-level="6" data-path="contato.html"><a href="contato.html"><i class="fa fa-check"></i><b>6</b> Contato</a></li>
+<li class="chapter" data-level="7" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html"><i class="fa fa-check"></i><b>7</b> Dia 1: Fundamentos e Ambiente de Trabalho</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#abertura"><i class="fa fa-check"></i><b>7.1</b> Abertura</a></li>
+<li class="chapter" data-level="7.2" data-path="cronograma.html"><a href="#apresenta%C3%A7%C3%A3o-do-curso-15-min"><i class="fa fa-check"></i><b>7.2</b> Apresentação do Curso (15 min)</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#bem-vindos"><i class="fa fa-check"></i><b>7.2.1</b> Bem-vindos!</a></li>
+<li class="chapter" data-level="7.2.2" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#objetivos-gerais-do-curso"><i class="fa fa-check"></i><b>7.2.2</b> Objetivos Gerais do Curso</a></li>
+<li class="chapter" data-level="7.2.3" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#metodologia-1"><i class="fa fa-check"></i><b>7.2.3</b> Metodologia</a></li>
+<li class="chapter" data-level="7.2.4" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#estrutura-dos-4-dias"><i class="fa fa-check"></i><b>7.2.4</b> Estrutura dos 4 Dias</a></li>
+<li class="chapter" data-level="7.2.5" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#materiais-e-suporte"><i class="fa fa-check"></i><b>7.2.5</b> Materiais e Suporte</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#por-que-r-github-e-ia-15-min"><i class="fa fa-check"></i><b>7.3</b> Por Que R, GitHub e IA? (15 min)</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#por-que-r"><i class="fa fa-check"></i><b>7.3.1</b> Por Que R?</a></li>
+<li class="chapter" data-level="7.3.2" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#por-que-github"><i class="fa fa-check"></i><b>7.3.2</b> Por Que GitHub?</a></li>
+<li class="chapter" data-level="7.3.3" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#por-que-ia-chatgpt-e-claude"><i class="fa fa-check"></i><b>7.3.3</b> Por Que IA (ChatGPT e Claude)?</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="cronograma.html"><a href="#ambienta%C3%A7%C3%A3o-e-setup-40-min"><i class="fa fa-check"></i><b>7.4</b> Ambientação e Setup (40 min)</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="cronograma.html"><a href="#verifica%C3%A7%C3%B5es-r%C3%A1pidas"><i class="fa fa-check"></i><b>7.4.1</b> Verificações rápidas</a></li>
+<li class="chapter" data-level="7.4.2" data-path="cronograma.html"><a href="#instalar-git-se-n%C3%A3o-estiver-dispon%C3%ADvel"><i class="fa fa-check"></i><b>7.4.2</b> Instalar Git (se não estiver disponível)</a></li>
+<li class="chapter" data-level="7.4.3" data-path="cronograma.html"><a href="#configurar-git-uma-vez-s%C3%B3"><i class="fa fa-check"></i><b>7.4.3</b> Configurar Git (uma vez só)</a></li>
+<li class="chapter" data-level="7.4.4" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#autenticar-no-github-pat-recomendado"><i class="fa fa-check"></i><b>7.4.4</b> Autenticar no GitHub (PAT recomendado)</a></li>
+<li class="chapter" data-level="7.4.5" data-path="cronograma.html"><a href="#instalar-pacotes-necess%C3%A1rios"><i class="fa fa-check"></i><b>7.4.5</b> Instalar pacotes necessários</a></li>
+<li class="chapter" data-level="7.4.6" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#criar-o-token-no-github"><i class="fa fa-check"></i><b>7.4.6</b> Criar o token no GitHub</a></li>
+<li class="chapter" data-level="7.4.7" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#salvar-o-token-no-rstudio"><i class="fa fa-check"></i><b>7.4.7</b> Salvar o token no RStudio</a></li>
+<li class="chapter" data-level="7.4.8" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#verificar-se-funcionou"><i class="fa fa-check"></i><b>7.4.8</b> Verificar se funcionou</a></li>
+<li class="chapter" data-level="7.4.9" data-path="cronograma.html"><a href="#workflow-com-fork-obrigat%C3%B3rio-para-a-turma"><i class="fa fa-check"></i><b>7.4.9</b> Workflow com Fork (obrigatório para a turma)</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#estrutura-de-projeto-e-portabilidade"><i class="fa fa-check"></i><b>7.5</b> Estrutura de projeto e portabilidade</a></li>
+<li class="chapter" data-level="7.6" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#fundamentos-de-r-50-min"><i class="fa fa-check"></i><b>7.6</b> Fundamentos de R (50 min)</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="cronograma.html"><a href="#objetos-b%C3%A1sicos-e-opera%C3%A7%C3%B5es"><i class="fa fa-check"></i><b>7.6.1</b> Objetos básicos e operações</a></li>
+<li class="chapter" data-level="7.6.2" data-path="cronograma.html"><a href="#vetores-e-indexa%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>7.6.2</b> Vetores e indexação</a></li>
+<li class="chapter" data-level="7.6.3" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#listas-e-data.frames"><i class="fa fa-check"></i><b>7.6.3</b> Listas e data.frames</a></li>
+<li class="chapter" data-level="7.6.4" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#fatores"><i class="fa fa-check"></i><b>7.6.4</b> Fatores</a></li>
+</ul></li>
+<li class="chapter" data-level="7.7" data-path="cronograma.html"><a href="#explora%C3%A7%C3%A3o-inicial-de-dados-40-min"><i class="fa fa-check"></i><b>7.7</b> Exploração inicial de dados (40 min)</a>
+<ul>
+<li class="chapter" data-level="7.7.1" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#comparando-str-vs-glimpse"><i class="fa fa-check"></i><b>7.7.1</b> Comparando str() vs glimpse()</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="cronograma.html"><a href="#exerc%C3%ADcios-guiados-20-min"><i class="fa fa-check"></i><b>7.8</b> Exercícios guiados (20 min)</a>
+<ul>
+<li class="chapter" data-level="7.8.1" data-path="cronograma.html"><a href="#exerc%C3%ADcio-1-vetores"><i class="fa fa-check"></i><b>7.8.1</b> Exercício 1 — Vetores</a></li>
+<li class="chapter" data-level="7.8.2" data-path="cronograma.html"><a href="#exerc%C3%ADcio-2-data-frame"><i class="fa fa-check"></i><b>7.8.2</b> Exercício 2 — Data frame</a></li>
+<li class="chapter" data-level="7.8.3" data-path="cronograma.html"><a href="#exerc%C3%ADcio-3-explora%C3%A7%C3%A3o-palmerpenguins"><i class="fa fa-check"></i><b>7.8.3</b> Exercício 3 — Exploração <code>palmerpenguins</code></a></li>
+</ul></li>
+<li class="chapter" data-level="7.9" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#primeiro-commit-5-min"><i class="fa fa-check"></i><b>7.9</b> Primeiro commit (5 min)</a></li>
+<li class="chapter" data-level="7.10" data-path="dia-1-fundamentos-e-ambiente-de-trabalho.html"><a href="dia-1-fundamentos-e-ambiente-de-trabalho.html#checklist-de-encerramento"><i class="fa fa-check"></i><b>7.10</b> Checklist de encerramento</a></li>
+<li class="chapter" data-level="7.11" data-path="cronograma.html"><a href="#refer%C3%AAncias-r%C3%A1pidas"><i class="fa fa-check"></i><b>7.11</b> Referências rápidas</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="cronograma.html"><a href="#dia-2-l%C3%B3gica-fun%C3%A7%C3%B5es-e-introdu%C3%A7%C3%A3o-ao-tidyverse"><i class="fa fa-check"></i><b>8</b> Dia 2: Lógica, Funções e Introdução ao Tidyverse</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="dia-2-lógica-funções-e-introdução-ao-tidyverse.html"><a href="dia-2-lógica-funções-e-introdução-ao-tidyverse.html"><i class="fa fa-check"></i><b>8.1</b> Operadores e Condicionais (30 min)</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="cronograma.html"><a href="#o-que-s%C3%A3o-operadores"><i class="fa fa-check"></i><b>8.1.1</b> O que são operadores?</a></li>
+<li class="chapter" data-level="8.1.2" data-path="cronograma.html"><a href="#operadores-l%C3%B3gicos-e-relacionais"><i class="fa fa-check"></i><b>8.1.2</b> Operadores lógicos e relacionais</a></li>
+<li class="chapter" data-level="8.1.3" data-path="cronograma.html"><a href="#condicionais-tomando-decis%C3%B5es-no-c%C3%B3digo"><i class="fa fa-check"></i><b>8.1.3</b> Condicionais: tomando decisões no código</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="cronograma.html"><a href="#loops-vetoriza%C3%A7%C3%A3o-e-fun%C3%A7%C3%B5es-25-min"><i class="fa fa-check"></i><b>8.2</b> Loops, Vetorização e Funções (25 min)</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="cronograma.html"><a href="#o-que-s%C3%A3o-loops"><i class="fa fa-check"></i><b>8.2.1</b> O que são loops?</a></li>
+<li class="chapter" data-level="8.2.2" data-path="dia-2-lógica-funções-e-introdução-ao-tidyverse.html"><a href="dia-2-lógica-funções-e-introdução-ao-tidyverse.html#tipos-de-loops-no-r"><i class="fa fa-check"></i><b>8.2.2</b> Tipos de loops no R</a></li>
+<li class="chapter" data-level="8.2.3" data-path="cronograma.html"><a href="#loops-vs.-vetoriza%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>8.2.3</b> Loops vs. Vetorização</a></li>
+<li class="chapter" data-level="8.2.4" data-path="cronograma.html"><a href="#fun%C3%A7%C3%B5es-empacotando-l%C3%B3gica-reutiliz%C3%A1vel"><i class="fa fa-check"></i><b>8.2.4</b> Funções: empacotando lógica reutilizável</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="cronograma.html"><a href="#introdu%C3%A7%C3%A3o-ao-tidyverse-45-min"><i class="fa fa-check"></i><b>8.3</b> Introdução ao Tidyverse (45 min)</a></li>
+<li class="chapter" data-level="8.4" data-path="dia-2-lógica-funções-e-introdução-ao-tidyverse.html"><a href="dia-2-lógica-funções-e-introdução-ao-tidyverse.html#pipe-vs."><i class="fa fa-check"></i><b>8.4</b> Pipe: <code>%&gt;%</code> vs. <code>|&gt;</code></a></li>
+<li class="chapter" data-level="8.5" data-path="dia-2-lógica-funções-e-introdução-ao-tidyverse.html"><a href="dia-2-lógica-funções-e-introdução-ao-tidyverse.html#datas-com-lubridate-10-min"><i class="fa fa-check"></i><b>8.5</b> Datas com <code>lubridate</code> (10 min)</a></li>
+<li class="chapter" data-level="8.6" data-path="cronograma.html"><a href="#exerc%C3%ADcios-pr%C3%A1ticos-2025-min"><i class="fa fa-check"></i><b>8.6</b> Exercícios Práticos (20–25 min)</a>
+<ul>
+<li class="chapter" data-level="8.6.1" data-path="cronograma.html"><a href="#exerc%C3%ADcio-1-condicionais"><i class="fa fa-check"></i><b>8.6.1</b> Exercício 1 — Condicionais</a></li>
+<li class="chapter" data-level="8.6.2" data-path="cronograma.html"><a href="#exerc%C3%ADcio-2-fun%C3%A7%C3%B5es"><i class="fa fa-check"></i><b>8.6.2</b> Exercício 2 — Funções</a></li>
+<li class="chapter" data-level="8.6.3" data-path="cronograma.html"><a href="#exerc%C3%ADcio-3-pipeline-dplyr"><i class="fa fa-check"></i><b>8.6.3</b> Exercício 3 — Pipeline <code>dplyr</code></a></li>
+<li class="chapter" data-level="8.6.4" data-path="cronograma.html"><a href="#exerc%C3%ADcio-4-datas-com-lubridate"><i class="fa fa-check"></i><b>8.6.4</b> Exercício 4 — Datas com <code>lubridate</code></a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="cronograma.html"><a href="#boas-pr%C3%A1ticas-e-debugging-20-min"><i class="fa fa-check"></i><b>8.7</b> Boas Práticas e Debugging (20 min)</a></li>
+<li class="chapter" data-level="8.8" data-path="cronograma.html"><a href="#ferramentas-%C3%BAteis"><i class="fa fa-check"></i><b>8.8</b> Ferramentas úteis</a></li>
+<li class="chapter" data-level="8.9" data-path="dia-2-lógica-funções-e-introdução-ao-tidyverse.html"><a href="dia-2-lógica-funções-e-introdução-ao-tidyverse.html#commit-do-dia"><i class="fa fa-check"></i><b>8.9</b> Commit do Dia</a></li>
+<li class="chapter" data-level="8.10" data-path="dia-2-lógica-funções-e-introdução-ao-tidyverse.html"><a href="dia-2-lógica-funções-e-introdução-ao-tidyverse.html#checklist-de-encerramento-1"><i class="fa fa-check"></i><b>8.10</b> Checklist de encerramento</a></li>
+<li class="chapter" data-level="8.11" data-path="cronograma.html"><a href="#refer%C3%AAncias-r%C3%A1pidas-1"><i class="fa fa-check"></i><b>8.11</b> Referências rápidas</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="cronograma.html"><a href="#dia-3-transforma%C3%A7%C3%A3o-io-e-visualiza%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>9</b> Dia 3: Transformação, I/O e Visualização</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="cronograma.html"><a href="#transforma%C3%A7%C3%A3o-e-io-de-dados-19h00---20h30"><i class="fa fa-check"></i><b>9.1</b> Transformação e I/O de Dados (19h00 - 20h30)</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html"><i class="fa fa-check"></i><b>9.1.1</b> Tidyr: Transformando estruturas de dados</a></li>
+<li class="chapter" data-level="9.1.2" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html#tratamento-de-valores-ausentes-na"><i class="fa fa-check"></i><b>9.1.2</b> Tratamento de Valores Ausentes (NA)</a></li>
+<li class="chapter" data-level="9.1.3" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html#leitura-e-escrita-de-dados-io"><i class="fa fa-check"></i><b>9.1.3</b> Leitura e Escrita de Dados (I/O)</a></li>
+<li class="chapter" data-level="9.1.4" data-path="cronograma.html"><a href="#ferramentas-%C3%BAteis-1"><i class="fa fa-check"></i><b>9.1.4</b> Ferramentas Úteis</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html#intervalo-20h30---20h50"><i class="fa fa-check"></i><b>9.2</b> INTERVALO (20h30 - 20h50)</a></li>
+<li class="chapter" data-level="9.3" data-path="cronograma.html"><a href="#visualiza%C3%A7%C3%A3o-com-ggplot2-20h50---22h00"><i class="fa fa-check"></i><b>9.3</b> Visualização com ggplot2 (20h50 - 22h00)</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="cronograma.html"><a href="#gram%C3%A1tica-de-gr%C3%A1ficos"><i class="fa fa-check"></i><b>9.3.1</b> Gramática de Gráficos</a></li>
+<li class="chapter" data-level="9.3.2" data-path="cronograma.html"><a href="#tipos-de-gr%C3%A1ficos-geoms"><i class="fa fa-check"></i><b>9.3.2</b> Tipos de Gráficos (geoms)</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="cronograma.html"><a href="#personaliza%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>9.4</b> Personalização</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html#labels-labs---comunicando-claramente"><i class="fa fa-check"></i><b>9.4.1</b> Labels (labs) - Comunicando claramente</a></li>
+<li class="chapter" data-level="9.4.2" data-path="cronograma.html"><a href="#temas-themes---definindo-a-apar%C3%AAncia"><i class="fa fa-check"></i><b>9.4.2</b> Temas (themes) - Definindo a aparência</a></li>
+<li class="chapter" data-level="9.4.3" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html#escalas-scales---controle-fino"><i class="fa fa-check"></i><b>9.4.3</b> Escalas (scales) - Controle fino</a></li>
+<li class="chapter" data-level="9.4.4" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html#temas-themes"><i class="fa fa-check"></i><b>9.4.4</b> Temas (themes)</a></li>
+<li class="chapter" data-level="9.4.5" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html#escalas-scales"><i class="fa fa-check"></i><b>9.4.5</b> Escalas (scales)</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="cronograma.html"><a href="#combinando-gr%C3%A1ficos-patchwork"><i class="fa fa-check"></i><b>9.5</b> Combinando Gráficos (patchwork)</a></li>
+<li class="chapter" data-level="9.6" data-path="cronograma.html"><a href="#salvando-gr%C3%A1ficos-ggsave"><i class="fa fa-check"></i><b>9.6</b> Salvando Gráficos (ggsave)</a></li>
+<li class="chapter" data-level="9.7" data-path="cronograma.html"><a href="#exerc%C3%ADcios-pr%C3%A1ticos"><i class="fa fa-check"></i><b>9.7</b> Exercícios Práticos</a>
+<ul>
+<li class="chapter" data-level="9.7.1" data-path="cronograma.html"><a href="#exerc%C3%ADcio-1-transforma%C3%A7%C3%A3o-de-dados"><i class="fa fa-check"></i><b>9.7.1</b> Exercício 1: Transformação de dados</a></li>
+<li class="chapter" data-level="9.7.2" data-path="cronograma.html"><a href="#exerc%C3%ADcio-2-limpeza-e-io"><i class="fa fa-check"></i><b>9.7.2</b> Exercício 2: Limpeza e I/O</a></li>
+<li class="chapter" data-level="9.7.3" data-path="cronograma.html"><a href="#exerc%C3%ADcio-3-visualiza%C3%A7%C3%A3o-completa"><i class="fa fa-check"></i><b>9.7.3</b> Exercício 3: Visualização completa</a></li>
+</ul></li>
+<li class="chapter" data-level="9.8" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html#commit-do-dia-1"><i class="fa fa-check"></i><b>9.8</b> Commit do Dia</a></li>
+<li class="chapter" data-level="9.9" data-path="dia-3-transformação-io-e-visualização.html"><a href="dia-3-transformação-io-e-visualização.html#checklist-de-encerramento-2"><i class="fa fa-check"></i><b>9.9</b> Checklist de Encerramento</a></li>
+<li class="chapter" data-level="9.10" data-path="cronograma.html"><a href="#refer%C3%AAncias-r%C3%A1pidas-2"><i class="fa fa-check"></i><b>9.10</b> Referências Rápidas</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="cronograma.html"><a href="#dia-4-integra%C3%A7%C3%A3o-do-chatgpt-e-claude-no-rstudio"><i class="fa fa-check"></i><b>10</b> Dia 4: Integração do ChatGPT e Claude no RStudio</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="cronograma.html"><a href="#revis%C3%A3o-r%C3%A1pida-dos-dias-anteriores-10-min"><i class="fa fa-check"></i><b>10.0.1</b> Revisão Rápida dos Dias Anteriores (≈ 10 min)</a></li>
+<li class="chapter" data-level="10.1" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><i class="fa fa-check"></i><b>10.1</b> Conceitos e Modelos (19h00 - 19h30)</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="cronograma.html"><a href="#o-que-s%C3%A3o-llms-large-language-models"><i class="fa fa-check"></i><b>10.1.1</b> O que são LLMs (Large Language Models)?</a></li>
+<li class="chapter" data-level="10.1.2" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#modelos-principais-que-usaremos"><i class="fa fa-check"></i><b>10.1.2</b> Modelos principais que usaremos</a></li>
+<li class="chapter" data-level="10.1.3" data-path="cronograma.html"><a href="#compara%C3%A7%C3%A3o-pr%C3%A1tica"><i class="fa fa-check"></i><b>10.1.3</b> Comparação prática</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="cronograma.html"><a href="#o-que-s%C3%A3o-apis"><i class="fa fa-check"></i><b>10.2</b> O que são APIs?</a></li>
+<li class="chapter" data-level="10.3" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#limites-e-custos"><i class="fa fa-check"></i><b>10.3</b> Limites e Custos</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#custos-por-modelo"><i class="fa fa-check"></i><b>10.3.1</b> Custos por modelo</a></li>
+<li class="chapter" data-level="10.3.2" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#rate-limits-limites-de-taxa"><i class="fa fa-check"></i><b>10.3.2</b> Rate Limits (Limites de taxa)</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="cronograma.html"><a href="#boas-pr%C3%A1ticas-de-uso-respons%C3%A1vel-de-ia"><i class="fa fa-check"></i><b>10.4</b> Boas Práticas de Uso Responsável de IA</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="cronograma.html"><a href="#privacidade-e-dados-sens%C3%ADveis"><i class="fa fa-check"></i><b>10.4.1</b> Privacidade e Dados Sensíveis</a></li>
+<li class="chapter" data-level="10.4.2" data-path="cronograma.html"><a href="#versionamento-de-c%C3%B3digo-gerado-por-ia"><i class="fa fa-check"></i><b>10.4.2</b> Versionamento de Código Gerado por IA</a></li>
+<li class="chapter" data-level="10.4.3" data-path="cronograma.html"><a href="#valida%C3%A7%C3%A3o-e-teste"><i class="fa fa-check"></i><b>10.4.3</b> Validação e Teste</a></li>
+<li class="chapter" data-level="10.4.4" data-path="cronograma.html"><a href="#uso-%C3%A9tico"><i class="fa fa-check"></i><b>10.4.4</b> Uso Ético</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="cronograma.html"><a href="#configura%C3%A7%C3%A3o-de-chaves-e-ambiente-19h30---20h15"><i class="fa fa-check"></i><b>10.5</b> Configuração de Chaves e Ambiente (19h30 - 20h15)</a>
+<ul>
+<li class="chapter" data-level="10.5.1" data-path="cronograma.html"><a href="#vari%C3%A1veis-de-ambiente-no-r"><i class="fa fa-check"></i><b>10.5.1</b> Variáveis de Ambiente no R</a></li>
+<li class="chapter" data-level="10.5.2" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#o-arquivo-.renviron"><i class="fa fa-check"></i><b>10.5.2</b> O arquivo .Renviron</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#criando-chaves-de-api"><i class="fa fa-check"></i><b>10.6</b> Criando Chaves de API</a>
+<ul>
+<li class="chapter" data-level="10.6.1" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#openai-chatgpt"><i class="fa fa-check"></i><b>10.6.1</b> OpenAI (ChatGPT)</a></li>
+<li class="chapter" data-level="10.6.2" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#anthropic-claude"><i class="fa fa-check"></i><b>10.6.2</b> Anthropic (Claude)</a></li>
+</ul></li>
+<li class="chapter" data-level="10.7" data-path="cronograma.html"><a href="#instala%C3%A7%C3%A3o-de-pacotes"><i class="fa fa-check"></i><b>10.7</b> Instalação de Pacotes</a>
+<ul>
+<li class="chapter" data-level="10.7.1" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#o-que-cada-pacote-faz"><i class="fa fa-check"></i><b>10.7.1</b> O que cada pacote faz</a></li>
+</ul></li>
+<li class="chapter" data-level="10.8" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#intervalo-20h15---20h30"><i class="fa fa-check"></i><b>10.8</b> INTERVALO (20h15 - 20h30)</a></li>
+<li class="chapter" data-level="10.9" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#rstudio-gptstudio-chatgpt-20h30---21h00"><i class="fa fa-check"></i><b>10.9</b> RStudio + gptstudio (ChatGPT) (20h30 - 21h00)</a>
+<ul>
+<li class="chapter" data-level="10.9.1" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#conhecendo-o-gptstudio"><i class="fa fa-check"></i><b>10.9.1</b> Conhecendo o gptstudio</a></li>
+<li class="chapter" data-level="10.9.2" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#acessando-os-addins"><i class="fa fa-check"></i><b>10.9.2</b> Acessando os Addins</a></li>
+<li class="chapter" data-level="10.9.3" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#chat-integrado"><i class="fa fa-check"></i><b>10.9.3</b> Chat Integrado</a></li>
+<li class="chapter" data-level="10.9.4" data-path="cronograma.html"><a href="#explicar-c%C3%B3digo-selecionado"><i class="fa fa-check"></i><b>10.9.4</b> Explicar Código Selecionado</a></li>
+<li class="chapter" data-level="10.9.5" data-path="cronograma.html"><a href="#comentar-c%C3%B3digo-automaticamente"><i class="fa fa-check"></i><b>10.9.5</b> Comentar Código Automaticamente</a></li>
+<li class="chapter" data-level="10.9.6" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#chamadas-via-api-manual-httr2"><i class="fa fa-check"></i><b>10.9.6</b> Chamadas via API Manual (httr2)</a></li>
+<li class="chapter" data-level="10.9.7" data-path="cronograma.html"><a href="#casos-de-uso-pr%C3%A1ticos-com-chatgpt"><i class="fa fa-check"></i><b>10.9.7</b> Casos de Uso Práticos com ChatGPT</a></li>
+</ul></li>
+<li class="chapter" data-level="10.10" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#rstudio-chattr-claude-21h00---21h30"><i class="fa fa-check"></i><b>10.10</b> RStudio + chattr (Claude) (21h00 - 21h30)</a>
+<ul>
+<li class="chapter" data-level="10.10.1" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#conhecendo-o-chattr"><i class="fa fa-check"></i><b>10.10.1</b> Conhecendo o chattr</a></li>
+<li class="chapter" data-level="10.10.2" data-path="cronograma.html"><a href="#configura%C3%A7%C3%A3o-inicial"><i class="fa fa-check"></i><b>10.10.2</b> Configuração inicial</a></li>
+<li class="chapter" data-level="10.10.3" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#chat-interativo"><i class="fa fa-check"></i><b>10.10.3</b> Chat Interativo</a></li>
+<li class="chapter" data-level="10.10.4" data-path="cronograma.html"><a href="#chat-program%C3%A1tico"><i class="fa fa-check"></i><b>10.10.4</b> Chat Programático</a></li>
+<li class="chapter" data-level="10.10.5" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#chamadas-via-api-manual-claude"><i class="fa fa-check"></i><b>10.10.5</b> Chamadas via API Manual (Claude)</a></li>
+<li class="chapter" data-level="10.10.6" data-path="cronograma.html"><a href="#casos-de-uso-pr%C3%A1ticos-com-claude"><i class="fa fa-check"></i><b>10.10.6</b> Casos de Uso Práticos com Claude</a></li>
+</ul></li>
+<li class="chapter" data-level="10.11" data-path="cronograma.html"><a href="#exerc%C3%ADcio-guiado-de-integra%C3%A7%C3%A3o-21h30---22h00"><i class="fa fa-check"></i><b>10.11</b> Exercício Guiado de Integração (21h30 - 22h00)</a>
+<ul>
+<li class="chapter" data-level="10.11.1" data-path="cronograma.html"><a href="#tarefa-1-revisar-c%C3%B3digo-com-gptstudio"><i class="fa fa-check"></i><b>10.11.1</b> Tarefa 1: Revisar código com gptstudio</a></li>
+<li class="chapter" data-level="10.11.2" data-path="cronograma.html"><a href="#tarefa-2-gerar-fun%C3%A7%C3%A3o-com-chattr-claude"><i class="fa fa-check"></i><b>10.11.2</b> Tarefa 2: Gerar função com chattr (Claude)</a></li>
+<li class="chapter" data-level="10.11.3" data-path="cronograma.html"><a href="#tarefa-3-documento-de-reflex%C3%A3o"><i class="fa fa-check"></i><b>10.11.3</b> Tarefa 3: Documento de Reflexão</a></li>
+<li class="chapter" data-level="10.11.4" data-path="cronograma.html"><a href="#compara%C3%A7%C3%A3o-chatgpt-vs-claude"><i class="fa fa-check"></i><b>10.11.4</b> Comparação ChatGPT vs Claude</a></li>
+<li class="chapter" data-level="10.11.5" data-path="cronograma.html"><a href="#reflex%C3%A3o-final"><i class="fa fa-check"></i><b>10.11.5</b> Reflexão Final</a></li>
+<li class="chapter" data-level="10.11.6" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#commit-e-push"><i class="fa fa-check"></i><b>10.11.6</b> Commit e Push</a></li>
+</ul></li>
+<li class="chapter" data-level="10.12" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#recursos-adicionais-1"><i class="fa fa-check"></i><b>10.12</b> Recursos Adicionais</a>
+<ul>
+<li class="chapter" data-level="10.12.1" data-path="cronograma.html"><a href="#documenta%C3%A7%C3%A3o-oficial"><i class="fa fa-check"></i><b>10.12.1</b> Documentação Oficial</a></li>
+<li class="chapter" data-level="10.12.2" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#tutoriais-e-cursos"><i class="fa fa-check"></i><b>10.12.2</b> Tutoriais e Cursos</a></li>
+<li class="chapter" data-level="10.12.3" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#comunidades"><i class="fa fa-check"></i><b>10.12.3</b> Comunidades</a></li>
+</ul></li>
+<li class="chapter" data-level="10.13" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#troubleshooting"><i class="fa fa-check"></i><b>10.13</b> Troubleshooting</a>
+<ul>
+<li class="chapter" data-level="10.13.1" data-path="cronograma.html"><a href="#erro-api-key-inv%C3%A1lida"><i class="fa fa-check"></i><b>10.13.1</b> Erro: API Key inválida</a></li>
+<li class="chapter" data-level="10.13.2" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#erro-rate-limit-excedido"><i class="fa fa-check"></i><b>10.13.2</b> Erro: Rate Limit excedido</a></li>
+<li class="chapter" data-level="10.13.3" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#erro-insufficient-credits"><i class="fa fa-check"></i><b>10.13.3</b> Erro: Insufficient credits</a></li>
+<li class="chapter" data-level="10.13.4" data-path="cronograma.html"><a href="#gptstudio-n%C3%A3o-aparece-nos-addins"><i class="fa fa-check"></i><b>10.13.4</b> gptstudio não aparece nos Addins</a></li>
+</ul></li>
+<li class="chapter" data-level="10.14" data-path="cronograma.html"><a href="#problemas-de-conex%C3%A3o"><i class="fa fa-check"></i><b>10.14</b> Problemas de conexão</a></li>
+<li class="chapter" data-level="10.15" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#dicas-finais"><i class="fa fa-check"></i><b>10.15</b> Dicas Finais</a>
+<ul>
+<li class="chapter" data-level="10.15.1" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#prompts-eficazes"><i class="fa fa-check"></i><b>10.15.1</b> Prompts Eficazes</a></li>
+<li class="chapter" data-level="10.15.2" data-path="cronograma.html"><a href="#itera%C3%A7%C3%A3o-com-ia"><i class="fa fa-check"></i><b>10.15.2</b> Iteração com IA</a></li>
+<li class="chapter" data-level="10.15.3" data-path="cronograma.html"><a href="#quando-n%C3%A3o-usar-ia"><i class="fa fa-check"></i><b>10.15.3</b> Quando NÃO usar IA</a></li>
+<li class="chapter" data-level="10.15.4" data-path="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html"><a href="dia-4-integração-do-chatgpt-e-claude-no-rstudio.html#quando-sim-usar-ia"><i class="fa fa-check"></i><b>10.15.4</b> Quando SIM usar IA</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="cronograma.html"><a href="#conclus%C3%A3o-do-curso"><i class="fa fa-check"></i><b>11</b> Conclusão do Curso</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="cronograma.html"><a href="#o-que-voc%C3%AA-aprendeu"><i class="fa fa-check"></i><b>11.1</b> O que você aprendeu:</a></li>
+<li class="chapter" data-level="11.2" data-path="cronograma.html"><a href="#pr%C3%B3ximos-passos"><i class="fa fa-check"></i><b>11.2</b> Próximos passos:</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="troubleshooting-por-sistema-operacional" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">4</span> Troubleshooting por Sistema Operacional<a href="troubleshooting-por-sistema-operacional.html#troubleshooting-por-sistema-operacional" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="windows" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Windows<a href="troubleshooting-por-sistema-operacional.html#windows" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Git não encontrado: reinstalar Git (opção Git from the command line…).<br />
+Acentos estranhos: garantir UTF-8 ao salvar, ou usar locale(encoding=“latin1”) quando necessário.<br />
+Pacotes com erro: tentar instalar na biblioteca do usuário.</p>
+</div>
+<div id="macos" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> macOS<a href="troubleshooting-por-sistema-operacional.html#macos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>xcrun error com Git: <code>xcode-select --install</code><br />
+LaTeX não encontrado: <code>tinytex::install_tinytex()</code></p>
+</div>
+<div id="linux-ubuntudebian" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Linux (Ubuntu/Debian)<a href="troubleshooting-por-sistema-operacional.html#linux-ubuntudebian" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Compilação de pacotes:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="troubleshooting-por-sistema-operacional.html#cb7-1" tabindex="-1"></a><span class="fu">sudo</span> apt install build-essential libcurl4-openssl-dev libssl-dev libxml2-dev</span>
+<span id="cb7-2"><a href="troubleshooting-por-sistema-operacional.html#cb7-2" tabindex="-1"></a><span class="fu">sudo</span> apt install libfontconfig1-dev libharfbuzz-dev libfribidi-dev</span></code></pre></div>
+</div>
+<div id="problemas-comuns-todos-os-so" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Problemas comuns (todos os SO)<a href="troubleshooting-por-sistema-operacional.html#problemas-comuns-todos-os-so" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Permission denied ao fazer push: corrigir origin para o fork do aluno:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="troubleshooting-por-sistema-operacional.html#cb8-1" tabindex="-1"></a><span class="fu">git</span> remote set-url origin https://github.com/SEU-USUARIO/curso-r-github-ia.git</span></code></pre></div>
+<p>API Key não encontrada: configurar no ~/.Renviron e reiniciar o R.</p>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="cronograma.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="recursos-adicionais.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["Curso_Completo_R_GitHub_IA.pdf"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

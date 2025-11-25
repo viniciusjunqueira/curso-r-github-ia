@@ -1,0 +1,12 @@
+book_filename: "Curso_Completo_R_GitHub_IA"
+output_dir: "_book"
+rmd_files:
+  - "index.Rmd"
+  - "sobre_mim.Rmd"
+  - "introducao.Rmd"
+  - "cronograma.Rmd"
+  - "dia1_fundamentos.Rmd"
+  - "dia2_logica_funcoes.Rmd"
+  - "dia3_manipulacao.Rmd"
+  - "dia4_ia.Rmd"
+delete_merged_file: true

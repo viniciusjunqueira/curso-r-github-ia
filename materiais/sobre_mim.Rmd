@@ -1,0 +1,81 @@
+<!-- 
+---
+title: "Sobre o Autor"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+geometry: margin=2.5cm
+fontsize: 11pt
+---
+-->
+
+\newpage
+
+# Sobre o Autor
+
+## Vinícius Junqueira
+
+Olá! Meu nome é Vinícius Junqueira e será um prazer guiá-lo nesta jornada pelo mundo do R e programação científica básica.
+
+## Formação Acadêmica
+
+Sou graduado em **Medicina Veterinária pela Universidade de Brasília (UnB)**, com mestrado e doutorado em **Genética e Melhoramento pela Universidade Federal de Viçosa (UFV)**. Minha trajetória acadêmica sempre esteve ligada à compreensão de dados complexos e à resolução de problemas usando ferramentas quantitativas e computacionais.
+
+Em 2016, tive a oportunidade de atuar como pesquisador convidado no grupo de melhoramento genético animal da **University of Georgia, nos Estados Unidos**, experiência que ampliou significativamente minha visão sobre metodologias avançadas de análise de dados e programação científica.
+
+## Trajetória Profissional
+
+No Brasil, iniciei minha carreira como pesquisador em genética quantitativa na **Monsanto/Bayer**, onde contribuí para o desenvolvimento técnico-científico de projetos em programas de melhoramento de milho e soja no Brasil, Argentina, México, Estados Unidos e Europa. Entre 2021 e 2024, liderei os programas de melhoramento de soja no Brasil e Argentina, coordenando a implementação de estratégias inovadoras que incluíram a introdução da biotecnologia INTACTA3, prevista para lançamento comercial no Brasil em 2030.
+
+Desde 2024, coordeno o desenvolvimento de estratégias genético-quantitativas para otimizar a alocação de fenotipagem a campo nas culturas de milho e soja nos Estados Unidos, trabalhando com grandes volumes de dados e modelos preditivos complexos.
+
+Paralelamente às atividades na Bayer, mantenho colaborações ativas com projetos de pesquisa junto à **Embrapa Pecuária Sul**, **Universidade Federal de Viçosa**, **Universidade Federal de Goiás**, **Universidade Federal de Uberlândia**, **Purdue University** e **University of Georgia**. Integro também a equipe técnica dos programas de melhoramento genético das raças Hereford e Braford (PampaPlus/ABHB) e do Programa de Melhoramento de Bovinos de Carne (PROMEBO/ANC).
+
+## Expertise e Áreas de Atuação
+
+Minha experiência abrange tanto o melhoramento genético de plantas quanto de animais, com foco em:
+
+- Estimação de valores genéticos por modelos tradicionais e genômicos
+- Modelos multicaracterísticos e análise de interação genótipo-ambiente
+- Índices de seleção bioeconômicos
+- Programação científica em Fortran, R e Python
+- Métodos de otimização para seleção de parentais e acasalamentos
+- Análise de grandes conjuntos de dados e tomada de decisões baseada em evidências
+
+## Por Que Ensino R?
+
+Ao longo da minha trajetória, **R se tornou a ferramenta fundamental** do meu trabalho diário. Foi através do R que consegui analisar milhões de dados fenotípicos e genotípicos, implementar modelos estatísticos complexos, criar visualizações que comunicam resultados para diferentes públicos, e desenvolver ferramentas computacionais que impactam decisões estratégicas em programas de melhoramento.
+
+Lembro-me perfeitamente de quando comecei a aprender R durante meu mestrado. No início, tudo parecia confuso e intimidador. Passei por frustrações, erros incompreensíveis e momentos em que pensei em desistir. Mas persisti, e posso afirmar sem hesitação: **aprender linguagens de programação foi uma das decisões mais transformadoras da minha carreira**.
+
+O R me deu autonomia para resolver problemas, liberdade para explorar dados de formas criativas, e a capacidade de comunicar descobertas científicas com clareza. Ele abriu portas profissionais que eu nem imaginava existirem e me permitiu colaborar com pesquisadores ao redor do mundo.
+
+## Minha Missão com Este Curso
+
+Decidi criar este curso porque acredito que **todo mundo pode aprender R**, independentemente do background. Você não precisa ser um gênio da matemática ou ter nascido programando. O que você precisa é de um caminho bem estruturado, exemplos práticos, e alguém que já passou pelas mesmas dificuldades para guiá-lo.
+
+Minha abordagem é diferente porque:
+
+- **Aprendi da forma difícil** e sei exatamente onde iniciantes tropeçam
+- **Uso R diariamente em problemas reais**, então ensino o que realmente funciona
+- **Integro ferramentas modernas de IA** ao aprendizado, acelerando sua curva de evolução
+- **Valorizo a aplicação prática** sobre teoria abstrata
+
+Este curso é resultado de anos utilizando R no melhoramento genético. Refinei o conteúdo com base em de dúvidas reais, erros comuns e feedbacks valiosos. Meu objetivo é que você não apenas aprenda R, mas que desenvolva confiança para usá-lo como ferramenta transformadora em sua própria jornada profissional.
+
+## Vamos Juntos!
+
+Se você está começando do zero, saiba que já estive exatamente onde você está. Se tem alguma experiência, vamos aprofundar seu conhecimento e apresentar ferramentas modernas que aumentarão sua produtividade. Independentemente do seu ponto de partida, **estou aqui para ajudá-lo a ter sucesso**.
+
+Bem-vindo ao curso. Vamos transformar dados em conhecimento!
+
+\vspace{1em}
+
+---
+
+**Contato:**
+
+- GitHub: [github.com/viniciusjunqueira](https://github.com/viniciusjunqueira)
+- LinkedIn: [linkedin.com/junqueiravinicius](https://www.linkedin.com/in/junqueiravinicius/)
+- Email: [junqueiravinicius@hotmail.com](mailto:junqueiravinicius@hotmail.com)

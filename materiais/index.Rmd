@@ -1,0 +1,31 @@
+---
+title: ""
+author: ""
+site: bookdown::bookdown_site
+output:
+  bookdown::pdf_book:
+    latex_engine: xelatex
+    number_sections: true
+    toc: true
+    toc_depth: 2
+    includes:
+      before_body: capa.tex
+lang: "pt-BR"
+fontsize: 11pt
+geometry: margin=2.5cm
+header-includes:
+  - \usepackage{pdfpages}
+  - \usepackage{tcolorbox}
+  - \newenvironment{resumo}{\begin{tcolorbox}[colframe=black,colback=gray!10,title=Em resumo]}{\end{tcolorbox}}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+echo = TRUE,
+eval = FALSE,
+warning = FALSE,
+message = FALSE,
+error = FALSE,
+comment = "#>"
+)
+```
