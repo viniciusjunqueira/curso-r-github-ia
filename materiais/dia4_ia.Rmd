@@ -535,7 +535,8 @@ install.packages(c(
   "chattr",       # Interface para múltiplos LLMs
   "httr2",        # Cliente HTTP moderno (para APIs)
   "jsonlite",      # Trabalhar com JSON
-  "shiny"
+  "shiny",
+  "ellmer"
 ))
 
 # Verificar instalação
@@ -545,6 +546,7 @@ library(httr2)
 library(jsonlite)
 library(shiny)
 library(tidyverse)
+library(ellmer)
 ```
 
 ### O que cada pacote faz
@@ -634,7 +636,10 @@ my_chat <- ellmer::chat_anthropic(model = 'claude-opus-4-1-20250805')
 
 my_chat <- ellmer::chat_openai()
 my_chat <- ellmer::chat_openai(model = 'gpt-5.1-codex-mini')
+```
 
+Depois do modelo escolhido, defina ele como padrão para ser utilizado no `chattr`.
+```{r}
 chattr_use(my_chat)
 ```
 
@@ -643,7 +648,6 @@ chattr_use(my_chat)
 **Como abrir:**
 
 ```{r}
-# Abre o chat no painel lateral do RStudio
 chattr_app(as_job = TRUE)
 ```
 
@@ -845,7 +849,7 @@ Claude fornece análise profunda:
   - Alertas sobre edge cases
 
 
-#### Caso 2: Gerar função robusta
+#### Caso 2: Gerar uma nova função
 
 ```{r}
 # Prompt para Claude:
@@ -885,8 +889,6 @@ chattr(erro)
 **Código para revisar:**
 
 ```{r tarefa1-codigo}
-# Salve este código em: scripts/04_ia_integracao_gptstudio.R
-
 library(tidyverse)
 library(palmerpenguins)
 
@@ -928,14 +930,31 @@ print(resultado)
 
 **Objetivo:** Usar LLM para gerar um arquivo de dados.
 
-**Salve a resposta em:** `scripts/04_ia_integracao_claude.R`
+```{r}
+#
+# Criar um data.frame que contem dados de um experimento com dois tratamentos
+# em DIC em bovinos leitiros para avaliar se existe diferença estatistica na
+# producao de leite de vacas alimentadas com duas dietas diferentes.
+prompt <- "Criar um data.frame que contem dados de um experimento com dois 
+           tratamentos em DIC em bovinos leitiros para avaliar se existe 
+           diferença estatistica na producao de leite de vacas alimentadas 
+           com duas dietas diferentes."
+
+chattr(prompt)
+
+```
 
 ---
 
-### Tarefa 3: Criar um gráfico a partir do data.frame criado
+### Tarefa 3: Criar um gráfico utilizando o `ggplot2`.
 
 **Objetivo:** Usar LLM para automatizar o processo
-
+```{r}
+prompt <- 'Crie um gráfico boxplot utilizando o ggplot a partir de dados simulados
+           de pesos ao nascimento de bovinos de corte'
+chattr(prompt)
+           
+```
 ### Comparação ChatGPT vs Claude
 
 **ChatGPT:**

@@ -200,12 +200,12 @@ caso-3-gerar-testes-unitários
 chat-programático
 caso-1-análise-profunda-de-código
 prompt
-caso-2-gerar-função-robusta
+caso-2-gerar-uma-nova-função
 caso-3-explicar-traceback-complexo
 exercício-guiado-de-integração-21h30---22h00
 tarefa-1-revisar-código-com-chattr
 tarefa-2-gerar-função-com-chattr-claude
-tarefa-3-criar-um-gráfico-a-partir-do-data.frame-criado
+tarefa-3-criar-um-gráfico-utilizando-o-ggplot2.
 comparação-chatgpt-vs-claude
 reflexão-final
 checklist-final
