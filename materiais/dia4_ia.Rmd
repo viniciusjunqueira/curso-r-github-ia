@@ -831,23 +831,8 @@ resultado <- mtcars %>%
 ```
 
 ```{r}
-chattr(paste0("Faca uma analise profunda desse codigo:", pipeline_complexo))
+chattr(paste0("Faca uma analise detalhada desse codigo:", pipeline_complexo))
 ```
-
-# Prompt:
-"Analise este pipeline tidyverse em detalhes:
-
-1. O que cada etapa faz?
-2. Há potenciais problemas ou melhorias?
-3. O código está otimizado?
-
-Claude fornece análise profunda:
-
-  - Explicação linha por linha
-  - Identificação de possíveis NAs não tratados
-  - Sugestões de otimização
-  - Alertas sobre edge cases
-
 
 #### Caso 2: Gerar uma nova função
 

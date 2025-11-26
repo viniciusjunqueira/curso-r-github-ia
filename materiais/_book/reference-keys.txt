@@ -199,7 +199,6 @@ caso-2-refatorar-função
 caso-3-gerar-testes-unitários
 chat-programático
 caso-1-análise-profunda-de-código
-prompt
 caso-2-gerar-uma-nova-função
 caso-3-explicar-traceback-complexo
 exercício-guiado-de-integração-21h30---22h00
