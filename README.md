@@ -154,6 +154,15 @@ MIT License - Veja LICENSE para detalhes
 - **Instagram**: [@vinicius_junq](https://instagram.com/vinicius_junq)
 - **X**: [@vsjunqueira](https://x.com/vsjunqueira)
 
+## 📸 Fotos do Curso
+
+<div align="center">
+
+**Edição Novembro/2025**
+
+![Turma do curso](fotos/foto1.jpeg)
+
+![Participantes](fotos/foto2.jpeg)
 
 ---
 
